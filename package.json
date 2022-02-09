@@ -1,0 +1,36 @@
+{
+  "name": "@rees46/react-native-sdk",
+  "version": "1.5.5",
+  "description": "Rees46 React Native SDK",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rees46/react-native-sdk.git"
+  },
+  "author": "Rees46",
+  "license": "MIT",
+  "keywords": [
+    "react-native",
+    "react",
+    "native",
+    "Rees46",
+    "@Rees46/react-native-sdk"
+  ],
+  "bugs": {
+    "url": "https://github.com/Rees46/react-native-sdk/issues"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "react-native-device-info": "^8.0.7"
+  },
+  "devDependencies": {
+    "react-native": "^0.64.0"
+  },
+  "homepage": "https://github.com/Rees46/react-native-sdk#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
