@@ -103,8 +103,7 @@ rees46sdk.track("view", 37);
 
 // View product (try to avoid it)
 rees46sdk.track("view", {
-    id: 37,
-    stock: true
+    id: 37
 });
 
 // View product after user clicked on recommender block
@@ -136,7 +135,7 @@ rees46sdk.track("cart", id);
 // Add product to cart with amount and track recommender
 rees46sdk.track("cart", {
   id: PRODUCT_ID,
-  amount: PRODUCT_QUANTITY,
+  quantity: PRODUCT_QUANTITY,
   recommended_by: 'dynamic',
   recommended_code: 'UNIQUE_RECOMMENDER_CODE'
 });
@@ -153,8 +152,8 @@ rees46sdk.track("remove_wish", id);
 // Track purchase (several products)
 rees46sdk.track("purchase", {
   products: [
-      {id: 37, price: 318, amount: 3},
-      {id: 187, price: 5000, amount: 1}
+      {id: 37, price: 318, quantity: 3},
+      {id: 187, price: 5000, quantity: 1}
   ],
   order: 'N318',
   order_price: 29999

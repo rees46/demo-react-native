@@ -64,7 +64,7 @@ class Rees46 {
           stream: this.stream,
           ...queryParams,
         },
-      });
+      }, 'application/json');
     } catch (error) {
       return error;
     }
@@ -84,7 +84,7 @@ class Rees46 {
           stream: this.stream,
           ...queryParams,
         },
-      });
+      }, 'application/json');
     } catch (error) {
       return error;
     }
