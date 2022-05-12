@@ -7,13 +7,14 @@ import PushNotification from "react-native-push-notification";
 
 //Время жизни сеанса в минутах
 export const SESSION_CODE_EXPIRE = 30;
-
+export var DEBUG = false;
 class Rees46 {
-  constructor(shop_id, stream) {
+  constructor(shop_id, stream, debug = false) {
     this.channel_id = 'rees46-push';
     this.shop_id = shop_id;
     this.stream = stream ?? null;
     this.initialized = false;
+    DEBUG = debug
     this.init();
   }
 
@@ -99,7 +100,7 @@ class Rees46 {
 
   async notificationTrack(event, options) {
     try {
-      return await request(`web_push_subscriptions/${event}`, {
+      return await request(`track/${event}`, {
         method: 'POST',
         params: {
           shop_id: this.shop_id,
@@ -207,11 +208,13 @@ class Rees46 {
       messaging()
         .getToken()
         .then(token => {
+          if (DEBUG) console.log('New token: ', token);
           this.setPushTokenNotification(token);
         });
 
       // Register handler
       messaging().onMessage(async remoteMessage => {
+        if (DEBUG) console.log('Message received: ', remoteMessage);
         if (!notifyReceive) {
           await this.showNotification(remoteMessage);
         } else{
@@ -221,6 +224,8 @@ class Rees46 {
 
       // Register background handler
       messaging().setBackgroundMessageHandler(async remoteMessage => {
+        if (DEBUG) console.log('Background message received: ', remoteMessage);
+
         if (!notifyReceive && !notifyBgReceive) {
           await this.showNotification(remoteMessage);
         } else if (!notifyBgReceive) {
@@ -259,6 +264,8 @@ class Rees46 {
     }
   }
   async showNotification (message){
+    if (DEBUG) console.log('Show notification: ', message);
+
     await this.notificationReceived({
       code: message.data.id,
       type: message.data.type
@@ -276,7 +283,20 @@ class Rees46 {
       }
     }
     return PushNotification.localNotification(localData);
-  };
+  }
+  async triggers(trigger_name, options) {
+    try {
+      return await request(`subscriptions/${trigger_name}`, {
+        method: 'POST',
+        params: {
+          shop_id: this.shop_id,
+          ...options,
+        },
+      });
+    } catch (error) {
+      return error;
+    }
+  }
 }
 
 export default Rees46;

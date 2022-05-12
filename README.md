@@ -1,4 +1,4 @@
-# Rees46 React Native SDK
+npm# Rees46 React Native SDK
 
 
 ## Installation
@@ -321,7 +321,30 @@ rees46sdk.initPush(false, onReceiveCallback, onBackgroundReceiveCallback);
 ```js
 rees46sdk.setPushTokenNotification('NEW_TOKEN');
 ```
+##
+## Triggers
+###Price drop
+```js
+// Subscribing
+pcsdk.triggers('subscribe_for_product_price', {email: 'John.Doe@store.com', item: '3323', price: 160});
 
+// Unsubscribing from specific products
+pcsdk.triggers('unsubscribe_from_product_price', {email: 'John.Doe@store.com', item_ids: [3323, 100500, 'ABCDEF']});
+
+// Unsubscribing from all products
+pcsdk.triggers('unsubscribe_from_product_price', {email: 'John.Doe@store.com', item_ids: []});
+```
+###Back in Stock
+```js
+// Subscribing
+pcsdk.triggers('subscribe_for_product_available', {email: 'John.Doe@store.com', item: '3323', properties: {fashion_size: "XL"}});
+
+// Unsubscribing from specific products
+pcsdk.triggers('unsubscribe_from_product_available', {email: 'John.Doe@store.com', item_ids: [3323, 100500, 'ABCDEF']});
+
+// Unsubscribing from all products
+pcsdk.triggers('unsubscribe_from_product_available', {email: 'John.Doe@store.com', item_ids: []});
+```
 ## 
 
 ## License
