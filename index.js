@@ -59,13 +59,14 @@ class Rees46 {
     try {
       const queryParams = await convertParams(event, options);
       return await request('push', {
+        headers: { "Content-Type": "application/json" },
         method: 'POST',
         params: {
           shop_id: this.shop_id,
           stream: this.stream,
           ...queryParams,
         },
-      }, 'application/json');
+      });
     } catch (error) {
       return error;
     }
@@ -79,13 +80,14 @@ class Rees46 {
       }
 
       return await request('push/custom', {
+        headers: { "Content-Type": "application/json" },
         method: 'POST',
         params: {
           shop_id: this.shop_id,
           stream: this.stream,
           ...queryParams,
         },
-      }, 'application/json');
+      });
     } catch (error) {
       return error;
     }
@@ -287,15 +289,12 @@ class Rees46 {
   async triggers(trigger_name, data) {
     try {
       return await request(`subscriptions/${trigger_name}`, {
-        headers: {
-          "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         method: 'POST',
-        params: {
+        params: Object.assign({
           shop_id: this.shop_id,
           stream: this.stream,
-        },
-        payload: data
+        }, data),
       });
     } catch (error) {
       return error;
