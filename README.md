@@ -73,7 +73,9 @@ SDK is used for several tasks:
 7. Save profile settings
 8. Init push
 9. Set push token notification
-
+10. Triggers
+    1. Price drop
+    2. Back in Stock
 ## Initialization
 
 Initialize SDK object and use it anywhere in your application. (!) Remember to initialize SDK only once on application launch.
