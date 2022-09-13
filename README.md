@@ -329,24 +329,24 @@ rees46sdk.setPushTokenNotification('NEW_TOKEN');
 ### Price drop
 ```js
 // Subscribing
-pcsdk.triggers('subscribe_for_product_price', {email: 'John.Doe@store.com', item: '3323', price: 160});
+rees46sdk.triggers('subscribe_for_product_price', {email: 'John.Doe@store.com', item: '3323', price: 160});
 
 // Unsubscribing from specific products
-pcsdk.triggers('unsubscribe_from_product_price', {email: 'John.Doe@store.com', item_ids: [3323, 100500, 'ABCDEF']});
+rees46sdk.triggers('unsubscribe_from_product_price', {email: 'John.Doe@store.com', item_ids: [3323, 100500, 'ABCDEF']});
 
 // Unsubscribing from all products
-pcsdk.triggers('unsubscribe_from_product_price', {email: 'John.Doe@store.com', item_ids: []});
+rees46sdk.triggers('unsubscribe_from_product_price', {email: 'John.Doe@store.com', item_ids: []});
 ```
 ### Back in Stock
 ```js
 // Subscribing
-pcsdk.triggers('subscribe_for_product_available', {email: 'John.Doe@store.com', item: '3323', properties: {fashion_size: "XL"}});
+rees46sdk.triggers('subscribe_for_product_available', {email: 'John.Doe@store.com', item: '3323', properties: {fashion_size: "XL"}});
 
 // Unsubscribing from specific products
-pcsdk.triggers('unsubscribe_from_product_available', {email: 'John.Doe@store.com', item_ids: [3323, 100500, 'ABCDEF']});
+rees46sdk.triggers('unsubscribe_from_product_available', {email: 'John.Doe@store.com', item_ids: [3323, 100500, 'ABCDEF']});
 
 // Unsubscribing from all products
-pcsdk.triggers('unsubscribe_from_product_available', {email: 'John.Doe@store.com', item_ids: []});
+rees46sdk.triggers('unsubscribe_from_product_available', {email: 'John.Doe@store.com', item_ids: []});
 ```
 ## 
 
