@@ -1,6 +1,6 @@
 {
   "name": "@rees46/react-native-sdk",
-  "version": "1.5.12",
+  "version": "1.6.0",
   "description": "Rees46 React Native SDK",
   "main": "index.js",
   "repository": {
