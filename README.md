@@ -144,7 +144,7 @@ rees46sdk.track("cart", {
 });
 
 
-//Full request to send the full current cart
+//Send the full current cart
 rees46sdk.track("cart", [
   {
     id: FIRST_PRODUCT_ID,
