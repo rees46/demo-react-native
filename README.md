@@ -1,9 +1,9 @@
-npm# Rees46 React Native SDK
+# Rees46 React Native SDK 
 
 
 ## Installation
 
-Rees46 React Native SDK is available through [GitHub](https://github.com/rees46/react-native-sdk/). To install it, run next command in terminal:
+Rees46 React Native SDK is available through [GitHub](https://github.com/rees46/react-native-sdk.git). To install it, run next command in terminal:
 
 ```
 yarn add @rees46/react-native-sdk
@@ -26,6 +26,7 @@ yarn add react-native-device-info
 For push notification:
 ```
 yarn add react-native-push-notification
+yarn add @react-native-community/push-notification-ios
 yarn add @react-native-firebase/app
 yarn add @react-native-firebase/messaging
 ```
@@ -76,7 +77,8 @@ SDK is used for several tasks:
 10. Triggers
     1. Price drop
     2. Back in Stock
-    
+
+
 ## Initialization
 
 Initialize SDK object and use it anywhere in your application. (!) Remember to initialize SDK only once on application launch.
@@ -85,13 +87,13 @@ Initialize SDK object and use it anywhere in your application. (!) Remember to i
 import Rees46 from '@rees46/react-native-sdk';
 
 ...
-const rees46sdk = new Rees46("YOUR_SHOP_ID", "Stream")
+const rnsdk = new Rees46("YOUR_SHOP_ID", "Stream");
 ```
 
 ## Check init
 
 ```js
-rees46sdk.isInit(); // returns true/false
+rnsdk.isInit(); // returns true/false
 ```
 
 ## Events tracking
@@ -102,72 +104,72 @@ Track user's behavior to collect data. There are several types of events:
 
 
 // View product (simple way)
-rees46sdk.track("view", 37);
+rnsdk.track("view", 37);
 
 // View product (try to avoid it)
-rees46sdk.track("view", {
-    id: 37
+rnsdk.track("view", {
+    id: 37,
+    stock: true
 });
 
 // View product after user clicked on recommender block
-rees46sdk.track("view", {
+rnsdk.track("view", {
   id: PRODUCT_ID,
   recommended_by: 'dynamic',
   recommended_code: 'UNIQUE_RECOMMENDER_CODE'
 });
 
 // View product, after user clicked on search results
-rees46sdk.track("view", {
+rnsdk.track("view", {
   id: PRODUCT_ID,
   recommended_by: 'full_search',
   recommended_code: QUERY_STRING
 });
 // ... or instant search dropdown
-rees46sdk.track("view", {
+rnsdk.track("view", {
   id: PRODUCT_ID,
   recommended_by: 'instant_search',
   recommended_code: QUERY_STRING
 });
 
 // View category
-rees46sdk.track("category", 100500);
+rnsdk.track("category", 100500);
 
 // Add product to cart (simple way)
-rees46sdk.track("cart", id);
+rnsdk.track("cart", id);
 
 // Add product to cart with amount and track recommender
-rees46sdk.track("cart", {
+rnsdk.track("cart", {
   id: PRODUCT_ID,
   quantity: PRODUCT_QUANTITY,
   recommended_by: 'dynamic',
   recommended_code: 'UNIQUE_RECOMMENDER_CODE'
 });
 
-
 //Send the full current cart
-rees46sdk.track("cart", [
+rnsdk.track("cart", [
   {
     id: FIRST_PRODUCT_ID,
-    amount: FIRST_PRODUCT_QUANTITY
+    quantity: FIRST_PRODUCT_QUANTITY
   },
   ...
   {
     id: LAST_PRODUCT_ID,
-    amount: LAST_PRODUCT_QUANTITY
+    quantity: LAST_PRODUCT_QUANTITY
   }
 ]);
 
 // Remove product from cart
-rees46sdk.track("remove_from_cart", id);
+rnsdk.track("remove_from_cart", id);
 
 // Add product to favorities
-rees46sdk.track("wish", id);
+rnsdk.track("wish", id);
 
 // Remove product from favorities
-rees46sdk.track("remove_wish", id);
+rnsdk.track("remove_wish", id);
 
 // Track purchase (several products)
-rees46sdk.track("purchase", {
+rnsdk.track("purchase", {
   products: [
       {id: 37, price: 318, quantity: 3},
       {id: 187, price: 5000, quantity: 1}
@@ -177,16 +179,16 @@ rees46sdk.track("purchase", {
 });
 
 // Track user search
-rees46sdk.track("search", "This is a search example");
+rnsdk.track("search", "This is a search example");
 ```
 
 ## Track custom event
 ```js
 // Simple tracking
-rees46sdk.trackEvent('my_event');
+rnsdk.trackEvent('my_event');
 
 // Tracking with custom parameters
-rees46sdk.trackEvent('my_event', {
+rnsdk.trackEvent('my_event', {
   category: "event category", 
   label: "event label",
   value: 100
@@ -201,10 +203,10 @@ const params = {
   type: 'TYPE'
 };
 // Track user click notification
-rees46sdk.notificationClicked(params);
+rnsdk.notificationClicked(params);
 
 // Track Notification received
-rees46sdk.notificationReceived(params);
+rnsdk.notificationReceived(params);
 
 ```
 
@@ -215,7 +217,7 @@ const type = 'instant_search'; // full_search, ...
 
 let search_query = 'your_search_text';
 
-rees46sdk.search({
+rnsdk.search({
   type: type,
   search_query: search_query,
   // other params
@@ -240,7 +242,7 @@ const params = {
  // other params
 };
 
-rees46sdk.recommend(recommender_code, params) 
+rnsdk.recommend(recommender_code, params) 
   .then((res) => {
     console.log(res);
   })
@@ -280,39 +282,42 @@ const params = {
   ]
 };
 
-rees46sdk.setProfile(params);
+rnsdk.setProfile(params);
 ```
 
 ## Init push notification
 
 ```js
+//Set use Firebase messaging only. Call this method before initPush; 
+rnsdk.firebase_only(true);
+
 // Simple init 
-rees46sdk.initPush();
+rnsdk.initPush();
 
 //onClick listener
-rees46sdk.initPush(onClickCallback);
+rnsdk.initPush(onClickCallback);
 
 // onReceivetive listener
-rees46sdk.initPush(false, onReceiveCallback);
+rnsdk.initPush(false, onReceiveCallback);
 
 // you can use different callback for notification, when app is in background.    
-rees46sdk.initPush(false, onReceiveCallback, onBackgroundReceiveCallback);
+rnsdk.initPush(false, onReceiveCallback, onBackgroundReceiveCallback);
 // If onBackgroundReceiveCallback not specified, used onReceiveCallback listener. 
 
 // onClickCallback params
 {
-  "bigPictureUrl": "MESSAGE_IMAGE",
-  "channelId": "rees46-push", 
   "data": {
+    "body": "MESSAGE_BODY",
+    "icon": "MESSAGE_ICON",
     "id": "MESSAGE_ID",
+    "image": "MESSAGE_IMAGE",
+    "title": "MESSAGE_TITLE",
     "type": "MESSAGE_TYPE"
-  }, 
-  "foreground": true, 
-  "id": "MESSAGE_ID", 
-  "largeIconUrl": "MESSAGE_ICON",
-  "message": "MESSAGE_BODY", 
-  "title": "MESSAGE_TITLE", 
-  "userInteraction": true
+  },
+  "from": "MESSAGE_FROM",
+  "messageId": "FMC_MESSAGE_ID",
+  "sentTime": TIMESTAMP,
+  "ttl": TTL_VALUE
 }
 // onReceiveCallBack, onBackgroundReceiveCallback params
 {
@@ -331,36 +336,38 @@ rees46sdk.initPush(false, onReceiveCallback, onBackgroundReceiveCallback);
   "sentTime": TIMESTAMP, 
   "ttl": TTL_VALUE
 }
+
 ```
+###IMPORTANT! Сall initPush method on app initialization
 
 ## Set push token notification
 
 ```js
-rees46sdk.setPushTokenNotification('NEW_TOKEN');
+rnsdk.setPushTokenNotification('NEW_TOKEN');
 ```
-##
+
 ## Triggers
 ### Price drop
 ```js
 // Subscribing
-rees46sdk.triggers('subscribe_for_product_price', {email: 'John.Doe@store.com', item: '3323', price: 160});
+rnsdk.triggers('subscribe_for_product_price', {email: 'John.Doe@store.com', item: '3323', price: 160});
 
 // Unsubscribing from specific products
-rees46sdk.triggers('unsubscribe_from_product_price', {email: 'John.Doe@store.com', item_ids: [3323, 100500, 'ABCDEF']});
+rnsdk.triggers('unsubscribe_from_product_price', {email: 'John.Doe@store.com', item_ids: [3323, 100500, 'ABCDEF']});
 
 // Unsubscribing from all products
-rees46sdk.triggers('unsubscribe_from_product_price', {email: 'John.Doe@store.com', item_ids: []});
+rnsdk.triggers('unsubscribe_from_product_price', {email: 'John.Doe@store.com', item_ids: []});
 ```
 ### Back in Stock
 ```js
 // Subscribing
-rees46sdk.triggers('subscribe_for_product_available', {email: 'John.Doe@store.com', item: '3323', properties: {fashion_size: "XL"}});
+rnsdk.triggers('subscribe_for_product_available', {email: 'John.Doe@store.com', item: '3323', properties: {fashion_size: "XL"}});
 
 // Unsubscribing from specific products
-rees46sdk.triggers('unsubscribe_from_product_available', {email: 'John.Doe@store.com', item_ids: [3323, 100500, 'ABCDEF']});
+rnsdk.triggers('unsubscribe_from_product_available', {email: 'John.Doe@store.com', item_ids: [3323, 100500, 'ABCDEF']});
 
 // Unsubscribing from all products
-rees46sdk.triggers('unsubscribe_from_product_available', {email: 'John.Doe@store.com', item_ids: []});
+rnsdk.triggers('unsubscribe_from_product_available', {email: 'John.Doe@store.com', item_ids: []});
 ```
 ## 
 
