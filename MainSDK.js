@@ -211,12 +211,22 @@ class MainSDK {
       authStatus === messaging.AuthorizationStatus.PROVISIONAL;
 
     if (enabled) {
-      messaging()
-        .getToken()
-        .then(token => {
-          if (DEBUG) console.log('New token: ', token);
-          this.setPushTokenNotification(token);
-        });
+      if (this.push_type === null && Platform.OS === 'ios') {
+        messaging()
+          .getAPNSToken()
+          .then(token => {
+            if (DEBUG) console.log('New APN token: ', token);
+            this.setPushTokenNotification(token);
+          });
+      } else {
+        messaging()
+          .getToken()
+          .then(token => {
+            if (DEBUG) console.log('New FCM token: ', token);
+            this.setPushTokenNotification(token);
+          });
+      }
+
 
       // Register handler
       messaging().onMessage(async remoteMessage => {
@@ -316,6 +326,8 @@ class MainSDK {
 
     if (AppState.currentState === 'background') {
       localData['date'] = new Date(Date.now() + (5 * 1000));
+      localdata['playSound'] = false;
+      localdata['userInfo']['content-available'] = 1;
       return PushNotification.localNotificationSchedule(localData)
     } else {
       return PushNotification.localNotification(localData);
