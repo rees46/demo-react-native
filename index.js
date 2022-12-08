@@ -8,7 +8,7 @@ export const SDK_PUSH_CHANNEL = 'Rees46';
 class Rees46 extends MainSDK{
   constructor(shop_id, stream, debug = false) {
     super(shop_id, stream, debug);
-    super.init();
+    this.init();
   }
 }
 export default Rees46;
