@@ -41,6 +41,15 @@ Open a terminal window and navigate to the location of the Xcode project for you
 cd ios/
 pod install
 ```
+Disable auto-registration the device
+```json
+// firebase.json
+{
+    "react-native": {
+        "messaging_ios_auto_register_for_remote_messages": false
+    }
+}
+```
 
 On iOS, when a message is received the device silently starts your application in a background state. To get around this problem, you can configure your application. Use this property to conditionally render null ("nothing") if your app is launched in the background:
 ```js
@@ -78,6 +87,7 @@ RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                              moduleName:@"nameOfYourApp"
                                              initialProperties:appProperties];
 ```
+
 #### iOS Background Limitation
 If the iOS Background App Refresh mode is off, your handler configured in setBackgroundMessageHandler will not be triggered.
 ## Android Additional Installation
@@ -263,9 +273,6 @@ rnsdk.search({
   .then((res) => {
     console.log(res);
   })
-  .catch((error) => {
-    console.log(error);
-  });
 ```
 
 ## Product recommendations
@@ -284,9 +291,6 @@ rnsdk.recommend(recommender_code, params)
   .then((res) => {
     console.log(res);
   })
-  .catch((error) => {
-    console.log(error);
-  });
 ```
 
 ## Save profile settings
