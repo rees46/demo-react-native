@@ -125,6 +125,10 @@ SDK is used for several tasks:
 10. Triggers
     1. Price drop
     2. Back in Stock
+11. Segments
+    1. Add user to a segment
+    2. Remove user from a segment
+    3. Get user segments
 
 
 ## Initialization
@@ -189,7 +193,7 @@ rnsdk.track("cart", id);
 // Add product to cart with amount and track recommender
 rnsdk.track("cart", {
   id: PRODUCT_ID,
-  quantity: PRODUCT_QUANTITY,
+  amount: PRODUCT_AMOUNT,
   recommended_by: 'dynamic',
   recommended_code: 'UNIQUE_RECOMMENDER_CODE'
 });
@@ -198,12 +202,12 @@ rnsdk.track("cart", {
 rnsdk.track("cart", [
   {
     id: FIRST_PRODUCT_ID,
-    quantity: FIRST_PRODUCT_QUANTITY
+    amount: FIRST_PRODUCT_AMOUNT
   },
   ...
   {
     id: LAST_PRODUCT_ID,
-    quantity: LAST_PRODUCT_QUANTITY
+    amount: LAST_PRODUCT_AMOUNT
   }
 ]);
 
@@ -219,8 +223,8 @@ rnsdk.track("remove_wish", id);
 // Track purchase (several products)
 rnsdk.track("purchase", {
   products: [
-      {id: 37, price: 318, quantity: 3},
-      {id: 187, price: 5000, quantity: 1}
+      {id: 37, price: 318, amount: 3},
+      {id: 187, price: 5000, amount: 1}
   ],
   order: 'N318',
   order_price: 29999
@@ -419,7 +423,6 @@ rnsdk.triggers('unsubscribe_from_product_available', {email: 'John.Doe@store.com
 // Unsubscribing from all products
 rnsdk.triggers('unsubscribe_from_product_available', {email: 'John.Doe@store.com', item_ids: []});
 ```
-## Subscriptions
 ### Manage subscriptions
 ```js
 // Subscribe user to all kids of email campaigns and SMS
@@ -449,6 +452,69 @@ rnsdk.subscriptions('manage', {
   email_chain: true,
   sms_bulk: true,
   sms_transactional: true
+});
+```
+## Segments
+### Add user to a segment
+```js
+// Using all possible identifiers
+rnsdk.segments('add', {
+  "email": "jane@example.com",
+  "phone": "+10000000000",
+  "segment_id": "SEGMENT_ID"
+});
+
+// With phone only
+rnsdk.segments('add', {
+  "phone": "+10000000000",
+  "segment_id": "SEGMENT_ID"
+});
+
+// With email only
+rnsdk.segments('add', {
+  "email": "jane@example.com",
+  "segment_id": "SEGMENT_ID"
+});
+
+// Without any contacts: `did` is used automatically
+rnsdk.segments('add', {
+  "segment_id": "SEGMENT_ID"
+});
+```
+### Remove user from a segment
+```js
+// Using all possible identifiers
+rnsdk.segments('remove', {
+  "email": "jane@example.com",
+  "phone": "+10000000000",
+  "segment_id": "SEGMENT_ID"
+});
+
+// With phone only
+rnsdk.segments('remove', {
+  "phone": "+10000000000",
+  "segment_id": "SEGMENT_ID"
+});
+
+// With email only
+rnsdk.segments('remove', {
+  "email": "jane@example.com",
+  "segment_id": "SEGMENT_ID"
+});
+
+// Without any contacts: `did` is used automatically
+rnsdk.segments('remove', {
+  "segment_id": "SEGMENT_ID"
+});
+```
+### Get user segments
+```js
+// Using all possible identifiers
+rnsdk.segments('get', function(segments) {
+  // segments (type: array of objects)
+  // each object has the following properties:
+  // "id" as Segment ID
+  // "type" as Segment Type ("dynamic", "static")
 });
 ```
 ## 
