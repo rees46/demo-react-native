@@ -6,7 +6,6 @@ import PushNotification from "react-native-push-notification";
 import PushNotificationIOS from "@react-native-community/push-notification-ios";
 import {SDK_PUSH_CHANNEL} from "./index";
 import Performer from './lib/performer';
-import pushData from "./lib/pushData";
 
 export var DEBUG = false;
 
@@ -354,7 +353,7 @@ class MainSDK  extends Performer {
       }
     });
     PushNotification.popInitialNotification((notification) => {
-      this.onClickPush(notification);
+      if (notification) this.onClickPush(notification);
     });
 
   }
