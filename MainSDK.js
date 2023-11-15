@@ -1,4 +1,13 @@
-import {initLocker, request, setInitLocker, updSeance, getPushData, updPushData, removePushMessage} from './lib/client';
+import {
+  initLocker,
+  request,
+  setInitLocker,
+  updSeance,
+  getPushData,
+  updPushData,
+  removePushMessage,
+  getData,
+} from './lib/client';
 import { convertParams } from './lib/tracker';
 import {AppState, Platform} from 'react-native';
 import messaging from '@react-native-firebase/messaging';
@@ -6,6 +15,7 @@ import PushNotification from "react-native-push-notification";
 import PushNotificationIOS from "@react-native-community/push-notification-ios";
 import {SDK_PUSH_CHANNEL} from "./index";
 import Performer from './lib/performer';
+import DeviceInfo from 'react-native-device-info';
 
 export var DEBUG = false;
 
@@ -41,17 +51,24 @@ class MainSDK  extends Performer {
           streamError.name = 'Init error';
           throw streamError;
         }
+        const storageData = await getData();
+        let response = null;
 
-        const response = await request('init', {
-          params: {
-            shop_id: this.shop_id,
-            stream: this.stream,
-          },
-        });
+        if ( storageData?.did ) {
+          response = storageData;
+        } else {
+          response = await request('init', {
+            params: {
+              did: Platform.OS === 'android' ? await DeviceInfo.getAndroidId() : await DeviceInfo.syncUniqueId() || '',
+              shop_id: this.shop_id,
+              stream: this.stream,
+            },
+          });
+        }
 
         updSeance(response?.did, response?.seance).then(()=>{
           this.initialized = true;
-          this.performQueue()
+          this.performQueue();
         });
       } catch (error) {
         this.initialized = false;
