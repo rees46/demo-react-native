@@ -7,6 +7,7 @@ import {
   updPushData,
   removePushMessage,
   getData,
+  generateSid
 } from './lib/client';
 import { convertParams } from './lib/tracker';
 import {AppState, Platform} from 'react-native';
@@ -56,6 +57,9 @@ class MainSDK  extends Performer {
 
         if ( storageData?.did ) {
           response = storageData;
+          if ( !storageData?.seance || !storageData?.expires || (new Date()).getTime() > storageData?.expires ) {
+            response.sid = response.seance = generateSid();
+          }
         } else {
           response = await request('init', {
             params: {
