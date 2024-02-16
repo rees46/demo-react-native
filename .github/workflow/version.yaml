@@ -1,0 +1,12 @@
+name: Version
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - master
+
+jobs:
+  run:
+    name: Version
+    uses: ./.github/workflows/reusable-version.yaml

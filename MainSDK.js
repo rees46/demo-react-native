@@ -95,7 +95,7 @@ class MainSDK  extends Performer {
     await this.showNotification(remoteMessage);
   };
   pushClickListener = async function (remoteMessage) {
-    this.onClickPush(remoteMessage);
+    await this.onClickPush(remoteMessage);
   };
   track(event, options) {
     this.push((async () => {
@@ -382,7 +382,7 @@ class MainSDK  extends Performer {
       await this.pushBgReceivedListener(remoteMessage);
     });
 
-    //Subscribe to click  notification
+    // Subscribe to click notification
     PushNotification.configure({
       popInitialNotification: true,
       requestPermissions: true,
@@ -390,25 +390,27 @@ class MainSDK  extends Performer {
         await updPushData(notification);
         if (notification?.userInteraction === true) {
           if (!notifyClick) {
-            this.pushClickListener(notification)
+            await this.pushClickListener(notification)
           } else {
-            getPushData(notification.data.message_id).then(data => {
-              this.pushClickListener(data && data.length > 0 ? data[0] : false )
-            })
-
+            const data = await getPushData(notification.data.message_id)
+            await this.pushClickListener(data && data.length > 0 ? data[0] : false)
           }
         }
         notification.finish(PushNotificationIOS.FetchResult.NoData);
       }
     });
-    PushNotification.popInitialNotification((notification) => {
-      if (notification) this.pushClickListener(notification);
+    PushNotification.popInitialNotification(async (notification) => {
+      if (!notification) return;
+
+      if (DEBUG) console.log('Pop initial notification: ' + JSON.stringify(notification))
+
+      await this.pushClickListener(notification);
     });
 
   }
   async showNotification (message){
     if (DEBUG) console.log('Show notification: ', message);
-    updPushData(message);
+    await updPushData(message);
     await this.notificationReceived({
       code: message.data.id,
       type: message.data.type
