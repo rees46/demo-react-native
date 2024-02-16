@@ -1,3 +1,4 @@
+<!-- auto-changelog-above -->
 #### 1.5.7 (May 12, 2022)
 ##### Changes
 * add Trigger subscription methods
