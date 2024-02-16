@@ -402,8 +402,6 @@ class MainSDK  extends Performer {
     PushNotification.popInitialNotification(async (notification) => {
       if (!notification) return;
 
-      if (DEBUG) console.log('Pop initial notification: ' + JSON.stringify(notification))
-
       await this.pushClickListener(notification);
     });
 
