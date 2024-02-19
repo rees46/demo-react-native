@@ -10,3 +10,4 @@ jobs:
   run:
     name: Version
     uses: ./.github/workflows/reusable-version.yaml
+    if: github.event.pull_request.merged == true
