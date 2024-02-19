@@ -56,7 +56,7 @@
     "hideCredit": true,
     "package": true,
     "commitLimit": 5,
-    "ignoreCommitPattern": "(chore(common): publish|chore(common): versions)"
+    "ignoreCommitPattern": "chore\\(common\\): (publish|versions\\))"
   },
   "packageManager": "yarn@4.1.0"
 }
