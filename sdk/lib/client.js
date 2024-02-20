@@ -44,6 +44,7 @@ export async function setInitLocker (val) {
     return error;
   }
 }
+
 export const getSavedPushToken = async () => {
   try {
     return await AsyncStorage.getItem(SDK_STORAGE_NAME + '_push_token');
