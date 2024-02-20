@@ -11,4 +11,5 @@ class Rees46 extends MainSDK{
     this.init();
   }
 }
+
 export default Rees46;

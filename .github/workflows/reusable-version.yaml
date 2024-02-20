@@ -34,7 +34,7 @@ jobs:
         id: find_base_commit
         run: |
           echo "Finding base commit between HEAD and origin/master"
-          base_commit=$(git merge-base origin/master HEAD)
+          base_commit=$(git log --merges -n 2 --format=format:%H | tail -n 1)
           echo "::set-output name=base_commit::$base_commit"
           echo "Base Commit: $base_commit"
 
