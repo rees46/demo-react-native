@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 5
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -30,8 +30,16 @@ jobs:
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
+      - name: Find Base Commit for master
+        id: find_base_commit
+        run: |
+          echo "Finding base commit between HEAD and origin/master"
+          base_commit=$(git merge-base origin/master HEAD)
+          echo "::set-output name=base_commit::$base_commit"
+          echo "Base Commit: $base_commit"
+
       - name: Version
-        run: yarn workspaces foreach --since --no-private --verbose version patch --deferred
+        run: yarn workspaces foreach --since=${{ steps.find_base_commit.outputs.base_commit }} --no-private --verbose version patch --deferred
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
