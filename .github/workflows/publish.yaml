@@ -1,0 +1,17 @@
+name: Publish
+
+on:
+  workflow_run:
+    workflows:
+      - 'Version'
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  run:
+    name: Publish
+    uses: ./.github/workflows/reusable-publish.yaml
+    secrets:
+      npmAuthToken: ${{ secrets.NPM_TOKEN }}
+    if: contains(github.event.head_commit.message, 'versions')
