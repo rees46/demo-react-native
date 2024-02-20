@@ -4,7 +4,8 @@ const path = require('path');
 /**
  * Metro configuration
  * https://facebook.github.io/metro/docs/configuration
- *
+ * With support for monorepo
+ * https://blog.cvoice.io/how-to-setup-a-react-native-monorepo
  * @type {import('metro-config').MetroConfig}
  */
 const config = {
