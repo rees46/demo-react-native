@@ -3,7 +3,8 @@
   "private": true,
   "license": "BSD 3-Clause",
   "workspaces": [
-    "app"
+    "app",
+    "sdk"
   ],
   "devDependencies": {
     "@jest/core": "29.7.0",
