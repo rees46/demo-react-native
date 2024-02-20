@@ -26,7 +26,7 @@ jobs:
           node-version: ${{ inputs.node-version }}
 
       - name: Install
-        run: yarn install
+        run: yarn install --mode=update-lockfile --inline-builds
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
@@ -36,6 +36,7 @@ jobs:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
       - name: Commit changes
+        if: ${{ !env.ACT }}
         uses: EndBug/add-and-commit@v9
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
