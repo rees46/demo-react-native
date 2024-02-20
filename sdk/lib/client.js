@@ -31,8 +31,8 @@ export const initLocker = async () => {
     return error;
   }
 };
-export async function setInitLocker (val) {
 
+export async function setInitLocker (val) {
   try {
     const data = {
       'state': val,

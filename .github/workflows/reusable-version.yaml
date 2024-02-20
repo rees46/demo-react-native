@@ -37,11 +37,11 @@ jobs:
 
       - name: Commit changes
         if: ${{ !env.ACT }}
-        uses: EndBug/add-and-commit@v9
+        uses: planetscale/ghcommit-action@v0.1.33
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         with:
-          author_name: github-actions
-          author_email: github-bot@atls.team
-          message: 'chore(common): versions'
-          add: '*.yml'
+          branch: ${{ github.head_ref || github.ref_name }}
+          repo: ${{ github.repository }}
+          commit_message: 'chore(common): versions'
+          file_pattern: '*.yml'
