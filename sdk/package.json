@@ -1,6 +1,6 @@
 {
   "name": "@rees46/react-native-sdk",
-  "version": "1.6.31",
+  "version": "1.6.32",
   "description": "Rees46 React Native SDK",
   "main": "index.js",
   "repository": {
@@ -55,8 +55,8 @@
   "auto-changelog": {
     "hideCredit": true,
     "package": true,
-    "commitLimit": 5,
-    "ignoreCommitPattern": "chore\\(common\\): (publish|versions\\))"
+    "commitLimit": 0,
+    "ignoreCommitPattern": "publish|version|workflow"
   },
   "packageManager": "yarn@4.1.0"
 }
