@@ -30,7 +30,7 @@ function notifyBgReceive(data: any) {
 }
 
 sdk.track('view', '17520')
-sdk.initPush(false)
+sdk.initPush()
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark'
