@@ -9,7 +9,7 @@ const path = require('path');
  * @type {import('metro-config').MetroConfig}
  */
 const config = {
-  watchFolders: [path.resolve(path.join(__dirname, '..'))],
+  watchFolders: [path.resolve(path.join(__dirname, '../sdk'))],
   transformer: {
     getTransformOptions: async () => ({
         transform: {
