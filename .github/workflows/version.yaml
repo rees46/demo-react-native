@@ -5,9 +5,19 @@ on:
     types: [closed]
     branches:
       - master
+    paths:
+      - '**.js*'
+      - '**.ts*'
+      - '**.css'
+      - '**.scss'
+      - 'package.json'
+      - '**.md'
+      - '**.html'
+      - '**rc'
+      - '**.vue'
 
 jobs:
   run:
     name: Version
-    uses: ./.github/workflows/reusable-version.yaml
-    if: github.event.pull_request.merged == true
+    uses: rees46/workflow/.github/workflows/reusable-version.yaml@master
+    permissions: write-all
