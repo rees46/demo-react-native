@@ -1,0 +1,41 @@
+name: Version and publish
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - master
+    paths:
+      - '**.js*'
+      - '**.ts*'
+      - '**.css'
+      - '**.scss'
+      - 'package.json'
+      - '**.md'
+      - '**.html'
+      - '**rc'
+      - '**.vue'
+  workflow_dispatch:
+
+jobs:
+  version:
+    name: Version
+    if: github.event.pull_request.merged == true
+    uses: rees46/workflow/.github/workflows/reusable-version.yaml@master
+    permissions: write-all
+    with:
+      appId: ${{ vars.PUBLIVERSIONER_ID }}
+    secrets:
+      appSecret: ${{ secrets.PUBLIVERSIONER_SECRET }}
+
+  publish:
+    name: Publish
+    needs: version
+    uses: rees46/workflow/.github/workflows/reusable-publish.yaml@master
+    permissions: write-all
+    with:
+      appId: ${{ vars.PUBLIVERSIONER_ID }}
+    secrets:
+      appSecret: ${{ secrets.PUBLIVERSIONER_SECRET }}
+      npmAuthToken: ${{ secrets.NPM_TOKEN }}
+    if: ${{ needs.version.outputs.committed }}
