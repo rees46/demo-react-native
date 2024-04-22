@@ -127,6 +127,10 @@ export async function convertParams(event, data) {
 				}
 			}
 
+			if( typeof data.custom === 'object' && data.custom !== null && !Array.isArray(data.custom) && Object.keys(data.custom).length > 0 ) {
+        queryParams['custom'] = data.custom
+      }
+
 			if( !data.products || data.products.length === 0 ) {
 				throw new Error(`Track: product list for purchase tracking is empty`);
 			}

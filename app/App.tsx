@@ -30,6 +30,20 @@ function notifyBgReceive(data: any) {
 }
 
 sdk.track('view', '17520')
+
+sdk.track('purchase', {
+  'email': "john.doe@examplemail.com",
+  'phone': "4400114527199",
+  'products': [
+    {'id': 37, 'price': 318, 'quantity': 1},
+  ],
+  'custom': {
+      'date_start': '2024-03-01',
+  },
+  'order': 'N318',
+  'order_price': 29999
+});
+
 sdk.initPush()
 
 function App(): React.JSX.Element {
