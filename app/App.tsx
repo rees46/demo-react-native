@@ -31,6 +31,10 @@ function notifyBgReceive(data: any) {
 
 sdk.track('view', '17520')
 
+sdk.track('wish', 17515);
+sdk.track('wish', [17515, 17520]);
+sdk.track('wish', []);
+
 sdk.track('purchase', {
   'email': "john.doe@examplemail.com",
   'phone': "4400114527199",

@@ -69,6 +69,14 @@ export async function convertParams(event, data) {
 			break;
 
 		case 'wish':
+      if( data instanceof Array ) {
+        data.forEach(buildParams);
+        queryParams['full_wish'] = true;
+      } else {
+        buildParams(data);
+      }
+
+      break;
 		case 'remove_wish':
 			buildParams(data);
 			break;
