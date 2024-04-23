@@ -39,3 +39,39 @@ jobs:
       appSecret: ${{ secrets.PUBLIVERSIONER_SECRET }}
       npmAuthToken: ${{ secrets.NPM_TOKEN }}
     if: ${{ needs.version.outputs.committed }}
+
+  release:
+    if: ${{ needs.version.outputs.committed }}
+    needs: [version, publish]
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.PUBLIVERSIONER_ID }}
+          private-key: ${{ secrets.PUBLIVERSIONER_SECRET }}
+
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          ref: master
+
+      - name: Retrieve version
+        env:
+          FILE_PATH: ./sdk/package.json
+        id: versionName
+        run: |
+          echo "versionName=$(grep '"version"' $FILE_PATH | awk -F ': ' '{ print $2 }' | tr -d '",')" >> $GITHUB_OUTPUT
+
+      - name: Zip source
+        run: |
+          tar -czvf source.tgz ./sdk/*
+
+      - name: Create release
+        env:
+          TAG: ${{ steps.versionName.outputs.versionName }}
+        run: |
+          gh release create "v$TAG" ./source.tgz \
+          --title=$TAG" \
+          --generate-notes
