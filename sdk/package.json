@@ -1,6 +1,6 @@
 {
   "name": "@rees46/react-native-sdk",
-  "version": "1.6.32",
+  "version": "1.6.33",
   "description": "Rees46 React Native SDK",
   "main": "index.js",
   "repository": {
@@ -26,11 +26,11 @@
   },
   "devDependencies": {
     "@testing-library/jest-native": "^4.0.4",
-    "auto-changelog": "2.4.0",
     "jest": "26.4.0",
     "react": "^17.0.2",
     "react-native": "^0.64.0",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^17.0.2",
+    "standard-changelog": "5.0.0"
   },
   "homepage": "https://github.com/Rees46/react-native-sdk#readme",
   "directories": {
@@ -38,7 +38,7 @@
   },
   "scripts": {
     "test": "jest",
-    "changelog": "auto-changelog"
+    "changelog": "standard-changelog --commit-path ."
   },
   "jest": {
     "preset": "react-native",
