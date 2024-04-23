@@ -74,4 +74,4 @@ jobs:
         run: |
           gh release create "v$TAG" ./source.tgz \
           --title=$TAG" \
-          --generate-notes
+          --notes-file=./sdk/CHANGELOG.md
