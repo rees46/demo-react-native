@@ -52,11 +52,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "auto-changelog": {
-    "hideCredit": true,
-    "package": true,
-    "commitLimit": 0,
-    "ignoreCommitPattern": "publish|version|workflow"
-  },
   "packageManager": "yarn@4.1.0"
 }
