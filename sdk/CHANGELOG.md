@@ -1,3 +1,13 @@
+## [1.6.34](https://github.com/Rees46/react-native-sdk/compare/v1.6.33...v1.6.34) (2024-04-23)
+
+
+### Features
+
+* add array to track wish request ([da7bc28](https://github.com/Rees46/react-native-sdk/commit/da7bc284bcb48e2d7deb09718618587aba0e5deb))
+* add custom properties to track purchase request ([d58f5af](https://github.com/Rees46/react-native-sdk/commit/d58f5af7dac7599e08946cd57d12144d8f78ebed))
+
+
+
 ## 1.6.33 (2024-04-23)
 
 
