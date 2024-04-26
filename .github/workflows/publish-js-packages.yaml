@@ -1,41 +1,56 @@
-name: Version and publish
+name: Version, publish and release
 
 on:
   pull_request:
     types: [closed]
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
-  version:
+  run:
     if: github.event.pull_request.merged == true
-    uses: rees46/workflow/.github/workflows/reusable-version-single.yaml@master
-    permissions: write-all
-    with:
-      appId: ${{ vars.PUBLIVERSIONER_ID }}
-      private: true
-      workingDirectory: ./sdk
-    secrets:
-      appSecret: ${{ secrets.PUBLIVERSIONER_SECRET }}
+    defaults:
+      run:
+        working-directory: ./sdk
+    runs-on: ubuntu-latest
 
-  publish:
-    if:  needs.version.outputs.committed == 'true'
-    needs: version
-    uses: rees46/workflow/.github/workflows/reusable-publish-single.yaml@master
-    permissions: write-all
-    with:
-      appId: ${{ vars.PUBLIVERSIONER_ID }}
-      workingDirectory: ./sdk
-    secrets:
-      appSecret: ${{ secrets.PUBLIVERSIONER_SECRET }}
-      npmAuthToken: ${{ secrets.NPM_TOKEN }}
+    steps:
+      - name: Start JS action
+        uses: rees46/workflow/.github/actions/js/start-js@master
+        with:
+          appId: ${{ vars.PUBLIVERSIONER_ID }}
+          appSecret: ${{ secrets.PUBLIVERSIONER_SECRET }}
 
-  release:
-    needs: publish
-    uses: rees46/workflow/.github/workflows/reusable-release-single.yaml@master
-    permissions: write-all
-    with:
-      workingDirectory: ./sdk
-      appId: ${{ vars.PUBLIVERSIONER_ID }}
-    secrets:
-      appSecret: ${{ secrets.PUBLIVERSIONER_SECRET }}
+      - name: Find base commit
+        id: base_commit
+        uses: rees46/workflow/.github/actions/js/find-base-commit-js@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bump version
+        uses: rees46/workflow/.github/actions/js/version-js@master
+        with:
+          checkChanges: 'true'
+          private: 'true'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          baseCommit: ${{ steps.base_commit.outputs.baseCommit }}
+
+      - name: Create changelog and publish
+        uses: rees46/workflow/.github/actions/js/changelog-and-publish-js@master
+        with:
+          baseCommit: ${{ steps.base_commit.outputs.baseCommit }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          onlyChangelog: 'false'
+
+      - name: Commit changes
+        uses: rees46/workflow/.github/actions/js/commit-js@master
+        with:
+          baseCommit: ${{ steps.base_commit.outputs.baseCommit }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create release
+        uses: rees46/workflow/.github/actions/js/release-js@master
+        with:
+          baseCommit: ${{ steps.base_commit.outputs.baseCommit }}
+          token: ${{ secrets.GITHUB_TOKEN }}
