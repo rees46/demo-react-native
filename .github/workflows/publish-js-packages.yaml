@@ -5,45 +5,37 @@ on:
     types: [closed]
     branches:
       - master
-    paths:
-      - '**.js*'
-      - '**.ts*'
-      - '**.css'
-      - '**.scss'
-      - 'package.json'
-      - '**.md'
-      - '**.html'
-      - '**rc'
-      - '**.vue'
-  workflow_dispatch:
 
 jobs:
   version:
     if: github.event.pull_request.merged == true
-    uses: rees46/workflow/.github/workflows/reusable-version.yaml@master
+    uses: rees46/workflow/.github/workflows/reusable-version-single.yaml@master
     permissions: write-all
     with:
       appId: ${{ vars.PUBLIVERSIONER_ID }}
       private: true
+      workingDirectory: ./sdk
     secrets:
       appSecret: ${{ secrets.PUBLIVERSIONER_SECRET }}
 
   publish:
     if:  needs.version.outputs.committed == 'true'
     needs: version
-    uses: rees46/workflow/.github/workflows/reusable-publish.yaml@master
+    uses: rees46/workflow/.github/workflows/reusable-publish-single.yaml@master
     permissions: write-all
     with:
       appId: ${{ vars.PUBLIVERSIONER_ID }}
+      workingDirectory: ./sdk
     secrets:
       appSecret: ${{ secrets.PUBLIVERSIONER_SECRET }}
       npmAuthToken: ${{ secrets.NPM_TOKEN }}
 
   release:
     needs: publish
-    uses: rees46/workflow/.github/workflows/reusable-release.yaml@master
+    uses: rees46/workflow/.github/workflows/reusable-release-single.yaml@master
     permissions: write-all
     with:
+      workingDirectory: ./sdk
       appId: ${{ vars.PUBLIVERSIONER_ID }}
     secrets:
       appSecret: ${{ secrets.PUBLIVERSIONER_SECRET }}

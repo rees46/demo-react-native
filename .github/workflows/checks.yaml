@@ -1,0 +1,9 @@
+name: PR checks
+
+on:
+  pull_request:
+
+jobs:
+  run:
+    uses: rees46/workflow/.github/workflows/reusable-js-checks.yaml@master
+    permissions: write-all
