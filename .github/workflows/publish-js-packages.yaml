@@ -10,9 +10,6 @@ on:
 jobs:
   run:
     if: github.event.pull_request.merged == true
-    defaults:
-      run:
-        working-directory: ./sdk
     runs-on: ubuntu-latest
 
     steps:
@@ -52,5 +49,6 @@ jobs:
       - name: Create release
         uses: rees46/workflow/.github/actions/js/release-js@master
         with:
+          isMonorepo: 'true'
           baseCommit: ${{ steps.base_commit.outputs.baseCommit }}
           token: ${{ secrets.GITHUB_TOKEN }}
