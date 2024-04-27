@@ -32,6 +32,7 @@ jobs:
           private: 'true'
           token: ${{ secrets.GITHUB_TOKEN }}
           baseCommit: ${{ steps.base_commit.outputs.baseCommit }}
+          exclude: '{.,sdkdev}'
 
       - name: Create changelog and publish
         uses: rees46/workflow/.github/actions/js/changelog-and-publish-js@master
@@ -39,12 +40,14 @@ jobs:
           baseCommit: ${{ steps.base_commit.outputs.baseCommit }}
           token: ${{ secrets.GITHUB_TOKEN }}
           onlyChangelog: 'false'
+          exclude: '{.,sdkdev}'
 
       - name: Commit changes
         uses: rees46/workflow/.github/actions/js/commit-js@master
         with:
           baseCommit: ${{ steps.base_commit.outputs.baseCommit }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          exclude: '{.,sdkdev}'
 
       - name: Create release
         uses: rees46/workflow/.github/actions/js/release-js@master
@@ -52,3 +55,4 @@ jobs:
           isMonorepo: 'true'
           baseCommit: ${{ steps.base_commit.outputs.baseCommit }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          exclude: '{.,sdkdev}'
