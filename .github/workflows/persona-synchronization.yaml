@@ -11,7 +11,6 @@ on:
 jobs:
   sync:
     name: Synchronization
-    if: github.event.pull_request.merged == true
     uses: rees46/workflow/.github/workflows/reusable-rn-synchronization.yml@master
     permissions: write-all
     with:
