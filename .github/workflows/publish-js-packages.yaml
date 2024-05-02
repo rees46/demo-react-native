@@ -39,6 +39,7 @@ jobs:
         with:
           baseCommit: ${{ steps.base_commit.outputs.baseCommit }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          npmAuthToken: ${{ secrets.NPM_TOKEN }}
           onlyChangelog: 'false'
           exclude: '{.,sdkdev}'
 
