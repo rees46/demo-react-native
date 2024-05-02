@@ -1,11 +1,12 @@
 name: Sync Repositories Workflow
 
 on:
-  pull_request:
-    types: [closed]
-    branches:
-      - master
-  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Version, publish and release
+    types:
+      - completed
+    workflow_dispatch:
 
 jobs:
   sync:
