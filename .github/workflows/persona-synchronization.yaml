@@ -1,0 +1,20 @@
+name: Sync Repositories Workflow
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  sync:
+    name: Synchronization
+    if: github.event.pull_request.merged == true
+    uses: rees46/workflow/.github/workflows/reusable-rn-synchronization.yml@master
+    permissions: write-all
+    with:
+      changeLookUpPath: 'sdk'
+      appId: ${{ vars.PUBLIVERSIONER_ID }}
+    secrets:
+      appSecret: ${{ secrets.PUBLIVERSIONER_SECRET }}

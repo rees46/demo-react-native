@@ -9,10 +9,9 @@ describe('Track', () => {
     ],
     order: 'N318',
     order_price: 29999
-   };
-
+  };
   describe('Purchase', () => {
-    test('в запрос добавляется "custom", если передать не пустой объект', async () => {
+    test('adds "custom" to the request if a non-empty object is passed', async () => {
       const customProperties = {
         date_start: '2024-03-01',
         date_finish: '2024-03-11',
@@ -20,7 +19,7 @@ describe('Track', () => {
         route: 'NewYork - Madrid - Istanbul',
         route_start: 'NewYork',
         route_finish: 'Istanbul',
-        tour_class: 'Люкс',
+        tour_class: 'Luxury',
         adults_count: 2,
         children_count: 1,
         infants_count: 1,
@@ -36,7 +35,7 @@ describe('Track', () => {
       expect(result).toHaveProperty('order_price', initialEventData.order_price);
       expect(result.items).toEqual(expect.arrayContaining([expect.objectContaining({ id: initialEventData.products[0].id })]));
     });
-    test('в запрос не добавляется "custom", если не передать его при вызове', async () => {
+    test('does not add "custom" to the request if it is not passed', async () => {
       const result = await convertParams('purchase', initialEventData);
 
       expect(result).not.toHaveProperty('custom');
@@ -44,7 +43,7 @@ describe('Track', () => {
       expect(result).toHaveProperty('order_price', initialEventData.order_price);
       expect(result.items).toEqual(expect.arrayContaining([expect.objectContaining({ id: initialEventData.products[0].id })]));
     });
-    test('в запрос не добавляется "custom", если передать невалидное значение', async () => {
+    test('does not add "custom" to the request if an invalid value is passed', async () => {
       const customProperties = [
         {
           date_start: '2024-03-01',
@@ -66,7 +65,7 @@ describe('Track', () => {
   describe('Wish', () => {
     const itemsIds = [111, 222];
 
-    test('в запрос добавляется параметр full_wish только, если передать массив', async () => {
+    test('adds the parameter full_wish only if an array is passed', async () => {
       let result = await convertParams('wish', []);
       expect(result).toHaveProperty('full_wish', true);
 
@@ -76,7 +75,7 @@ describe('Track', () => {
       result = await convertParams('wish', 111);
       expect(result).not.toHaveProperty('full_wish');
     });
-    test('в запрос добавляется items, если передать не пустой массив', async () => {
+    test('adds items if a non-empty array is passed', async () => {
       let result = await convertParams('wish', itemsIds);
       expect(result).toHaveProperty('full_wish', true);
       expect(result.items.length).toBe(2);
@@ -88,7 +87,7 @@ describe('Track', () => {
       expect(result).toHaveProperty('full_wish', true);
       expect(result).not.toHaveProperty('items');
     });
-    test('в запрос добавляется один объект в items, если передать строку, или число', async () => {
+    test('adds one object to items if a string or number is passed', async () => {
       const stringId = '111';
       const numberId = 111;
 
