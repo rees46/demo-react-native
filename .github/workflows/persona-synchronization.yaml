@@ -15,6 +15,5 @@ jobs:
     permissions: write-all
     with:
       changeLookUpPath: 'sdk'
-      appId: ${{ vars.PUBLIVERSIONER_ID }}
     secrets:
-      appSecret: ${{ secrets.PUBLIVERSIONER_SECRET }}
+      token: ${{ secrets.JADE_SMITH_BOT_TOKEN }}
