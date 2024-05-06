@@ -8,11 +8,15 @@ The codebase of the React Native SDK is automatically synchronized with PersonaC
 #### List of files that are synced:
 - All JavaScript files related to the RN SDK;
 - All tests related to the RN SDK;
+- CHANGELOG.md;
+- .npmignore;
+- LICENSE;
+- package.json
 
 #### List of files that are not synced automatically:
 - README.md;
-- CHANGELOG.md;
-- .npmignore
+- .git/
+- .github/
 
 > **_NOTE:_** If it is necessary to change any of the files listed above, they should be modified manually.
 
