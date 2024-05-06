@@ -1,3 +1,14 @@
+## [1.6.39](https://github.com/Rees46/react-native-sdk/compare/v1.6.33...v1.6.39) (2024-05-06)
+
+
+### Features
+
+* add array to track wish request ([da7bc28](https://github.com/Rees46/react-native-sdk/commit/da7bc284bcb48e2d7deb09718618587aba0e5deb))
+* add custom properties to track purchase request ([d58f5af](https://github.com/Rees46/react-native-sdk/commit/d58f5af7dac7599e08946cd57d12144d8f78ebed))
+* add persona-synchronization.yaml ([17ddf01](https://github.com/Rees46/react-native-sdk/commit/17ddf01a79b79cebf898cd7d68c2cc5949b3840f))
+
+
+
 ## [1.6.38](https://github.com/Rees46/react-native-sdk/compare/v1.6.33...v1.6.38) (2024-05-06)
 
 
