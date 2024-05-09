@@ -29,6 +29,7 @@ yarn add react-native-push-notification
 yarn add @react-native-community/push-notification-ios
 yarn add @react-native-firebase/app
 yarn add @react-native-firebase/messaging
+yarn add @notifee/react-native
 ```
 ## iOS Additional Installation
 Open your `/ios/{projectName}/AppDelegate.m` file, and add the following:
