@@ -5,7 +5,8 @@
   "license": "BSD 3-Clause",
   "workspaces": [
     "app",
-    "sdk"
+    "sdk",
+    "demo-app"
   ],
   "devDependencies": {
     "@jest/core": "29.7.0",
