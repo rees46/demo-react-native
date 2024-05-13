@@ -1,76 +1,12 @@
-## [1.6.40](https://github.com/Rees46/react-native-sdk/compare/v1.6.33...v1.6.40) (2024-05-08)
+## [1.7.1](https://github.com/rees46/mobile/compare/v1.6.33...v1.7.1) (2024-05-09)
 
 
 ### Features
 
-* add array to track wish request ([da7bc28](https://github.com/Rees46/react-native-sdk/commit/da7bc284bcb48e2d7deb09718618587aba0e5deb))
-* add custom properties to track purchase request ([d58f5af](https://github.com/Rees46/react-native-sdk/commit/d58f5af7dac7599e08946cd57d12144d8f78ebed))
-* add persona-synchronization.yaml ([17ddf01](https://github.com/Rees46/react-native-sdk/commit/17ddf01a79b79cebf898cd7d68c2cc5949b3840f))
-
-
-
-## [1.6.39](https://github.com/Rees46/react-native-sdk/compare/v1.6.33...v1.6.39) (2024-05-06)
-
-
-### Features
-
-* add array to track wish request ([da7bc28](https://github.com/Rees46/react-native-sdk/commit/da7bc284bcb48e2d7deb09718618587aba0e5deb))
-* add custom properties to track purchase request ([d58f5af](https://github.com/Rees46/react-native-sdk/commit/d58f5af7dac7599e08946cd57d12144d8f78ebed))
-* add persona-synchronization.yaml ([17ddf01](https://github.com/Rees46/react-native-sdk/commit/17ddf01a79b79cebf898cd7d68c2cc5949b3840f))
-
-
-
-## [1.6.38](https://github.com/Rees46/react-native-sdk/compare/v1.6.33...v1.6.38) (2024-05-06)
-
-
-### Features
-
-* add array to track wish request ([da7bc28](https://github.com/Rees46/react-native-sdk/commit/da7bc284bcb48e2d7deb09718618587aba0e5deb))
-* add custom properties to track purchase request ([d58f5af](https://github.com/Rees46/react-native-sdk/commit/d58f5af7dac7599e08946cd57d12144d8f78ebed))
-* add persona-synchronization.yaml ([17ddf01](https://github.com/Rees46/react-native-sdk/commit/17ddf01a79b79cebf898cd7d68c2cc5949b3840f))
-
-
-
-## [1.6.37](https://github.com/Rees46/react-native-sdk/compare/v1.6.33...v1.6.37) (2024-05-03)
-
-
-### Features
-
-* add array to track wish request ([da7bc28](https://github.com/Rees46/react-native-sdk/commit/da7bc284bcb48e2d7deb09718618587aba0e5deb))
-* add custom properties to track purchase request ([d58f5af](https://github.com/Rees46/react-native-sdk/commit/d58f5af7dac7599e08946cd57d12144d8f78ebed))
-* add persona-synchronization.yaml ([17ddf01](https://github.com/Rees46/react-native-sdk/commit/17ddf01a79b79cebf898cd7d68c2cc5949b3840f))
-
-
-
-## [1.6.36](https://github.com/Rees46/react-native-sdk/compare/v1.6.33...v1.6.36) (2024-05-02)
-
-
-### Features
-
-* add array to track wish request ([da7bc28](https://github.com/Rees46/react-native-sdk/commit/da7bc284bcb48e2d7deb09718618587aba0e5deb))
-* add custom properties to track purchase request ([d58f5af](https://github.com/Rees46/react-native-sdk/commit/d58f5af7dac7599e08946cd57d12144d8f78ebed))
-* add persona-synchronization.yaml ([17ddf01](https://github.com/Rees46/react-native-sdk/commit/17ddf01a79b79cebf898cd7d68c2cc5949b3840f))
-
-
-
-## [1.6.35](https://github.com/Rees46/react-native-sdk/compare/v1.6.33...v1.6.35) (2024-05-02)
-
-
-### Features
-
-* add array to track wish request ([da7bc28](https://github.com/Rees46/react-native-sdk/commit/da7bc284bcb48e2d7deb09718618587aba0e5deb))
-* add custom properties to track purchase request ([d58f5af](https://github.com/Rees46/react-native-sdk/commit/d58f5af7dac7599e08946cd57d12144d8f78ebed))
-* add persona-synchronization.yaml ([17ddf01](https://github.com/Rees46/react-native-sdk/commit/17ddf01a79b79cebf898cd7d68c2cc5949b3840f))
-
-
-
-## [1.6.34](https://github.com/Rees46/react-native-sdk/compare/v1.6.33...v1.6.34) (2024-04-23)
-
-
-### Features
-
-* add array to track wish request ([da7bc28](https://github.com/Rees46/react-native-sdk/commit/da7bc284bcb48e2d7deb09718618587aba0e5deb))
-* add custom properties to track purchase request ([d58f5af](https://github.com/Rees46/react-native-sdk/commit/d58f5af7dac7599e08946cd57d12144d8f78ebed))
+* add array to track wish request ([da7bc28](https://github.com/rees46/mobile/commit/da7bc284bcb48e2d7deb09718618587aba0e5deb))
+* add custom properties to track purchase request ([d58f5af](https://github.com/rees46/mobile/commit/d58f5af7dac7599e08946cd57d12144d8f78ebed))
+* add persona-synchronization.yaml ([17ddf01](https://github.com/rees46/mobile/commit/17ddf01a79b79cebf898cd7d68c2cc5949b3840f))
+* BREAKING CHANGE use @notifee/react-native for requesting alarm permissions ([0e23088](https://github.com/rees46/mobile/commit/0e23088394e050aea1847206e3b372c8cd16c23b))
 
 
 
@@ -83,12 +19,6 @@
 * connect sdk to dev app ([48788fa](https://github.com/Rees46/react-native-sdk/commit/48788fa9b393207266e55d62ee3f3cfb8954b525))
 * move to sdk ([85a1e1e](https://github.com/Rees46/react-native-sdk/commit/85a1e1e6aa64d0ae962a5daa1c6eeab6af5fb1fe))
 * swap auto-changelog for standard-changelog ([ec88b46](https://github.com/Rees46/react-native-sdk/commit/ec88b46a239c11e8e889eef34d9cee4e92243ac4))
-
-
-
-### Changelog
-
-All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
 #### 1.6.31
 
