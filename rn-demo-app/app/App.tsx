@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {TabLayoutFragment} from './fragments';
+import {TabLayoutFragment} from '@fragments/tab-layout';
 import {SDKProvider} from './stores';
 
 function App(): React.JSX.Element {

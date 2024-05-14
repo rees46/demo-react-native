@@ -1,8 +1,10 @@
 import React, {useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {useSDK} from '../../../stores';
+import {ProductSearch} from '../../../fragments/product-search';
+import {BlankElement} from '@fragments/blank-fragment';
 
-const CatalogScreen = () => {
+const HomeScreen = () => {
   const sdk = useSDK();
 
   useEffect(() => {
@@ -11,7 +13,9 @@ const CatalogScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text>Catalog Screen</Text>
+      <ProductSearch />
+      <BlankElement />
+      <Text>Home Screen</Text>
     </View>
   );
 };
@@ -25,4 +29,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CatalogScreen;
+export default HomeScreen;

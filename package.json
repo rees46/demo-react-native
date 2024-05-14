@@ -9,7 +9,10 @@
   "workspaces": [
     "app",
     "sdk",
-    "rn-demo-app"
+    "rn-demo-app/app",
+    "rn-demo-app/fragments/**/*",
+    "rn-demo-app/screens/**/*",
+    "rn-demo-app/stores/**/*"
   ],
   "devDependencies": {
     "@jest/core": "29.7.0",

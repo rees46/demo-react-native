@@ -1864,6 +1864,40 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fragments/blank-fragment@workspace:0.0.1, @fragments/blank-fragment@workspace:rn-demo-app/fragments/blank":
+  version: 0.0.0-use.local
+  resolution: "@fragments/blank-fragment@workspace:rn-demo-app/fragments/blank"
+  dependencies:
+    "@types/react": "npm:^18.2.6"
+    react: "npm:18.2.0"
+    react-native: "npm:0.74.1"
+  languageName: unknown
+  linkType: soft
+
+"@fragments/new-blank-fragment@workspace:0.0.1, @fragments/new-blank-fragment@workspace:rn-demo-app/fragments/new-blank":
+  version: 0.0.0-use.local
+  resolution: "@fragments/new-blank-fragment@workspace:rn-demo-app/fragments/new-blank"
+  dependencies:
+    "@types/react": "npm:^18.2.6"
+    react: "npm:18.2.0"
+    react-native: "npm:0.74.1"
+  languageName: unknown
+  linkType: soft
+
+"@fragments/tab-layout@workspace:0.0.1, @fragments/tab-layout@workspace:rn-demo-app/fragments/tab-layout":
+  version: 0.0.0-use.local
+  resolution: "@fragments/tab-layout@workspace:rn-demo-app/fragments/tab-layout"
+  dependencies:
+    "@react-navigation/bottom-tabs": "npm:6.5.20"
+    "@screens/home": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    "@types/react-native-vector-icons": "npm:6.4.18"
+    react: "npm:18.2.0"
+    react-native: "npm:0.74.1"
+    react-native-vector-icons: "npm:10.1.0"
+  languageName: unknown
+  linkType: soft
+
 "@hapi/hoek@npm:^9.0.0, @hapi/hoek@npm:^9.3.0":
   version: 9.3.0
   resolution: "@hapi/hoek@npm:9.3.0"
@@ -3737,6 +3771,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@screens/home@workspace:0.0.1, @screens/home@workspace:rn-demo-app/screens/home":
+  version: 0.0.0-use.local
+  resolution: "@screens/home@workspace:rn-demo-app/screens/home"
+  dependencies:
+    "@fragments/blank-fragment": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    react: "npm:18.2.0"
+    react-native: "npm:0.74.1"
+  languageName: unknown
+  linkType: soft
+
 "@sideway/address@npm:^4.1.5":
   version: 4.1.5
   resolution: "@sideway/address@npm:4.1.5"
@@ -3802,6 +3847,25 @@ __metadata:
   checksum: 10c0/a77bead4d71b40d6f7f9a3ad66a00269aa2c078260f43f594b8aed4676c6c4e7c2b642d4b8e34df314e1c971589455f7b4267ab831bf44ffdccc0bda599850ad
   languageName: node
   linkType: hard
+
+"@stores/rn-sdk@workspace:rn-demo-app/stores/rn-sdk":
+  version: 0.0.0-use.local
+  resolution: "@stores/rn-sdk@workspace:rn-demo-app/stores/rn-sdk"
+  dependencies:
+    "@notifee/react-native": "npm:7.8.2"
+    "@react-native-async-storage/async-storage": "npm:1.23.1"
+    "@react-native-community/push-notification-ios": "npm:1.11.0"
+    "@react-native-firebase/app": "npm:19.2.2"
+    "@react-native-firebase/messaging": "npm:19.2.2"
+    "@rees46/react-native-sdk": "npm:1.7.1"
+    "@types/react": "npm:^18.2.6"
+    "@types/react-native-push-notification": "npm:8"
+    react: "npm:18.2.0"
+    react-native: "npm:0.74.1"
+    react-native-device-info: "npm:10.13.2"
+    react-native-push-notification: "npm:8.1.1"
+  languageName: unknown
+  linkType: soft
 
 "@testing-library/jest-native@npm:^4.0.4":
   version: 4.0.13
@@ -3946,11 +4010,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 20.12.11
-  resolution: "@types/node@npm:20.12.11"
+  version: 20.12.12
+  resolution: "@types/node@npm:20.12.12"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/efaa7b08c50ba6e6982ac7d531ba08d5935539ba76e954807df1ff9382a319ead7e003ccaca5ad7cf33ecf53f212507f7c1f2794bd2ff52df6365fef21f6e1fb
+  checksum: 10c0/f374b763c744e8f16e4f38cf6e2c0eef31781ec9228c9e43a6f267880fea420fab0a238b59f10a7cb3444e49547c5e3785787e371fc242307310995b21988812
   languageName: node
   linkType: hard
 
@@ -5384,9 +5448,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001587":
-  version: 1.0.30001617
-  resolution: "caniuse-lite@npm:1.0.30001617"
-  checksum: 10c0/711702501063968b2807d1a8f40981e66f45eb8962968b4b84c70392dc804cee62845e8e391e9749f78ff41ca48be2a4a7a38620c44af526b5e03bc3c7a1bc0a
+  version: 1.0.30001618
+  resolution: "caniuse-lite@npm:1.0.30001618"
+  checksum: 10c0/2e33e5e854fb6365566e2ff5ba866c877cd08ca278a2c06b9bc3346a884fc1336a0674c2a0003e7ee7a1a64e90f167ec4ad08ea14d12da5926017c92c99f82a5
   languageName: node
   linkType: hard
 
@@ -5887,11 +5951,11 @@ __metadata:
   linkType: hard
 
 "core-js-compat@npm:^3.31.0, core-js-compat@npm:^3.34.0, core-js-compat@npm:^3.36.1":
-  version: 3.37.0
-  resolution: "core-js-compat@npm:3.37.0"
+  version: 3.37.1
+  resolution: "core-js-compat@npm:3.37.1"
   dependencies:
     browserslist: "npm:^4.23.0"
-  checksum: 10c0/ca6ba7d200f7a4a850fd5cba58b40ab78139d3f301bad7b53816eafe0cfb000523e72882069ddaba440794b950ed101225668bf7b97b73e54a5e3384a8215e03
+  checksum: 10c0/4e2da9c900f2951a57947af7aeef4d16f2c75d7f7e966c0d0b62953f65225003ade5e84d3ae98847f65b24c109c606821d9dc925db8ca418fb761e7c81963c2a
   languageName: node
   linkType: hard
 
@@ -6297,9 +6361,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.668":
-  version: 1.4.763
-  resolution: "electron-to-chromium@npm:1.4.763"
-  checksum: 10c0/8787092e2c237699d145860564635391eb856febad3d2ab171a12c671788d1aee323a42822daf0fc8ee49d615b85776470c97ecf212edeb64794f1ffc171f842
+  version: 1.4.767
+  resolution: "electron-to-chromium@npm:1.4.767"
+  checksum: 10c0/b1d217091a7bc1a24560c8de6703d18bcf0e952bbf12a3f1c470b5306d5446b2493be5edb1c6b8e43ff3c1feadde8d5a3e1a50b0acd542bae2fc260402fef79b
   languageName: node
   linkType: hard
 
@@ -11820,10 +11884,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picocolors@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "picocolors@npm:1.0.0"
-  checksum: 10c0/20a5b249e331c14479d94ec6817a182fd7a5680debae82705747b2db7ec50009a5f6648d0621c561b0572703f84dbef0858abcbd5856d3c5511426afcb1961f7
+"picocolors@npm:^1.0.0, picocolors@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "picocolors@npm:1.0.1"
+  checksum: 10c0/c63cdad2bf812ef0d66c8db29583802355d4ca67b9285d846f390cc15c2f6ccb94e8cb7eb6a6e97fc5990a6d3ad4ae42d86c84d3146e667c739a4234ed50d400
   languageName: node
   linkType: hard
 
@@ -12905,13 +12969,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rn-demo-app@workspace:rn-demo-app":
+"rn-demo-app@workspace:rn-demo-app/app":
   version: 0.0.0-use.local
-  resolution: "rn-demo-app@workspace:rn-demo-app"
+  resolution: "rn-demo-app@workspace:rn-demo-app/app"
   dependencies:
     "@babel/core": "npm:7.24.5"
     "@babel/preset-env": "npm:^7.20.0"
     "@babel/runtime": "npm:^7.20.0"
+    "@fragments/blank-fragment": "workspace:0.0.1"
+    "@fragments/new-blank-fragment": "workspace:0.0.1"
+    "@fragments/tab-layout": "workspace:0.0.1"
     "@notifee/react-native": "npm:7.8.2"
     "@react-native-async-storage/async-storage": "npm:1.23.1"
     "@react-native-community/push-notification-ios": "npm:1.11.0"
@@ -14489,16 +14556,16 @@ __metadata:
   linkType: hard
 
 "update-browserslist-db@npm:^1.0.13":
-  version: 1.0.15
-  resolution: "update-browserslist-db@npm:1.0.15"
+  version: 1.0.16
+  resolution: "update-browserslist-db@npm:1.0.16"
   dependencies:
     escalade: "npm:^3.1.2"
-    picocolors: "npm:^1.0.0"
+    picocolors: "npm:^1.0.1"
   peerDependencies:
     browserslist: ">= 4.21.0"
   bin:
     update-browserslist-db: cli.js
-  checksum: 10c0/c5f67dc68aba9a37701a14199e57e22f20c579411d386f47b4d81f6e3f06fd3ec256310594f4f9d6b01bc1cfb93cb1ebb1a1da70c4fa28720bc1d030f55bb8a1
+  checksum: 10c0/5995399fc202adbb51567e4810e146cdf7af630a92cc969365a099150cb00597e425cc14987ca7080b09a4d0cfd2a3de53fbe72eebff171aed7f9bb81f9bf405
   languageName: node
   linkType: hard
 
