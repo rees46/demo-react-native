@@ -3,6 +3,9 @@
   "version": "0.0.3",
   "private": true,
   "license": "BSD 3-Clause",
+  "scripts": {
+    "clean": "rm -rf node_modules **/node_modules **/**/node_modules **/**/**/node_modules && rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clean"
+  },
   "workspaces": [
     "app",
     "sdk",
