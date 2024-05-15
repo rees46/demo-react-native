@@ -1,0 +1,18 @@
+{
+  "translation": {
+    "screens.home.title": "Home",
+    "screens.cart.title": "Cart",
+    "screens.catalog.title": "Catalog",
+    "screens.profile.title": "Profile",
+    "fragments.recommendations-block.title": "Recommendations",
+    "fragments.product-search.placeholder": "Search",
+    "fragments.product-search.products-title": "Products",
+    "fragments.product-search.categories-title": "Categories",
+    "fragments.product-search.total": "Total products found: {value}",
+    "fragments.product-search.empty":  "Items not found",
+    "fragments.tab-layout.home": "Home",
+    "fragments.tab-layout.cart": "Cart",
+    "fragments.tab-layout.catalog": "Catalog",
+    "fragments.tab-layout.profile": "Profile"
+  }
+}

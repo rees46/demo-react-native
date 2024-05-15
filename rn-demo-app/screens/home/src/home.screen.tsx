@@ -4,9 +4,11 @@ import { useSDK } from "@stores/rn-sdk";
 import { ProductSearch } from "@fragments/product-search";
 import { RecommendationsBlock } from "@fragments/recommendations-block";
 import { styles } from "./home.styles";
+import { useTranslation } from "react-i18next";
 
 const HomeScreen = () => {
   const sdk = useSDK();
+  const { t } = useTranslation();
 
   useEffect(() => {
     sdk.track("wish", []);
@@ -15,7 +17,7 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <ProductSearch />
-      <Text>Home Screen</Text>
+      <Text>{t("screens.home.title")}</Text>
       <RecommendationsBlock />
     </View>
   );

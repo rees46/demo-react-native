@@ -7,6 +7,7 @@
     "@stores/rn-sdk": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "react": "18.2.0",
+    "react-i18next": "14.1.1",
     "react-native": "0.74.1",
     "react-native-paper": "5.12.3",
     "react-native-vector-icons": "10.1.0"

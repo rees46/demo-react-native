@@ -6,25 +6,25 @@ import CatalogScreen from "@screens/catalog";
 
 export const screenOptions: ScreenOptions[] = [
   {
-    name: "Home",
+    name: "home",
     component: HomeScreen,
     focusedIconName: "home",
     unfocusedIconName: "home-outline",
   },
   {
-    name: "Catalog",
+    name: "catalog",
     component: CatalogScreen,
     focusedIconName: "list",
     unfocusedIconName: "list-outline",
   },
   {
-    name: "Cart",
+    name: "cart",
     component: CartScreen,
     focusedIconName: "cart",
     unfocusedIconName: "cart-outline",
   },
   {
-    name: "Profile",
+    name: "profile",
     component: ProfileScreen,
     focusedIconName: "people",
     unfocusedIconName: "people-outline",

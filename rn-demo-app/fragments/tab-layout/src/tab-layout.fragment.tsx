@@ -2,10 +2,13 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { screenOptions } from "./tab-layout.constants";
 import Icon from "react-native-vector-icons/Ionicons";
+import { useTranslation } from "react-i18next";
 
 const Tab = createBottomTabNavigator();
 
 export const TabLayoutFragment = () => {
+  const { t } = useTranslation();
+
   return (
     <Tab.Navigator
       screenOptions={{
@@ -17,7 +20,7 @@ export const TabLayoutFragment = () => {
         ({ name, component, unfocusedIconName, focusedIconName }) => (
           <Tab.Screen
             key={name}
-            name={name}
+            name={t(`fragments.tab-layout.${name}`)}
             component={component}
             options={{
               tabBarIcon: ({ focused, color }) => {

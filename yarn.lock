@@ -1747,7 +1747,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.20.0, @babel/runtime@npm:^7.8.4":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.20.0, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.23.9, @babel/runtime@npm:^7.8.4":
   version: 7.24.5
   resolution: "@babel/runtime@npm:7.24.5"
   dependencies:
@@ -1885,6 +1885,7 @@ __metadata:
     "@types/react-native-vector-icons": "npm:6.4.18"
     "@ui/condition": "workspace:0.0.1"
     react: "npm:18.2.0"
+    react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
     react-native-paper: "npm:5.12.3"
     react-native-vector-icons: "npm:10.1.0"
@@ -1899,6 +1900,7 @@ __metadata:
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react: "npm:18.2.0"
+    react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   languageName: unknown
   linkType: soft
@@ -1915,6 +1917,7 @@ __metadata:
     "@types/react": "npm:^18.2.6"
     "@types/react-native-vector-icons": "npm:6.4.18"
     react: "npm:18.2.0"
+    react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
     react-native-vector-icons: "npm:10.1.0"
   languageName: unknown
@@ -3806,6 +3809,7 @@ __metadata:
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react: "npm:18.2.0"
+    react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   languageName: unknown
   linkType: soft
@@ -3817,6 +3821,7 @@ __metadata:
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react: "npm:18.2.0"
+    react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   languageName: unknown
   linkType: soft
@@ -3830,6 +3835,7 @@ __metadata:
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react: "npm:18.2.0"
+    react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   languageName: unknown
   linkType: soft
@@ -3841,6 +3847,7 @@ __metadata:
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react: "npm:18.2.0"
+    react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   languageName: unknown
   linkType: soft
@@ -8066,6 +8073,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"html-parse-stringify@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "html-parse-stringify@npm:3.0.1"
+  dependencies:
+    void-elements: "npm:3.1.0"
+  checksum: 10c0/159292753d48b84d216d61121054ae5a33466b3db5b446e2ffc093ac077a411a99ce6cbe0d18e55b87cf25fa3c5a86c4d8b130b9719ec9b66623259000c72c15
+  languageName: node
+  linkType: hard
+
 "http-cache-semantics@npm:^4.1.1":
   version: 4.1.1
   resolution: "http-cache-semantics@npm:4.1.1"
@@ -8147,6 +8163,15 @@ __metadata:
   bin:
     husky: lib/bin.js
   checksum: 10c0/6722591771c657b91a1abb082e07f6547eca79144d678e586828ae806499d90dce2a6aee08b66183fd8b085f19d20e0990a2ad396961746b4c8bd5bdb619d668
+  languageName: node
+  linkType: hard
+
+"i18next@npm:23.11.4":
+  version: 23.11.4
+  resolution: "i18next@npm:23.11.4"
+  dependencies:
+    "@babel/runtime": "npm:^7.23.2"
+  checksum: 10c0/e43d6f839f75a78f05503780bfc8b867825ed2f5a5c85f6abf5b88b76021df6e5865c93fc45b715fc1d1563be96ec3565d04684779bc01a9a9ea1d389b61044c
   languageName: node
   linkType: hard
 
@@ -12266,6 +12291,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-i18next@npm:14.1.1":
+  version: 14.1.1
+  resolution: "react-i18next@npm:14.1.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.23.9"
+    html-parse-stringify: "npm:^3.0.1"
+  peerDependencies:
+    i18next: ">= 23.2.3"
+    react: ">= 16.8.0"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 10c0/d6da148d5dd1635f57d7a85bdd5c6e1f1404982112358a5efa9f6f47d505a00e4650237d5fc94b4381dcb336c134d500268a7157e06e2b2f0293a2bcd7ec2812
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.12.0 || ^17.0.0 || ^18.0.0, react-is@npm:^18.0.0, react-is@npm:^18.2.0":
   version: 18.3.1
   resolution: "react-is@npm:18.3.1"
@@ -12322,6 +12365,20 @@ __metadata:
   peerDependencies:
     react-native: "*"
   checksum: 10c0/6dd27bed19b194e33bfa3d18162e4dd12f652285d2327d21fd0c4fd0d2e5ddf53df05abbc3117118bbcb4226feb916f4d05a8469a038ee281a99cf11ea57eadc
+  languageName: node
+  linkType: hard
+
+"react-native-localize@npm:3.1.0":
+  version: 3.1.0
+  resolution: "react-native-localize@npm:3.1.0"
+  peerDependencies:
+    react: ">=18.1.0"
+    react-native: ">=0.70.0"
+    react-native-macos: ">=0.70.0"
+  peerDependenciesMeta:
+    react-native-macos:
+      optional: true
+  checksum: 10c0/0a98c3d05d090c34ada84756d1a0341f313f3f73d1281686fe8c972d5d4e996172a5ff053b8908153e396729755bf576c24ed46886afe82438fa465e010def7a
   languageName: node
   linkType: hard
 
@@ -13106,11 +13163,14 @@ __metadata:
     babel-jest: "npm:^29.6.3"
     eslint: "npm:^8.19.0"
     eslint-plugin-prettier: "npm:5.1.3"
+    i18next: "npm:23.11.4"
     jest: "npm:^29.6.3"
     prettier: "npm:2.8.8"
     react: "npm:18.2.0"
+    react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
     react-native-device-info: "npm:10.13.2"
+    react-native-localize: "npm:3.1.0"
     react-native-paper: "npm:5.12.3"
     react-native-push-notification: "npm:8.1.1"
     react-native-safe-area-context: "npm:4.10.1"
@@ -14815,6 +14875,13 @@ __metadata:
   version: 1.0.1
   resolution: "vlq@npm:1.0.1"
   checksum: 10c0/a8ec5c95d747c840198f20b4973327fa317b98397f341e7a2f352bfcf385aeb73c0eea01cc6d406c20169298375397e259efc317aec53c8ffc001ec998204aed
+  languageName: node
+  linkType: hard
+
+"void-elements@npm:3.1.0":
+  version: 3.1.0
+  resolution: "void-elements@npm:3.1.0"
+  checksum: 10c0/0b8686f9f9aa44012e9bd5eabf287ae0cde409b9a2854c5a2335cb83920c957668ac5876e3f0d158dd424744ac411a7270e64128556b451ed3bec875ef18534d
   languageName: node
   linkType: hard
 
