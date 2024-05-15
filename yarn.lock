@@ -1803,6 +1803,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@callstack/react-theme-provider@npm:^3.0.9":
+  version: 3.0.9
+  resolution: "@callstack/react-theme-provider@npm:3.0.9"
+  dependencies:
+    deepmerge: "npm:^3.2.0"
+    hoist-non-react-statics: "npm:^3.3.0"
+  peerDependencies:
+    react: ">=16.3.0"
+  checksum: 10c0/ac3463383c35e1a4ef813e869532bf86d3e83a4c211b00616c832a5f08545f04f07f769726664b5010124575af2cf8152aabfb7d4c37a64b22ae8a7f9490df0e
+  languageName: node
+  linkType: hard
+
 "@cnakazawa/watch@npm:^1.0.3":
   version: 1.0.4
   resolution: "@cnakazawa/watch@npm:1.0.4"
@@ -1864,20 +1876,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fragments/blank-fragment@workspace:0.0.1, @fragments/blank-fragment@workspace:rn-demo-app/fragments/blank":
+"@fragments/product-search@workspace:0.0.1, @fragments/product-search@workspace:rn-demo-app/fragments/product-search":
   version: 0.0.0-use.local
-  resolution: "@fragments/blank-fragment@workspace:rn-demo-app/fragments/blank"
+  resolution: "@fragments/product-search@workspace:rn-demo-app/fragments/product-search"
   dependencies:
+    "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
+    "@types/react-native-vector-icons": "npm:6.4.18"
+    "@ui/condition": "workspace:0.0.1"
     react: "npm:18.2.0"
     react-native: "npm:0.74.1"
+    react-native-paper: "npm:5.12.3"
+    react-native-vector-icons: "npm:10.1.0"
   languageName: unknown
   linkType: soft
 
-"@fragments/new-blank-fragment@workspace:0.0.1, @fragments/new-blank-fragment@workspace:rn-demo-app/fragments/new-blank":
+"@fragments/recommendations-block@workspace:0.0.1, @fragments/recommendations-block@workspace:rn-demo-app/fragments/recommendations-block":
   version: 0.0.0-use.local
-  resolution: "@fragments/new-blank-fragment@workspace:rn-demo-app/fragments/new-blank"
+  resolution: "@fragments/recommendations-block@workspace:rn-demo-app/fragments/recommendations-block"
   dependencies:
+    "@globals/constants": "workspace:0.0.1"
+    "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react: "npm:18.2.0"
     react-native: "npm:0.74.1"
@@ -1889,12 +1908,21 @@ __metadata:
   resolution: "@fragments/tab-layout@workspace:rn-demo-app/fragments/tab-layout"
   dependencies:
     "@react-navigation/bottom-tabs": "npm:6.5.20"
+    "@screens/cart": "workspace:0.0.1"
+    "@screens/catalog": "workspace:0.0.1"
     "@screens/home": "workspace:0.0.1"
+    "@screens/profile": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     "@types/react-native-vector-icons": "npm:6.4.18"
     react: "npm:18.2.0"
     react-native: "npm:0.74.1"
     react-native-vector-icons: "npm:10.1.0"
+  languageName: unknown
+  linkType: soft
+
+"@globals/constants@workspace:0.0.1, @globals/constants@workspace:rn-demo-app/globals/constants":
+  version: 0.0.0-use.local
+  resolution: "@globals/constants@workspace:rn-demo-app/globals/constants"
   languageName: unknown
   linkType: soft
 
@@ -3771,11 +3799,46 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@screens/cart@workspace:0.0.1, @screens/cart@workspace:rn-demo-app/screens/cart":
+  version: 0.0.0-use.local
+  resolution: "@screens/cart@workspace:rn-demo-app/screens/cart"
+  dependencies:
+    "@stores/rn-sdk": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    react: "npm:18.2.0"
+    react-native: "npm:0.74.1"
+  languageName: unknown
+  linkType: soft
+
+"@screens/catalog@workspace:0.0.1, @screens/catalog@workspace:rn-demo-app/screens/catalog":
+  version: 0.0.0-use.local
+  resolution: "@screens/catalog@workspace:rn-demo-app/screens/catalog"
+  dependencies:
+    "@stores/rn-sdk": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    react: "npm:18.2.0"
+    react-native: "npm:0.74.1"
+  languageName: unknown
+  linkType: soft
+
 "@screens/home@workspace:0.0.1, @screens/home@workspace:rn-demo-app/screens/home":
   version: 0.0.0-use.local
   resolution: "@screens/home@workspace:rn-demo-app/screens/home"
   dependencies:
-    "@fragments/blank-fragment": "workspace:0.0.1"
+    "@fragments/product-search": "workspace:0.0.1"
+    "@fragments/recommendations-block": "workspace:0.0.1"
+    "@stores/rn-sdk": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    react: "npm:18.2.0"
+    react-native: "npm:0.74.1"
+  languageName: unknown
+  linkType: soft
+
+"@screens/profile@workspace:0.0.1, @screens/profile@workspace:rn-demo-app/screens/profile":
+  version: 0.0.0-use.local
+  resolution: "@screens/profile@workspace:rn-demo-app/screens/profile"
+  dependencies:
+    "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react: "npm:18.2.0"
     react-native: "npm:0.74.1"
@@ -3848,10 +3911,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stores/rn-sdk@workspace:rn-demo-app/stores/rn-sdk":
+"@stores/rn-sdk@workspace:0.0.1, @stores/rn-sdk@workspace:rn-demo-app/stores/rn-sdk":
   version: 0.0.0-use.local
   resolution: "@stores/rn-sdk@workspace:rn-demo-app/stores/rn-sdk"
   dependencies:
+    "@globals/constants": "workspace:0.0.1"
     "@notifee/react-native": "npm:7.8.2"
     "@react-native-async-storage/async-storage": "npm:1.23.1"
     "@react-native-community/push-notification-ios": "npm:1.11.0"
@@ -4411,6 +4475,16 @@ __metadata:
   checksum: 10c0/7395f69739cfa1cb83c1fb2fad30afa2a814756367302fb4facd5893eff66abc807e8d8f63eba94ed3b0fe0c1c996ac9a1680bcbf0f83717acedc3f2bb724fbf
   languageName: node
   linkType: hard
+
+"@ui/condition@workspace:0.0.1, @ui/condition@workspace:rn-demo-app/ui/condition":
+  version: 0.0.0-use.local
+  resolution: "@ui/condition@workspace:rn-demo-app/ui/condition"
+  dependencies:
+    "@types/react": "npm:^18.2.6"
+    react: "npm:18.2.0"
+    react-native: "npm:0.74.1"
+  languageName: unknown
+  linkType: soft
 
 "@ungap/structured-clone@npm:^1.2.0":
   version: 1.2.0
@@ -5695,7 +5769,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-convert@npm:^1.9.0":
+"color-convert@npm:^1.9.0, color-convert@npm:^1.9.3":
   version: 1.9.3
   resolution: "color-convert@npm:1.9.3"
   dependencies:
@@ -5727,13 +5801,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-string@npm:^1.9.0":
+"color-string@npm:^1.6.0, color-string@npm:^1.9.0":
   version: 1.9.1
   resolution: "color-string@npm:1.9.1"
   dependencies:
     color-name: "npm:^1.0.0"
     simple-swizzle: "npm:^0.2.2"
   checksum: 10c0/b0bfd74c03b1f837f543898b512f5ea353f71630ccdd0d66f83028d1f0924a7d4272deb278b9aef376cacf1289b522ac3fb175e99895283645a2dc3a33af2404
+  languageName: node
+  linkType: hard
+
+"color@npm:^3.1.2":
+  version: 3.2.1
+  resolution: "color@npm:3.2.1"
+  dependencies:
+    color-convert: "npm:^1.9.3"
+    color-string: "npm:^1.6.0"
+  checksum: 10c0/39345d55825884c32a88b95127d417a2c24681d8b57069413596d9fcbb721459ef9d9ec24ce3e65527b5373ce171b73e38dbcd9c830a52a6487e7f37bf00e83c
   languageName: node
   linkType: hard
 
@@ -7938,6 +8022,15 @@ __metadata:
   dependencies:
     source-map: "npm:^0.7.3"
   checksum: 10c0/d772faa712f97ec009cb8de1f6b2dc26af491d1baaea92af7649fbb9cafd60a9c7a499de32d23ba7606e501147bfb2daf14e477c967f11e3de8a1e41ecf626c7
+  languageName: node
+  linkType: hard
+
+"hoist-non-react-statics@npm:^3.3.0":
+  version: 3.3.2
+  resolution: "hoist-non-react-statics@npm:3.3.2"
+  dependencies:
+    react-is: "npm:^16.7.0"
+  checksum: 10c0/fe0889169e845d738b59b64badf5e55fa3cf20454f9203d1eb088df322d49d4318df774828e789898dcb280e8a5521bb59b3203385662ca5e9218a6ca5820e74
   languageName: node
   linkType: hard
 
@@ -12180,7 +12273,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.13.0, react-is@npm:^16.13.1":
+"react-is@npm:^16.13.0, react-is@npm:^16.13.1, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: 10c0/33977da7a5f1a287936a0c85639fec6ca74f4f15ef1e59a6bc20338fc73dc69555381e211f7a3529b8150a1f71e4225525b41b60b52965bda53ce7d47377ada1
@@ -12229,6 +12322,22 @@ __metadata:
   peerDependencies:
     react-native: "*"
   checksum: 10c0/6dd27bed19b194e33bfa3d18162e4dd12f652285d2327d21fd0c4fd0d2e5ddf53df05abbc3117118bbcb4226feb916f4d05a8469a038ee281a99cf11ea57eadc
+  languageName: node
+  linkType: hard
+
+"react-native-paper@npm:5.12.3":
+  version: 5.12.3
+  resolution: "react-native-paper@npm:5.12.3"
+  dependencies:
+    "@callstack/react-theme-provider": "npm:^3.0.9"
+    color: "npm:^3.1.2"
+    use-latest-callback: "npm:^0.1.5"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-safe-area-context: "*"
+    react-native-vector-icons: "*"
+  checksum: 10c0/0adc7c5dd3e47af357b9e0b700e9663d32d9e6e47cba10b26af76a4a63197bda47e5295d6bdc031904039aaa12b875a135fa512c323ea44d4c1ae97d68e1d356
   languageName: node
   linkType: hard
 
@@ -12976,8 +13085,6 @@ __metadata:
     "@babel/core": "npm:7.24.5"
     "@babel/preset-env": "npm:^7.20.0"
     "@babel/runtime": "npm:^7.20.0"
-    "@fragments/blank-fragment": "workspace:0.0.1"
-    "@fragments/new-blank-fragment": "workspace:0.0.1"
     "@fragments/tab-layout": "workspace:0.0.1"
     "@notifee/react-native": "npm:7.8.2"
     "@react-native-async-storage/async-storage": "npm:1.23.1"
@@ -12991,6 +13098,7 @@ __metadata:
     "@react-navigation/bottom-tabs": "npm:6.5.20"
     "@react-navigation/native": "npm:6.1.17"
     "@rees46/react-native-sdk": "npm:1.7.1"
+    "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     "@types/react-native-push-notification": "npm:8"
     "@types/react-native-vector-icons": "npm:6.4.18"
@@ -13003,6 +13111,7 @@ __metadata:
     react: "npm:18.2.0"
     react-native: "npm:0.74.1"
     react-native-device-info: "npm:10.13.2"
+    react-native-paper: "npm:5.12.3"
     react-native-push-notification: "npm:8.1.1"
     react-native-safe-area-context: "npm:4.10.1"
     react-native-screens: "npm:3.31.1"
@@ -14595,7 +14704,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-latest-callback@npm:^0.1.9":
+"use-latest-callback@npm:^0.1.5, use-latest-callback@npm:^0.1.9":
   version: 0.1.9
   resolution: "use-latest-callback@npm:0.1.9"
   peerDependencies:

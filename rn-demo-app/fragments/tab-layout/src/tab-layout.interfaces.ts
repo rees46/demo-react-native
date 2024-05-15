@@ -1,12 +1,12 @@
-import {ComponentType} from 'react';
+import { ComponentType } from "react";
 
 export interface ScreenOptions {
   name: string;
   component: ComponentType<any>;
-  focusedIconName: 'home' | 'filter' | 'cart' | 'people';
+  focusedIconName: "home" | "list" | "cart" | "people";
   unfocusedIconName:
-    | 'home-outline'
-    | 'filter-outline'
-    | 'cart-outline'
-    | 'people-outline';
+    | "home-outline"
+    | "list-outline"
+    | "cart-outline"
+    | "people-outline";
 }

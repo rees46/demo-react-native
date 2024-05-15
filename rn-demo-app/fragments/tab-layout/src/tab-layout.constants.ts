@@ -1,5 +1,8 @@
-import { ScreenOptions } from "./tab-layout.interfaces.ts";
+import { ScreenOptions } from "./tab-layout.interfaces";
 import HomeScreen from "@screens/home";
+import ProfileScreen from "@screens/profile";
+import CartScreen from "@screens/cart";
+import CatalogScreen from "@screens/catalog";
 
 export const screenOptions: ScreenOptions[] = [
   {
@@ -10,19 +13,19 @@ export const screenOptions: ScreenOptions[] = [
   },
   {
     name: "Catalog",
-    component: HomeScreen,
-    focusedIconName: "filter",
-    unfocusedIconName: "filter-outline",
+    component: CatalogScreen,
+    focusedIconName: "list",
+    unfocusedIconName: "list-outline",
   },
   {
     name: "Cart",
-    component: HomeScreen,
+    component: CartScreen,
     focusedIconName: "cart",
     unfocusedIconName: "cart-outline",
   },
   {
     name: "Profile",
-    component: HomeScreen,
+    component: ProfileScreen,
     focusedIconName: "people",
     unfocusedIconName: "people-outline",
   },

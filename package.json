@@ -12,7 +12,9 @@
     "rn-demo-app/app",
     "rn-demo-app/fragments/**/*",
     "rn-demo-app/screens/**/*",
-    "rn-demo-app/stores/**/*"
+    "rn-demo-app/stores/**/*",
+    "rn-demo-app/ui/**/*",
+    "rn-demo-app/globals/**/*"
   ],
   "devDependencies": {
     "@jest/core": "29.7.0",

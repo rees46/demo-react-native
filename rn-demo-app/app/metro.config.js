@@ -13,6 +13,9 @@ const config = {
     path.resolve(path.join(__dirname, '../../sdk')),
     path.resolve(__dirname, '../fragments'),
     path.resolve(__dirname, '../screens'),
+    path.resolve(__dirname, '../stores'),
+    path.resolve(__dirname, '../ui'),
+    path.resolve(__dirname, '../globals'),
   ],
   transformer: {
     getTransformOptions: async () => ({
