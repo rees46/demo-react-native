@@ -1,32 +1,53 @@
-import React from "react";
-import { View, Text, FlatList } from "react-native";
+import React, {useRef} from "react";
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+} from "react-native";
 import { Searchbar } from "react-native-paper";
 import { useProductSearch } from "./campaing-services";
-import { useFocus } from "./utils/use-focus.hook";
 import { Condition } from "@ui/condition";
 import { styles } from "./product-search.styles";
 import { useTranslation } from "react-i18next";
+import { appRoutes } from '@navigations/constants'
 
-export const ProductSearch = () => {
+export const ProductSearch = ({ navigation }) => {
   const { searchQuery, setSearchQuery, totalResults, items, categories } =
     useProductSearch();
-  const { focus: searchFocus, ...focusedProps } = useFocus();
   const { t } = useTranslation();
+  const searchbarRef = useRef(null);
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
   };
 
+  const handleProductPress = (productId: string) => {
+    navigation.navigate(appRoutes.Product.name, { productId });
+  };
+
+  const handleCategoryPress = (categoryId: string) => {
+    navigation.navigate(appRoutes.Category.name, { categoryId });
+  };
+
+  const handleOutsidePress = () => {
+    if (searchbarRef.current && searchbarRef.current.isFocused()) {
+      searchbarRef.current.blur();
+    }
+  };
+
   return (
+    <TouchableWithoutFeedback onPress={handleOutsidePress}>
     <View style={styles.container}>
       <Searchbar
+        ref={searchbarRef}
         placeholder={t("fragments.product-search.placeholder")}
         onChangeText={handleSearch}
         value={searchQuery}
         style={styles.searchbar}
-        {...focusedProps}
       />
-      <Condition condition={searchFocus}>
+      <Condition condition={!!searchbarRef.current && searchbarRef.current.isFocused()}>
         <View>
           <Condition condition={!!totalResults}>
             <View>
@@ -36,12 +57,12 @@ export const ProductSearch = () => {
               <FlatList
                 data={items}
                 renderItem={({ item }) => (
-                  <View style={styles.item}>
+                  <TouchableOpacity style={styles.item} onPress={() => handleProductPress(item.id)}>
                     <Text style={styles.itemName}>{item.name}</Text>
                     <Text style={styles.itemPrice}>
                       {item.price_full_formatted}
                     </Text>
-                  </View>
+                  </TouchableOpacity>
                 )}
                 keyExtractor={(item) => item.id}
                 style={styles.itemsList}
@@ -52,13 +73,15 @@ export const ProductSearch = () => {
               <FlatList
                 data={categories}
                 renderItem={({ item }) => (
-                  <Text style={styles.category}>{item.name}</Text>
+                  <TouchableOpacity onPress={() => handleCategoryPress(item.id)}>
+                    <Text style={styles.category}>{item.name}</Text>
+                  </TouchableOpacity>
                 )}
                 keyExtractor={(item) => item.id}
                 style={styles.categoriesList}
               />
               <Text style={styles.totalResults}>
-                {t("fragments.product-search.total", { value: totalResults })}
+                {t("fragments.product-search.total", { total: totalResults })}
               </Text>
             </View>
           </Condition>
@@ -70,5 +93,6 @@ export const ProductSearch = () => {
         </View>
       </Condition>
     </View>
+    </TouchableWithoutFeedback>
   );
 };

@@ -1,0 +1,15 @@
+{
+  "name": "@navigations/screen-stack-framgent",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "private": true,
+  "dependencies": {
+    "@react-navigation/native-stack": "6.9.26",
+    "react": "18.2.0",
+    "react-i18next": "14.1.1",
+    "react-native": "0.74.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.6"
+  }
+}

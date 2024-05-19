@@ -4,15 +4,19 @@
     "screens.cart.title": "Cart",
     "screens.catalog.title": "Catalog",
     "screens.profile.title": "Profile",
+    "screens.product.title": "Product",
+    "screens.category.title": "Category",
     "fragments.recommendations-block.title": "Recommendations",
     "fragments.product-search.placeholder": "Search",
     "fragments.product-search.products-title": "Products",
     "fragments.product-search.categories-title": "Categories",
-    "fragments.product-search.total": "Total products found: {value}",
-    "fragments.product-search.empty":  "Items not found",
-    "fragments.tab-layout.home": "Home",
-    "fragments.tab-layout.cart": "Cart",
-    "fragments.tab-layout.catalog": "Catalog",
-    "fragments.tab-layout.profile": "Profile"
+    "fragments.product-search.total": "Total products found: {{total}}",
+    "fragments.product-search.empty":  "Products not found",
+    "navigations.titles.home": "Home",
+    "navigations.titles.cart": "Cart",
+    "navigations.titles.catalog": "Catalog",
+    "navigations.titles.profile": "Profile",
+    "navigations.titles.category": "Category",
+    "navigations.titles.product": "Product"
   }
 }

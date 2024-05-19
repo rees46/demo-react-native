@@ -1,2 +1,2 @@
-export * from './sdk.provider.tsx';
-export * from './useSDK.hook.ts';
+export * from './sdk.provider';
+export * from './useSDK.hook';

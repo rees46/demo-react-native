@@ -1880,6 +1880,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/product-search@workspace:rn-demo-app/fragments/product-search"
   dependencies:
+    "@navigations/constants": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     "@types/react-native-vector-icons": "npm:6.4.18"
@@ -1902,24 +1903,6 @@ __metadata:
     react: "npm:18.2.0"
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/tab-layout@workspace:0.0.1, @fragments/tab-layout@workspace:rn-demo-app/fragments/tab-layout":
-  version: 0.0.0-use.local
-  resolution: "@fragments/tab-layout@workspace:rn-demo-app/fragments/tab-layout"
-  dependencies:
-    "@react-navigation/bottom-tabs": "npm:6.5.20"
-    "@screens/cart": "workspace:0.0.1"
-    "@screens/catalog": "workspace:0.0.1"
-    "@screens/home": "workspace:0.0.1"
-    "@screens/profile": "workspace:0.0.1"
-    "@types/react": "npm:^18.2.6"
-    "@types/react-native-vector-icons": "npm:6.4.18"
-    react: "npm:18.2.0"
-    react-i18next: "npm:14.1.1"
-    react-native: "npm:0.74.1"
-    react-native-vector-icons: "npm:10.1.0"
   languageName: unknown
   linkType: soft
 
@@ -2512,6 +2495,58 @@ __metadata:
   checksum: 10c0/3d1ce6ebc69df9682a5a8896b414c6537e428a1d68b02fcc8363b04284a8ca0df04d0ee3013132252ab14f2527bc13bea6526a912ecb5658f0e39fd2860b4df4
   languageName: node
   linkType: hard
+
+"@navigations/constants@workspace:0.0.1, @navigations/constants@workspace:rn-demo-app/navigations/constants":
+  version: 0.0.0-use.local
+  resolution: "@navigations/constants@workspace:rn-demo-app/navigations/constants"
+  languageName: unknown
+  linkType: soft
+
+"@navigations/home-stack@workspace:0.0.1, @navigations/home-stack@workspace:rn-demo-app/navigations/home-stack":
+  version: 0.0.0-use.local
+  resolution: "@navigations/home-stack@workspace:rn-demo-app/navigations/home-stack"
+  dependencies:
+    "@navigations/constants": "workspace:0.0.1"
+    "@navigations/screen-stack-framgent": "workspace:0.0.1"
+    "@screens/category": "workspace:0.0.1"
+    "@screens/home": "workspace:0.0.1"
+    "@screens/product": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    react: "npm:18.2.0"
+    react-native: "npm:0.74.1"
+  languageName: unknown
+  linkType: soft
+
+"@navigations/screen-stack-framgent@workspace:0.0.1, @navigations/screen-stack-framgent@workspace:rn-demo-app/navigations/screen-stack-fragment":
+  version: 0.0.0-use.local
+  resolution: "@navigations/screen-stack-framgent@workspace:rn-demo-app/navigations/screen-stack-fragment"
+  dependencies:
+    "@react-navigation/native-stack": "npm:6.9.26"
+    "@types/react": "npm:^18.2.6"
+    react: "npm:18.2.0"
+    react-i18next: "npm:14.1.1"
+    react-native: "npm:0.74.1"
+  languageName: unknown
+  linkType: soft
+
+"@navigations/tab-layout@workspace:0.0.1, @navigations/tab-layout@workspace:rn-demo-app/navigations/tabs":
+  version: 0.0.0-use.local
+  resolution: "@navigations/tab-layout@workspace:rn-demo-app/navigations/tabs"
+  dependencies:
+    "@navigations/constants": "workspace:0.0.1"
+    "@navigations/home-stack": "workspace:0.0.1"
+    "@react-navigation/bottom-tabs": "npm:6.5.20"
+    "@screens/cart": "workspace:0.0.1"
+    "@screens/catalog": "workspace:0.0.1"
+    "@screens/profile": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    "@types/react-native-vector-icons": "npm:6.4.18"
+    react: "npm:18.2.0"
+    react-i18next: "npm:14.1.1"
+    react-native: "npm:0.74.1"
+    react-native-vector-icons: "npm:10.1.0"
+  languageName: unknown
+  linkType: soft
 
 "@nicolo-ribaudo/eslint-scope-5-internals@npm:5.1.1-v1":
   version: 5.1.1-v1
@@ -3826,12 +3861,36 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@screens/category@workspace:0.0.1, @screens/category@workspace:rn-demo-app/screens/category":
+  version: 0.0.0-use.local
+  resolution: "@screens/category@workspace:rn-demo-app/screens/category"
+  dependencies:
+    "@stores/rn-sdk": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    react: "npm:18.2.0"
+    react-i18next: "npm:14.1.1"
+    react-native: "npm:0.74.1"
+  languageName: unknown
+  linkType: soft
+
 "@screens/home@workspace:0.0.1, @screens/home@workspace:rn-demo-app/screens/home":
   version: 0.0.0-use.local
   resolution: "@screens/home@workspace:rn-demo-app/screens/home"
   dependencies:
     "@fragments/product-search": "workspace:0.0.1"
     "@fragments/recommendations-block": "workspace:0.0.1"
+    "@stores/rn-sdk": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    react: "npm:18.2.0"
+    react-i18next: "npm:14.1.1"
+    react-native: "npm:0.74.1"
+  languageName: unknown
+  linkType: soft
+
+"@screens/product@workspace:0.0.1, @screens/product@workspace:rn-demo-app/screens/product":
+  version: 0.0.0-use.local
+  resolution: "@screens/product@workspace:rn-demo-app/screens/product"
+  dependencies:
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react: "npm:18.2.0"
@@ -13142,7 +13201,7 @@ __metadata:
     "@babel/core": "npm:7.24.5"
     "@babel/preset-env": "npm:^7.20.0"
     "@babel/runtime": "npm:^7.20.0"
-    "@fragments/tab-layout": "workspace:0.0.1"
+    "@navigations/tab-layout": "workspace:0.0.1"
     "@notifee/react-native": "npm:7.8.2"
     "@react-native-async-storage/async-storage": "npm:1.23.1"
     "@react-native-community/push-notification-ios": "npm:1.11.0"

@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import { View, Text } from "react-native";
+import {View, Text} from "react-native";
 import { useSDK } from "@stores/rn-sdk";
 import { ProductSearch } from "@fragments/product-search";
 import { RecommendationsBlock } from "@fragments/recommendations-block";
 import { styles } from "./home.styles";
 import { useTranslation } from "react-i18next";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const sdk = useSDK();
   const { t } = useTranslation();
 
@@ -16,7 +16,7 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <ProductSearch />
+      <ProductSearch navigation={navigation} />
       <Text>{t("screens.home.title")}</Text>
       <RecommendationsBlock />
     </View>

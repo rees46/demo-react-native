@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 const Tab = createBottomTabNavigator();
 
-export const TabLayoutFragment = () => {
+export const TabLayoutNavigation = () => {
   const { t } = useTranslation();
 
   return (
@@ -17,12 +17,13 @@ export const TabLayoutFragment = () => {
       }}
     >
       {screenOptions.map(
-        ({ name, component, unfocusedIconName, focusedIconName }) => (
+        ({ name, title, component, unfocusedIconName, focusedIconName }) => (
           <Tab.Screen
             key={name}
-            name={t(`fragments.tab-layout.${name}`)}
+            name={name}
             component={component}
             options={{
+                title: t(`navigations.titles.${title}`),
               tabBarIcon: ({ focused, color }) => {
                 return (
                   <Icon
