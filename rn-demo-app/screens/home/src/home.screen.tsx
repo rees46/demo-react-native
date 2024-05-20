@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import {View, Text} from "react-native";
+import { View, Text, Button } from "react-native";
 import { useSDK } from "@stores/rn-sdk";
 import { ProductSearch } from "@fragments/product-search";
 import { RecommendationsBlock } from "@fragments/recommendations-block";
@@ -16,7 +16,7 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <ProductSearch navigation={navigation} />
+      <ProductSearch navigation={navigation} viewOnly />
       <Text>{t("screens.home.title")}</Text>
       <RecommendationsBlock />
     </View>

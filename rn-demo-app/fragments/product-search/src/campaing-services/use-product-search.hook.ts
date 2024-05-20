@@ -30,7 +30,7 @@ export const useProductSearch: UseProductSearchType = () => {
             setCategories(res?.categories ?? []);
           }
         } catch (error) {
-          console.error("Error fetching search results:", error);
+          console.error("Error fetching product-search results:", error);
         }
       } else {
         if (isSubscribed) {

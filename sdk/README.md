@@ -178,13 +178,13 @@ rnsdk.track("view", {
   recommended_code: 'UNIQUE_RECOMMENDER_CODE'
 });
 
-// View product, after user clicked on search results
+// View product, after user clicked on product-search results
 rnsdk.track("view", {
   id: PRODUCT_ID,
   recommended_by: 'full_search',
   recommended_code: QUERY_STRING
 });
-// ... or instant search dropdown
+// ... or instant product-search dropdown
 rnsdk.track("view", {
   id: PRODUCT_ID,
   recommended_by: 'instant_search',
@@ -237,8 +237,8 @@ rnsdk.track("purchase", {
   order_price: 29999
 });
 
-// Track user search
-rnsdk.track("search", "This is a search example");
+// Track user product-search
+rnsdk.track("search", "This is a product-search example");
 ```
 
 ## Track custom event

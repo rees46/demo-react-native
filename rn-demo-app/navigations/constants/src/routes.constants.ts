@@ -24,5 +24,9 @@ export const appRoutes = {
   },
   Product: {
     name: 'Product',
+  },
+  ProductSearch: {
+    name: 'ProductSearch',
+    groupName: 'ProductSearchStack',
   }
 } as const

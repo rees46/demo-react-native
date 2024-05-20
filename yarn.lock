@@ -2507,10 +2507,25 @@ __metadata:
   resolution: "@navigations/home-stack@workspace:rn-demo-app/navigations/home-stack"
   dependencies:
     "@navigations/constants": "workspace:0.0.1"
+    "@navigations/product-search-stack": "workspace:0.0.1"
     "@navigations/screen-stack-framgent": "workspace:0.0.1"
-    "@screens/category": "workspace:0.0.1"
     "@screens/home": "workspace:0.0.1"
     "@screens/product": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    react: "npm:18.2.0"
+    react-native: "npm:0.74.1"
+  languageName: unknown
+  linkType: soft
+
+"@navigations/product-search-stack@workspace:0.0.1, @navigations/product-search-stack@workspace:rn-demo-app/navigations/product-search-stack":
+  version: 0.0.0-use.local
+  resolution: "@navigations/product-search-stack@workspace:rn-demo-app/navigations/product-search-stack"
+  dependencies:
+    "@navigations/constants": "workspace:0.0.1"
+    "@navigations/screen-stack-framgent": "workspace:0.0.1"
+    "@screens/category": "workspace:0.0.1"
+    "@screens/product": "workspace:0.0.1"
+    "@screens/product-search": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react: "npm:18.2.0"
     react-native: "npm:0.74.1"
@@ -3879,10 +3894,22 @@ __metadata:
   dependencies:
     "@fragments/product-search": "workspace:0.0.1"
     "@fragments/recommendations-block": "workspace:0.0.1"
+    "@navigations/constants": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react: "npm:18.2.0"
     react-i18next: "npm:14.1.1"
+    react-native: "npm:0.74.1"
+  languageName: unknown
+  linkType: soft
+
+"@screens/product-search@workspace:0.0.1, @screens/product-search@workspace:rn-demo-app/screens/product-search":
+  version: 0.0.0-use.local
+  resolution: "@screens/product-search@workspace:rn-demo-app/screens/product-search"
+  dependencies:
+    "@fragments/product-search": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    react: "npm:18.2.0"
     react-native: "npm:0.74.1"
   languageName: unknown
   linkType: soft
@@ -5588,9 +5615,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001587":
-  version: 1.0.30001618
-  resolution: "caniuse-lite@npm:1.0.30001618"
-  checksum: 10c0/2e33e5e854fb6365566e2ff5ba866c877cd08ca278a2c06b9bc3346a884fc1336a0674c2a0003e7ee7a1a64e90f167ec4ad08ea14d12da5926017c92c99f82a5
+  version: 1.0.30001620
+  resolution: "caniuse-lite@npm:1.0.30001620"
+  checksum: 10c0/3783117143fbdc98c1b91a579d0f2a7bcee7008f322ba7a2bf56a6c3d105400772c7ed8026840b4ea909ec7bf254bcc36532f2ce1b1a1240b00d0335da39b7ec
   languageName: node
   linkType: hard
 
@@ -6511,9 +6538,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.668":
-  version: 1.4.767
-  resolution: "electron-to-chromium@npm:1.4.767"
-  checksum: 10c0/b1d217091a7bc1a24560c8de6703d18bcf0e952bbf12a3f1c470b5306d5446b2493be5edb1c6b8e43ff3c1feadde8d5a3e1a50b0acd542bae2fc260402fef79b
+  version: 1.4.774
+  resolution: "electron-to-chromium@npm:1.4.774"
+  checksum: 10c0/dc957ee574d14838abd16f48fb3e4bd069bf47807fe02144b850d4903265810e17abc5800a361941f787bd78692cf4f81eab70046a6757eb39e44c91ff520dd4
   languageName: node
   linkType: hard
 
@@ -7342,13 +7369,13 @@ __metadata:
   linkType: hard
 
 "fast-xml-parser@npm:^4.0.12, fast-xml-parser@npm:^4.2.4":
-  version: 4.3.6
-  resolution: "fast-xml-parser@npm:4.3.6"
+  version: 4.4.0
+  resolution: "fast-xml-parser@npm:4.4.0"
   dependencies:
     strnum: "npm:^1.0.5"
   bin:
     fxparser: src/cli/cli.js
-  checksum: 10c0/9ebe2ac142c6978cae423c39c2a9b561edb76be584317d578768ed4a006a61fc0e83abf8c6fe31029139c4ad15ea1f2e7b6720ba9e6eda0e5266d7f2770fb079
+  checksum: 10c0/ce32fad713471a40bea67959894168f297a5dd0aba64b89a2abc71a4fec0b1ae1d49c2dd8d8719ca8beeedf477824358c8a486b360b9f3ef12abc2e355d11318
   languageName: node
   linkType: hard
 

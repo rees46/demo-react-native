@@ -30,6 +30,12 @@ export interface ProductType {
   fashion_wear_type?: string;
 }
 
+export interface ItemType {
+  id: string;
+  name: string;
+  price_full_formatted?: string;
+}
+
 interface QueryType {
   name: string;
   url: string;
@@ -45,4 +51,9 @@ export interface SearchResponse {
   queries: QueryType[];
   requests_count: number;
   search_query: string;
+}
+
+export interface ProductSearchProps {
+  navigation: any;
+  viewOnly?: boolean;
 }
