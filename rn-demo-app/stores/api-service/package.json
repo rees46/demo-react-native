@@ -1,14 +1,12 @@
 {
-  "name": "@fragments/recommendations-block",
+  "name": "@stores/api-service",
   "version": "0.0.1",
   "main": "src/index.ts",
   "private": true,
   "dependencies": {
     "@globals/constants": "workspace:0.0.1",
-    "@stores/api-service": "workspace:0.0.1",
-    "@stores/rn-sdk": "workspace:0.0.1",
+    "axios": "1.7.0",
     "react": "18.2.0",
-    "react-i18next": "14.1.1",
     "react-native": "0.74.1"
   },
   "devDependencies": {

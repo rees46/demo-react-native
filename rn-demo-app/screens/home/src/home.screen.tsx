@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import { View, Text, Button } from "react-native";
+import { ScrollView } from "react-native";
 import { useSDK } from "@stores/rn-sdk";
 import { ProductSearch } from "@fragments/product-search";
 import { RecommendationsBlock } from "@fragments/recommendations-block";
 import { styles } from "./home.styles";
 import { useTranslation } from "react-i18next";
+import { recommenderCodes } from "./home.constants";
 
 const HomeScreen = ({ navigation }) => {
   const sdk = useSDK();
@@ -15,11 +16,12 @@ const HomeScreen = ({ navigation }) => {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <ProductSearch navigation={navigation} viewOnly />
-      <Text>{t("screens.home.title")}</Text>
-      <RecommendationsBlock />
-    </View>
+      {recommenderCodes.map((code) => (
+        <RecommendationsBlock recommenderCode={code} key={code} />
+      ))}
+    </ScrollView>
   );
 };
 
