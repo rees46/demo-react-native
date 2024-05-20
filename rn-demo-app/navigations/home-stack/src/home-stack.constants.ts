@@ -1,7 +1,8 @@
 import HomeScreen from "@screens/home";
 import ProductScreen from "@screens/product";
-import ProductSearchStack from "@navigations/product-search-stack";
 import { appRoutes } from "@navigations/constants";
+import CategoryScreen from "@screens/category";
+import ProductSearchScreen from "@screens/product-search";
 
 export const homeStackParams = [
   {
@@ -13,7 +14,7 @@ export const homeStackParams = [
   },
   {
     name: appRoutes.ProductSearch.name,
-    component: ProductSearchStack,
+    component: ProductSearchScreen,
     options: {
       headerShown: false,
     },
@@ -21,5 +22,9 @@ export const homeStackParams = [
   {
     name: appRoutes.Product.name,
     component: ProductScreen,
+  },
+  {
+    name: appRoutes.Category.name,
+    component: CategoryScreen,
   },
 ];

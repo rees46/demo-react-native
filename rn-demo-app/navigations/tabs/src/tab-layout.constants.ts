@@ -1,14 +1,14 @@
 import { ScreenOptions } from "./tab-layout.interfaces";
-import HomeStack from '@navigations/home-stack'
+import HomeStack from "@navigations/home-stack";
 import ProfileScreen from "@screens/profile";
 import CartScreen from "@screens/cart";
 import CatalogScreen from "@screens/catalog";
-import {appRoutes} from '@navigations/constants'
+import { appRoutes } from "@navigations/constants";
 
 export const screenOptions: ScreenOptions[] = [
   {
     name: appRoutes.Home.tabName,
-    title: 'home',
+    title: "home",
     component: HomeStack,
     focusedIconName: "home",
     unfocusedIconName: "home-outline",
@@ -29,7 +29,7 @@ export const screenOptions: ScreenOptions[] = [
   },
   {
     name: appRoutes.Profile.tabName,
-    title: 'profile',
+    title: "profile",
     component: ProfileScreen,
     focusedIconName: "people",
     unfocusedIconName: "people-outline",

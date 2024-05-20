@@ -1,1 +1,1 @@
-export * from "./recommendation-item.fragment";
+export * from "./recommendation-item.component";

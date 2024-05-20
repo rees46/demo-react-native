@@ -1,32 +1,31 @@
 export const appRoutes = {
   Home: {
-    name: 'Home',
-    tabName: 'HomeTab',
-    groupName: 'HomeStack',
+    name: "Home",
+    tabName: "HomeTab",
+    groupName: "HomeStack",
   },
   Catalog: {
-    name: 'Catalog',
-    tabName: 'CatalogTab',
-    groupName: 'CatalogStack',
+    name: "Catalog",
+    tabName: "CatalogTab",
+    groupName: "CatalogStack",
   },
   Cart: {
-    name: 'Cart',
-    tabName: 'CartTab',
-    groupName: 'CartStack',
+    name: "Cart",
+    tabName: "CartTab",
+    groupName: "CartStack",
   },
   Profile: {
-    name: 'Profile',
-    tabName: 'ProfileTab',
-    groupName: 'ProfileStack',
+    name: "Profile",
+    tabName: "ProfileTab",
+    groupName: "ProfileStack",
   },
   Category: {
-    name: 'Category',
+    name: "Category",
   },
   Product: {
-    name: 'Product',
+    name: "Product",
   },
   ProductSearch: {
-    name: 'ProductSearch',
-    groupName: 'ProductSearchStack',
-  }
-} as const
+    name: "ProductSearch",
+  },
+} as const;

@@ -5,10 +5,11 @@
   "private": true,
   "dependencies": {
     "@navigations/constants": "workspace:0.0.1",
-    "@navigations/product-search-stack": "workspace:0.0.1",
     "@navigations/screen-stack-framgent": "workspace:0.0.1",
+    "@screens/category": "workspace:0.0.1",
     "@screens/home": "workspace:0.0.1",
     "@screens/product": "workspace:0.0.1",
+    "@screens/product-search": "workspace:0.0.1",
     "react": "18.2.0",
     "react-native": "0.74.1"
   },
