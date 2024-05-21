@@ -7,7 +7,16 @@ module.exports = {
   ],
   plugins: ['react', 'react-hooks', 'prettier'],
   rules: {
-    'prettier/prettier': 'warn',
+    'prettier/prettier': [
+      'warn',
+      {
+        arrowParens: 'avoid',
+        bracketSameLine: true,
+        bracketSpacing: true,
+        singleQuote: true,
+        trailingComma: 'all',
+      },
+    ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
   },
