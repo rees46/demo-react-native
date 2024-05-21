@@ -1,8 +1,9 @@
-import { CategoryType, ProductType } from "../product-search.interfaces";
+import { CategoryType, ProductType } from '../product-search.interfaces';
+import { Dispatch, SetStateAction } from 'react';
 
 interface UseProductSearchReturnedType {
   searchQuery: string;
-  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
+  setSearchQuery: Dispatch<SetStateAction<string>>;
   items: ProductType[];
   categories: CategoryType[];
   totalResults: number;

@@ -1,8 +1,8 @@
-import { useCallback, useEffect, useState } from "react";
-import { RecommendationsBlockType } from "../../recommendations-block.interfaces";
-import { defaultOptions } from "../../recommendations-block.constants";
-import { useSDK } from "@stores/rn-sdk";
-import { UseRecommendations } from "./use-recommendations.interfaces";
+import { useCallback, useEffect, useState } from 'react';
+import { RecommendationsBlockType } from '../../recommendations-block.interfaces';
+import { defaultOptions } from '../../recommendations-block.constants';
+import { useSDK } from '@stores/rn-sdk';
+import { UseRecommendations } from './use-recommendations.interfaces';
 
 export const useRecommendations: UseRecommendations = ({ recommenderCode }) => {
   const [recommendations, setRecommendations] = useState<
@@ -11,7 +11,7 @@ export const useRecommendations: UseRecommendations = ({ recommenderCode }) => {
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
   const sdk = useSDK();
-  const [blockTitle, setBlockTitle] = useState("");
+  const [blockTitle, setBlockTitle] = useState('');
   const [initialized, setInitialized] = useState(false);
   const [recommendsIds, setRecommendsIds] = useState<string[]>([]);
   const [ended, setEnded] = useState(false);
@@ -37,18 +37,15 @@ export const useRecommendations: UseRecommendations = ({ recommenderCode }) => {
             idsArray.push(id);
           },
         );
-        setRecommendsIds((prev) => [...prev, ...idsArray]);
-        setRecommendations((prev) => [
-          ...prev,
-          ...newRecommendations.recommends,
-        ]);
+        setRecommendsIds(prev => [...prev, ...idsArray]);
+        setRecommendations(prev => [...prev, ...newRecommendations.recommends]);
         setPage(page + 1);
         setInitialized(true);
       } else {
         setEnded(true);
       }
     } catch (error) {
-      console.error("Error loading recommendations:", error);
+      console.error('Error loading recommendations:', error);
     } finally {
       setLoading(false);
     }

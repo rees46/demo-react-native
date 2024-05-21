@@ -1,1 +1,1 @@
-export * from "./recommendations-block.fragment";
+export * from './recommendations-block.fragment';

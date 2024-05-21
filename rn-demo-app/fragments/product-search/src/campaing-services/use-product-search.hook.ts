@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
-import { SEARCH_TYPE } from "../product-search.constants";
-import { useSDK } from "@stores/rn-sdk";
-import { CategoryType, ProductType } from "../product-search.interfaces";
-import { useDebounce } from "../utils";
-import { UseProductSearchType } from "./use-product-search.interfaces";
+import { useEffect, useState } from 'react';
+import { SEARCH_TYPE } from '../product-search.constants';
+import { useSDK } from '@stores/rn-sdk';
+import { CategoryType, ProductType } from '../product-search.interfaces';
+import { useDebounce } from '../utils';
+import { UseProductSearchType } from './use-product-search.interfaces';
 
 export const useProductSearch: UseProductSearchType = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
   const [items, setItems] = useState<ProductType[]>([]);
   const [categories, setCategories] = useState<CategoryType[]>([]);
   const [totalResults, setTotalResults] = useState(0);
@@ -30,7 +30,7 @@ export const useProductSearch: UseProductSearchType = () => {
             setCategories(res?.categories ?? []);
           }
         } catch (error) {
-          console.error("Error fetching product-search results:", error);
+          console.error('Error fetching product-search results:', error);
         }
       } else {
         if (isSubscribed) {
@@ -46,6 +46,7 @@ export const useProductSearch: UseProductSearchType = () => {
     return () => {
       isSubscribed = false;
     };
+    //   eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedSearchQuery]);
 
   return {

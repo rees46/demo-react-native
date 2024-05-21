@@ -1,1 +1,1 @@
-export * from "./use-product-search.hook";
+export * from './use-product-search.hook';

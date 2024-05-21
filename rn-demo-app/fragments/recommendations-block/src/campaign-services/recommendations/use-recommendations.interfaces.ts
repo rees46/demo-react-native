@@ -1,4 +1,4 @@
-import { RecommendationsBlockType } from "../../recommendations-block.interfaces";
+import { RecommendationsBlockType } from '../../recommendations-block.interfaces';
 
 export interface UseRecommendationsProps {
   recommenderCode: string;
