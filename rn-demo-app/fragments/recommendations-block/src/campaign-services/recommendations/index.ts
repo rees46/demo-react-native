@@ -1,1 +1,1 @@
-export * from "./use-recommendations.hook";
+export * from './use-recommendations.hook'

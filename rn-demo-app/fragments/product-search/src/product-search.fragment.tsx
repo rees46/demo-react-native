@@ -1,61 +1,62 @@
-import React, {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
-import { View, Text, TouchableOpacity, SectionList } from 'react-native';
-import { Searchbar } from 'react-native-paper';
-import { useProductSearch } from './campaing-services';
-import { Condition } from '@ui/condition';
-import { useTranslation } from 'react-i18next';
-import { appRoutes } from '@navigations/constants';
-import { getStyles } from './product-search.styles';
-import { ItemType, ProductSearchProps } from './product-search.interfaces';
+import React                  from 'react'
+import { SectionList }        from 'react-native'
+import { Text }               from 'react-native'
+import { TouchableOpacity }   from 'react-native'
+import { View }               from 'react-native'
+import { Searchbar }          from 'react-native-paper'
+import { useCallback }        from 'react'
+import { useEffect }          from 'react'
+import { useMemo }            from 'react'
+import { useRef }             from 'react'
+import { useState }           from 'react'
+import { useTranslation }     from 'react-i18next'
 
-export const ProductSearch = ({
-  navigation,
-  viewOnly = true,
-}: ProductSearchProps) => {
-  const { searchQuery, setSearchQuery, totalResults, items, categories } =
-    useProductSearch();
-  const { t } = useTranslation();
-  const searchbarRef = useRef<any>(null);
-  const [styles] = useState(getStyles(viewOnly));
+import { APP_ROUTES }         from '@navigations/constants'
+import { Condition }          from '@ui/condition'
+
+import { ItemType }           from './product-search.interfaces'
+import { ProductSearchProps } from './product-search.interfaces'
+import { useProductSearch }   from './campaign-services'
+import { getStyles }          from './product-search.styles'
+
+export const ProductSearch = ({ navigation, viewOnly = true }: ProductSearchProps) => {
+  const { searchQuery, setSearchQuery, totalResults, items, categories } = useProductSearch()
+  const { t } = useTranslation()
+  const searchbarRef = useRef<any>(null)
+  const [styles] = useState(getStyles(viewOnly))
 
   useEffect(() => {
     if (searchbarRef.current && !viewOnly) {
-      searchbarRef.current.focus();
+      searchbarRef.current.focus()
     }
-  }, [viewOnly]);
+  }, [viewOnly])
 
   const handleFocus = useCallback(() => {
     if (searchbarRef.current && viewOnly) {
-      navigation.navigate(appRoutes.ProductSearch.name);
+      navigation.navigate(APP_ROUTES.PRODUCT_SEARCH.name)
     }
-  }, [navigation, viewOnly]);
+  }, [navigation, viewOnly])
 
   const handleSearch = useCallback(
     (query: string) => {
-      setSearchQuery(query);
+      setSearchQuery(query)
     },
-    [setSearchQuery],
-  );
+    [setSearchQuery]
+  )
 
   const handleProductPress = useCallback(
     (productId: string) => {
-      navigation.navigate(appRoutes.Product.name, { productId });
+      navigation.navigate(APP_ROUTES.PRODUCT.name, { productId })
     },
-    [navigation],
-  );
+    [navigation]
+  )
 
   const handleCategoryPress = useCallback(
     (categoryId: string) => {
-      navigation.navigate(appRoutes.Category.name, { categoryId });
+      navigation.navigate(APP_ROUTES.CATEGORY.name, { categoryId })
     },
-    [navigation],
-  );
+    [navigation]
+  )
 
   const sections = useMemo(
     () => [
@@ -64,9 +65,7 @@ export const ProductSearch = ({
         data: items,
         keyExtractor: (item: ItemType) => item.id,
         renderItem: ({ item }: { item: ItemType }) => (
-          <TouchableOpacity
-            style={styles.item}
-            onPress={() => handleProductPress(item.id)}>
+          <TouchableOpacity style={styles.item} onPress={() => handleProductPress(item.id)}>
             <Text style={styles.itemName}>{item.name}</Text>
             <Text style={styles.itemPrice}>{item.price_full_formatted}</Text>
           </TouchableOpacity>
@@ -77,9 +76,7 @@ export const ProductSearch = ({
         data: categories,
         keyExtractor: (item: ItemType) => item.id,
         renderItem: ({ item }: { item: ItemType }) => (
-          <TouchableOpacity
-            style={styles.category}
-            onPress={() => handleCategoryPress(item.id)}>
+          <TouchableOpacity style={styles.category} onPress={() => handleCategoryPress(item.id)}>
             <Text>{item.name}</Text>
           </TouchableOpacity>
         ),
@@ -95,8 +92,8 @@ export const ProductSearch = ({
       styles.category,
       handleProductPress,
       handleCategoryPress,
-    ],
-  );
+    ]
+  )
 
   return (
     <View style={styles.container}>
@@ -107,7 +104,7 @@ export const ProductSearch = ({
         value={searchQuery}
         style={styles.searchbar}
         onFocus={handleFocus}
-        onClearIconPress={() => navigation.navigate(appRoutes.Home.name)}
+        onClearIconPress={() => navigation.navigate(APP_ROUTES.HOME.name)}
       />
       <Condition condition={!viewOnly}>
         <Condition condition={!!totalResults}>
@@ -117,7 +114,7 @@ export const ProductSearch = ({
             renderSectionHeader={({ section: { title } }) => (
               <Text style={styles.header}>{title}</Text>
             )}
-            keyboardShouldPersistTaps="always"
+            keyboardShouldPersistTaps='always'
           />
         </Condition>
         <Condition condition={!totalResults}>
@@ -127,5 +124,5 @@ export const ProductSearch = ({
         </Condition>
       </Condition>
     </View>
-  );
-};
+  )
+}

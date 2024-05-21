@@ -1,1 +1,1 @@
-export { default } from './home-stack.navigation';
+export { default } from './home-stack.navigation'

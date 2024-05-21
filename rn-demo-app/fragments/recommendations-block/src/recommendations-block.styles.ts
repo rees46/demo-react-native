@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   container: {
@@ -11,4 +11,7 @@ export const styles = StyleSheet.create({
     marginLeft: 20,
     color: 'black',
   },
-});
+  error: {
+    color: 'red',
+  },
+})

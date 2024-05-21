@@ -1,31 +1,26 @@
-export const appRoutes = {
-  Home: {
+export const APP_ROUTES = {
+  HOME: {
     name: 'Home',
     tabName: 'HomeTab',
     groupName: 'HomeStack',
   },
-  Catalog: {
+  CATALOG: {
     name: 'Catalog',
     tabName: 'CatalogTab',
     groupName: 'CatalogStack',
   },
-  Cart: {
+  CART: {
     name: 'Cart',
     tabName: 'CartTab',
     groupName: 'CartStack',
   },
-  Profile: {
-    name: 'Profile',
-    tabName: 'ProfileTab',
-    groupName: 'ProfileStack',
-  },
-  Category: {
+  CATEGORY: {
     name: 'Category',
   },
-  Product: {
+  PRODUCT: {
     name: 'Product',
   },
-  ProductSearch: {
+  PRODUCT_SEARCH: {
     name: 'ProductSearch',
   },
-} as const;
+} as const

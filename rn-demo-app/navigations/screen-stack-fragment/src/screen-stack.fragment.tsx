@@ -1,12 +1,14 @@
-import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { useTranslation } from 'react-i18next';
-import { ScreenStackProps } from './screen-stack.interfaces';
+import React                          from 'react'
+import { useTranslation }             from 'react-i18next'
 
-const Stack = createNativeStackNavigator();
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+
+import { ScreenStackProps }           from './screen-stack.interfaces'
+
+const Stack = createNativeStackNavigator()
 
 export const ScreenStack = ({ groupName, screens }: ScreenStackProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <Stack.Navigator initialRouteName={groupName}>
@@ -22,5 +24,5 @@ export const ScreenStack = ({ groupName, screens }: ScreenStackProps) => {
         />
       ))}
     </Stack.Navigator>
-  );
-};
+  )
+}

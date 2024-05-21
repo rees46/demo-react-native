@@ -1,30 +1,30 @@
-import HomeScreen from '@screens/home';
-import ProductScreen from '@screens/product';
-import { appRoutes } from '@navigations/constants';
-import CategoryScreen from '@screens/category';
-import ProductSearchScreen from '@screens/product-search';
+import CategoryScreen      from '@screens/category'
+import HomeScreen          from '@screens/home'
+import ProductScreen       from '@screens/product'
+import ProductSearchScreen from '@screens/product-search'
+import { APP_ROUTES }      from '@navigations/constants'
 
-export const homeStackParams = [
+export const HOME_STACK_OPTIONS = [
   {
-    name: appRoutes.Home.name,
+    name: APP_ROUTES.HOME.name,
     component: HomeScreen,
     options: {
       headerShown: false,
     },
   },
   {
-    name: appRoutes.ProductSearch.name,
+    name: APP_ROUTES.PRODUCT_SEARCH.name,
     component: ProductSearchScreen,
     options: {
       headerShown: false,
     },
   },
   {
-    name: appRoutes.Product.name,
+    name: APP_ROUTES.PRODUCT.name,
     component: ProductScreen,
   },
   {
-    name: appRoutes.Category.name,
+    name: APP_ROUTES.CATEGORY.name,
     component: CategoryScreen,
   },
-];
+]

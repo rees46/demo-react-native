@@ -1,67 +1,58 @@
-import { useCallback, useEffect, useState } from 'react';
-import { RecommendationsBlockType } from '../../recommendations-block.interfaces';
-import { defaultOptions } from '../../recommendations-block.constants';
-import { useSDK } from '@stores/rn-sdk';
-import { UseRecommendations } from './use-recommendations.interfaces';
+import { useCallback }              from 'react'
+import { useEffect }                from 'react'
+import { useState }                 from 'react'
+
+import { useSDK }                   from '@stores/rn-sdk'
+
+import { RecommendationsBlockType } from '../../recommendations-block.interfaces'
+import { UseRecommendations }       from './use-recommendations.interfaces'
+import { defaultOptions }           from '../../recommendations-block.constants'
 
 export const useRecommendations: UseRecommendations = ({ recommenderCode }) => {
-  const [recommendations, setRecommendations] = useState<
-    RecommendationsBlockType[]
-  >([]);
-  const [loading, setLoading] = useState(false);
-  const [page, setPage] = useState(1);
-  const sdk = useSDK();
-  const [blockTitle, setBlockTitle] = useState('');
-  const [initialized, setInitialized] = useState(false);
-  const [recommendsIds, setRecommendsIds] = useState<string[]>([]);
-  const [ended, setEnded] = useState(false);
+  const [recommendations, setRecommendations] = useState<RecommendationsBlockType[]>([])
+  const [loading, setLoading] = useState(false)
+  const [page, setPage] = useState(1)
+  const sdk = useSDK()
+  const [blockTitle, setBlockTitle] = useState('')
+  const [initialized, setInitialized] = useState(false)
+  const [error, setError] = useState<Error>()
 
   const loadRecommendations = useCallback(async () => {
-    if (loading || ended) return;
+    if (loading || error) return
 
-    setLoading(true);
+    setLoading(true)
+    setError(undefined)
     try {
       const newRecommendations = await sdk.recommend(recommenderCode, {
         ...defaultOptions,
         page,
-      });
-      setBlockTitle(newRecommendations.title);
-      if (
-        !(newRecommendations.recommends as RecommendationsBlockType[]).some(
-          ({ id }) => recommendsIds.includes(id),
-        )
-      ) {
-        const idsArray: string[] = [];
-        newRecommendations.recommends.forEach(
-          ({ id }: RecommendationsBlockType) => {
-            idsArray.push(id);
-          },
-        );
-        setRecommendsIds(prev => [...prev, ...idsArray]);
-        setRecommendations(prev => [...prev, ...newRecommendations.recommends]);
-        setPage(page + 1);
-        setInitialized(true);
-      } else {
-        setEnded(true);
-      }
-    } catch (error) {
-      console.error('Error loading recommendations:', error);
+      })
+
+      !initialized && setBlockTitle(newRecommendations.title)
+
+      setRecommendations((prev) => [...prev, ...newRecommendations.recommends])
+      setPage((prevPage) => prevPage + 1)
+      setInitialized(true)
+    } catch (err) {
+      console.error('Error loading recommendations:', err)
+      setError(err as Error)
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  }, [loading, ended, sdk, recommenderCode, page, recommendsIds]);
+  }, [loading, sdk, recommenderCode, page, error, initialized])
 
   useEffect(() => {
     if (!loading && !initialized) {
-      loadRecommendations();
+      loadRecommendations()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loading, initialized]);
+  }, [loading, initialized])
 
   return {
     loading,
     recommendations,
     blockTitle,
     loadRecommendations,
-  };
-};
+    error,
+  }
+}

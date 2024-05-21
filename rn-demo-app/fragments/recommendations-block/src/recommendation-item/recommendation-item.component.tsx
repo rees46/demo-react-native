@@ -1,7 +1,13 @@
-import React, { memo } from 'react';
-import { View, Text, Image } from 'react-native';
-import { styles } from './recommendation-item.styles';
-import { RecommendationItemProps } from './recommendation-item.interfaces';
+import React                       from 'react'
+import { memo }             from 'react'
+import { Image }                   from 'react-native'
+
+import { Text }             from 'react-native'
+
+import { View }       from 'react-native'
+
+import { RecommendationItemProps } from './recommendation-item.interfaces'
+import { styles }                  from './recommendation-item.styles'
 
 export const RecommendationItem = memo(
   ({ item }: RecommendationItemProps) => (
@@ -11,5 +17,5 @@ export const RecommendationItem = memo(
       <Text style={styles.itemPrice}>{item.price}</Text>
     </View>
   ),
-  (prevProps, nextProps) => prevProps.item.id === nextProps.item.id,
-);
+  (prevProps, nextProps) => prevProps.item.id === nextProps.item.id
+)

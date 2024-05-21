@@ -1,1 +1,1 @@
-export { default } from './product-search.screen';
+export { default } from './product-search.screen'

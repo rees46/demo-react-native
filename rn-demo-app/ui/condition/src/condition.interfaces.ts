@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import { ReactNode } from 'react'
 
 export interface ConditionProps {
-  children: ReactNode;
-  condition?: boolean;
+  children: ReactNode
+  condition?: boolean
 }

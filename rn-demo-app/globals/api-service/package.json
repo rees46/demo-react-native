@@ -1,15 +1,17 @@
 {
-  "name": "@stores/api-service",
+  "name": "@globals/api-service",
   "version": "0.0.1",
   "main": "src/index.ts",
   "private": true,
   "dependencies": {
     "@globals/constants": "workspace:0.0.1",
-    "axios": "1.7.0",
-    "react": "18.2.0",
-    "react-native": "0.74.1"
+    "axios": "1.7.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.6"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-native": "0.74.1"
   }
 }

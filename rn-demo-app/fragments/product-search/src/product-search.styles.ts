@@ -1,9 +1,11 @@
-import { Dimensions, StyleSheet } from 'react-native';
+import { Dimensions }             from 'react-native'
 
-const { height } = Dimensions.get('window');
-const TAB_BAR_HEIGHT = 50;
-const TAB_HEADER_HEIGHT = 80;
-const SEARCH_HEIGHT = 90;
+import { StyleSheet } from 'react-native'
+
+const { height } = Dimensions.get('window')
+const TAB_BAR_HEIGHT = 50
+const TAB_HEADER_HEIGHT = 80
+const SEARCH_HEIGHT = 90
 
 export const getStyles = (viewOnly: boolean) =>
   StyleSheet.create({
@@ -13,9 +15,7 @@ export const getStyles = (viewOnly: boolean) =>
       padding: 16,
       backgroundColor: 'white',
       flexGrow: 1,
-      maxHeight: viewOnly
-        ? SEARCH_HEIGHT
-        : height - TAB_BAR_HEIGHT - TAB_HEADER_HEIGHT,
+      maxHeight: viewOnly ? SEARCH_HEIGHT : height - TAB_BAR_HEIGHT - TAB_HEADER_HEIGHT,
     },
     searchbar: {
       marginBottom: 16,
@@ -53,4 +53,4 @@ export const getStyles = (viewOnly: boolean) =>
       textAlign: 'center',
       marginTop: 16,
     },
-  });
+  })

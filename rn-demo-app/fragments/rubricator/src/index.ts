@@ -1,1 +1,1 @@
-export * from './rubricator.fragments';
+export * from './rubricator.fragments'

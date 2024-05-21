@@ -9,11 +9,13 @@
     "@screens/category": "workspace:0.0.1",
     "@screens/home": "workspace:0.0.1",
     "@screens/product": "workspace:0.0.1",
-    "@screens/product-search": "workspace:0.0.1",
-    "react": "18.2.0",
-    "react-native": "0.74.1"
+    "@screens/product-search": "workspace:0.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.6"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-native": "0.74.1"
   }
 }

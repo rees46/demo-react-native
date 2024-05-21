@@ -1,16 +1,15 @@
-import { RecommendationsBlockType } from '../../recommendations-block.interfaces';
+import { RecommendationsBlockType } from '../../recommendations-block.interfaces'
 
 export interface UseRecommendationsProps {
-  recommenderCode: string;
+  recommenderCode: string
 }
 
 export interface UseRecommendationsReturnedType {
-  loading: boolean;
-  recommendations: RecommendationsBlockType[];
-  blockTitle: string;
-  loadRecommendations: () => void;
+  loading: boolean
+  recommendations: RecommendationsBlockType[]
+  blockTitle: string
+  loadRecommendations: () => void
+  error?: Error
 }
 
-export type UseRecommendations = (
-  props: UseRecommendationsProps,
-) => UseRecommendationsReturnedType;
+export type UseRecommendations = (props: UseRecommendationsProps) => UseRecommendationsReturnedType

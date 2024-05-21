@@ -1884,13 +1884,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:8.57.0":
-  version: 8.57.0
-  resolution: "@eslint/js@npm:8.57.0"
-  checksum: 10/3c501ce8a997cf6cbbaf4ed358af5492875e3550c19b9621413b82caa9ae5382c584b0efa79835639e6e0ddaa568caf3499318e5bdab68643ef4199dce5eb0a0
-  languageName: node
-  linkType: hard
-
 "@fragments/product-search@workspace:0.0.1, @fragments/product-search@workspace:rn-demo-app/fragments/product-search":
   version: 0.0.0-use.local
   resolution: "@fragments/product-search@workspace:rn-demo-app/fragments/product-search"
@@ -1900,11 +1893,12 @@ __metadata:
     "@types/react": "npm:^18.2.6"
     "@types/react-native-vector-icons": "npm:6.4.18"
     "@ui/condition": "workspace:0.0.1"
-    react: "npm:18.2.0"
     react-i18next: "npm:14.1.1"
-    react-native: "npm:0.74.1"
     react-native-paper: "npm:5.12.3"
-    react-native-vector-icons: "npm:10.1.0"
+  peerDependencies:
+    react: 18.2.0
+    react-native: 0.74.1
+    react-native-vector-icons: 10.1.0
   languageName: unknown
   linkType: soft
 
@@ -1912,13 +1906,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/recommendations-block@workspace:rn-demo-app/fragments/recommendations-block"
   dependencies:
+    "@globals/api-service": "workspace:0.0.1"
     "@globals/constants": "workspace:0.0.1"
-    "@stores/api-service": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
-    react: "npm:18.2.0"
-    react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
+  peerDependencies:
+    react: 18.2.0
+    react-i18next: 14.1.1
   languageName: unknown
   linkType: soft
 
@@ -1927,8 +1922,22 @@ __metadata:
   resolution: "@fragments/rubricator@workspace:rn-demo-app/fragments/rubricator"
   dependencies:
     "@types/react": "npm:^18.2.6"
-    react: "npm:18.2.0"
-    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: 18.2.0
+    react-native: 0.74.1
+  languageName: unknown
+  linkType: soft
+
+"@globals/api-service@workspace:0.0.1, @globals/api-service@workspace:rn-demo-app/globals/api-service":
+  version: 0.0.0-use.local
+  resolution: "@globals/api-service@workspace:rn-demo-app/globals/api-service"
+  dependencies:
+    "@globals/constants": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    axios: "npm:1.7.0"
+  peerDependencies:
+    react: 18.2.0
+    react-native: 0.74.1
   languageName: unknown
   linkType: soft
 
@@ -1954,7 +1963,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@humanwhocodes/config-array@npm:^0.11.13, @humanwhocodes/config-array@npm:^0.11.14":
+"@humanwhocodes/config-array@npm:^0.11.13":
   version: 0.11.14
   resolution: "@humanwhocodes/config-array@npm:0.11.14"
   dependencies:
@@ -2539,8 +2548,9 @@ __metadata:
     "@screens/product": "workspace:0.0.1"
     "@screens/product-search": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
-    react: "npm:18.2.0"
-    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: 18.2.0
+    react-native: 0.74.1
   languageName: unknown
   linkType: soft
 
@@ -2550,9 +2560,11 @@ __metadata:
   dependencies:
     "@react-navigation/native-stack": "npm:6.9.26"
     "@types/react": "npm:^18.2.6"
-    react: "npm:18.2.0"
     react-i18next: "npm:14.1.1"
-    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: 18.2.0
+    react-i18next: 14.1.1
+    react-native: 0.74.1
   languageName: unknown
   linkType: soft
 
@@ -2565,13 +2577,14 @@ __metadata:
     "@react-navigation/bottom-tabs": "npm:6.5.20"
     "@screens/cart": "workspace:0.0.1"
     "@screens/catalog": "workspace:0.0.1"
-    "@screens/profile": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     "@types/react-native-vector-icons": "npm:6.4.18"
-    react: "npm:18.2.0"
     react-i18next: "npm:14.1.1"
-    react-native: "npm:0.74.1"
-    react-native-vector-icons: "npm:10.1.0"
+  peerDependencies:
+    react: 18.2.0
+    react-i18next: 14.1.1
+    react-native: 0.74.1
+    react-native-vector-icons: 10.1.0
   languageName: unknown
   linkType: soft
 
@@ -3881,6 +3894,51 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@rn-demo-app/app@workspace:rn-demo-app/app":
+  version: 0.0.0-use.local
+  resolution: "@rn-demo-app/app@workspace:rn-demo-app/app"
+  dependencies:
+    "@babel/core": "npm:7.24.5"
+    "@babel/preset-env": "npm:^7.20.0"
+    "@babel/runtime": "npm:^7.20.0"
+    "@navigations/tab-layout": "workspace:0.0.1"
+    "@notifee/react-native": "npm:7.8.2"
+    "@react-native-async-storage/async-storage": "npm:1.23.1"
+    "@react-native-community/eslint-config": "npm:3.2.0"
+    "@react-native-community/push-notification-ios": "npm:1.11.0"
+    "@react-native-firebase/app": "npm:19.2.2"
+    "@react-native-firebase/messaging": "npm:19.2.2"
+    "@react-native/babel-preset": "npm:0.74.83"
+    "@react-native/eslint-config": "npm:0.74.83"
+    "@react-native/metro-config": "npm:0.74.83"
+    "@react-native/typescript-config": "npm:0.74.83"
+    "@react-navigation/bottom-tabs": "npm:6.5.20"
+    "@react-navigation/native": "npm:6.1.17"
+    "@rees46/react-native-sdk": "npm:1.7.1"
+    "@stores/rn-sdk": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    "@types/react-native-push-notification": "npm:8"
+    "@types/react-native-vector-icons": "npm:6.4.18"
+    "@types/react-test-renderer": "npm:^18.0.0"
+    babel-jest: "npm:^29.6.3"
+    i18next: "npm:23.11.4"
+    jest: "npm:^29.6.3"
+    react: "npm:18.2.0"
+    react-i18next: "npm:14.1.1"
+    react-native: "npm:0.74.1"
+    react-native-device-info: "npm:10.13.2"
+    react-native-localize: "npm:3.1.0"
+    react-native-paper: "npm:5.12.3"
+    react-native-push-notification: "npm:8.1.1"
+    react-native-safe-area-context: "npm:4.10.1"
+    react-native-screens: "npm:3.31.1"
+    react-native-vector-icons: "npm:10.1.0"
+    react-native-webview: "npm:13.10.2"
+    react-test-renderer: "npm:18.2.0"
+    typescript: "npm:5.0.4"
+  languageName: unknown
+  linkType: soft
+
 "@rnx-kit/chromium-edge-launcher@npm:^1.0.0":
   version: 1.0.0
   resolution: "@rnx-kit/chromium-edge-launcher@npm:1.0.0"
@@ -3901,9 +3959,12 @@ __metadata:
   dependencies:
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
-    react: "npm:18.2.0"
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
+  peerDependencies:
+    react: 18.2.0
+    react-i18next: 14.1.1
+    react-native: 0.74.1
   languageName: unknown
   linkType: soft
 
@@ -3913,9 +3974,12 @@ __metadata:
   dependencies:
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
-    react: "npm:18.2.0"
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
+  peerDependencies:
+    react: 18.2.0
+    react-i18next: 14.1.1
+    react-native: 0.74.1
   languageName: unknown
   linkType: soft
 
@@ -3925,9 +3989,12 @@ __metadata:
   dependencies:
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
-    react: "npm:18.2.0"
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
+  peerDependencies:
+    react: 18.2.0
+    react-i18next: 14.1.1
+    react-native: 0.74.1
   languageName: unknown
   linkType: soft
 
@@ -3951,8 +4018,10 @@ __metadata:
   dependencies:
     "@fragments/product-search": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
-    react: "npm:18.2.0"
     react-native: "npm:0.74.1"
+  peerDependencies:
+    react: 18.2.0
+    react-native: 0.74.1
   languageName: unknown
   linkType: soft
 
@@ -3962,21 +4031,12 @@ __metadata:
   dependencies:
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
-    react: "npm:18.2.0"
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
-  languageName: unknown
-  linkType: soft
-
-"@screens/profile@workspace:0.0.1, @screens/profile@workspace:rn-demo-app/screens/profile":
-  version: 0.0.0-use.local
-  resolution: "@screens/profile@workspace:rn-demo-app/screens/profile"
-  dependencies:
-    "@stores/rn-sdk": "workspace:0.0.1"
-    "@types/react": "npm:^18.2.6"
-    react: "npm:18.2.0"
-    react-i18next: "npm:14.1.1"
-    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: 18.2.0
+    react-i18next: 14.1.1
+    react-native: 0.74.1
   languageName: unknown
   linkType: soft
 
@@ -4045,18 +4105,6 @@ __metadata:
   checksum: 10/c7ee19f62bd0ca52553dd5fca9b3921373218c9fed0f02af2f8e5261f65ce9ff0a5e55ca612ded6daf4088a243e905d61bd6dce1c6d325794283b55c71708395
   languageName: node
   linkType: hard
-
-"@stores/api-service@workspace:0.0.1, @stores/api-service@workspace:rn-demo-app/stores/api-service":
-  version: 0.0.0-use.local
-  resolution: "@stores/api-service@workspace:rn-demo-app/stores/api-service"
-  dependencies:
-    "@globals/constants": "workspace:0.0.1"
-    "@types/react": "npm:^18.2.6"
-    axios: "npm:1.7.0"
-    react: "npm:18.2.0"
-    react-native: "npm:0.74.1"
-  languageName: unknown
-  linkType: soft
 
 "@stores/rn-sdk@workspace:0.0.1, @stores/rn-sdk@workspace:rn-demo-app/stores/rn-sdk":
   version: 0.0.0-use.local
@@ -4645,8 +4693,10 @@ __metadata:
   resolution: "@ui/condition@workspace:rn-demo-app/ui/condition"
   dependencies:
     "@types/react": "npm:^18.2.6"
-    react: "npm:18.2.0"
     react-native: "npm:0.74.1"
+  peerDependencies:
+    react: 18.2.0
+    react-native: 0.74.1
   languageName: unknown
   linkType: soft
 
@@ -6936,17 +6986,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:9.1.0":
-  version: 9.1.0
-  resolution: "eslint-config-prettier@npm:9.1.0"
-  peerDependencies:
-    eslint: ">=7.0.0"
-  bin:
-    eslint-config-prettier: bin/cli.js
-  checksum: 10/411e3b3b1c7aa04e3e0f20d561271b3b909014956c4dba51c878bf1a23dbb8c800a3be235c46c4732c70827276e540b6eed4636d9b09b444fd0a8e07f0fcd830
-  languageName: node
-  linkType: hard
-
 "eslint-config-prettier@npm:^8.5.0":
   version: 8.10.0
   resolution: "eslint-config-prettier@npm:8.10.0"
@@ -7035,7 +7074,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react-hooks@npm:4.6.2, eslint-plugin-react-hooks@npm:^4.6.0":
+"eslint-plugin-react-hooks@npm:^4.6.0":
   version: 4.6.2
   resolution: "eslint-plugin-react-hooks@npm:4.6.2"
   peerDependencies:
@@ -7169,54 +7208,6 @@ __metadata:
   bin:
     eslint: bin/eslint.js
   checksum: 10/ef6193c6e4cef20774b985a5cc2fd4bf6d3c4decd423117cbc4a0196617861745db291217ad3c537bc3a160650cca965bc818f55e1f3e446af1fcb293f9940a5
-  languageName: node
-  linkType: hard
-
-"eslint@npm:^8.19.0":
-  version: 8.57.0
-  resolution: "eslint@npm:8.57.0"
-  dependencies:
-    "@eslint-community/eslint-utils": "npm:^4.2.0"
-    "@eslint-community/regexpp": "npm:^4.6.1"
-    "@eslint/eslintrc": "npm:^2.1.4"
-    "@eslint/js": "npm:8.57.0"
-    "@humanwhocodes/config-array": "npm:^0.11.14"
-    "@humanwhocodes/module-importer": "npm:^1.0.1"
-    "@nodelib/fs.walk": "npm:^1.2.8"
-    "@ungap/structured-clone": "npm:^1.2.0"
-    ajv: "npm:^6.12.4"
-    chalk: "npm:^4.0.0"
-    cross-spawn: "npm:^7.0.2"
-    debug: "npm:^4.3.2"
-    doctrine: "npm:^3.0.0"
-    escape-string-regexp: "npm:^4.0.0"
-    eslint-scope: "npm:^7.2.2"
-    eslint-visitor-keys: "npm:^3.4.3"
-    espree: "npm:^9.6.1"
-    esquery: "npm:^1.4.2"
-    esutils: "npm:^2.0.2"
-    fast-deep-equal: "npm:^3.1.3"
-    file-entry-cache: "npm:^6.0.1"
-    find-up: "npm:^5.0.0"
-    glob-parent: "npm:^6.0.2"
-    globals: "npm:^13.19.0"
-    graphemer: "npm:^1.4.0"
-    ignore: "npm:^5.2.0"
-    imurmurhash: "npm:^0.1.4"
-    is-glob: "npm:^4.0.0"
-    is-path-inside: "npm:^3.0.3"
-    js-yaml: "npm:^4.1.0"
-    json-stable-stringify-without-jsonify: "npm:^1.0.1"
-    levn: "npm:^0.4.1"
-    lodash.merge: "npm:^4.6.2"
-    minimatch: "npm:^3.1.2"
-    natural-compare: "npm:^1.4.0"
-    optionator: "npm:^0.9.3"
-    strip-ansi: "npm:^6.0.1"
-    text-table: "npm:^0.2.0"
-  bin:
-    eslint: bin/eslint.js
-  checksum: 10/00496e218b23747a7a9817bf58b522276d0dc1f2e546dceb4eea49f9871574088f72f1f069a6b560ef537efa3a75261b8ef70e51ef19033da1cc4c86a755ef15
   languageName: node
   linkType: hard
 
@@ -11511,17 +11502,12 @@ __metadata:
   dependencies:
     "@atls/prettier-plugin": "npm:0.0.8"
     "@jest/core": "npm:29.7.0"
-    "@react-navigation/bottom-tabs": "npm:6.5.20"
-    "@react-navigation/native": "npm:6.1.17"
-    "@react-navigation/native-stack": "npm:6.9.26"
     "@types/eslint": "npm:8.56.2"
     "@types/jest": "npm:29.5.12"
     "@types/node": "npm:18.19.17"
     eslint: "npm:8.56.0"
     husky: "npm:8.0.3"
     prettier: "npm:3.1.1"
-    react-native-safe-area-context: "npm:4.10.1"
-    react-native-screens: "npm:3.31.1"
     typescript: "npm:5.4.5"
   languageName: unknown
   linkType: soft
@@ -12385,15 +12371,6 @@ __metadata:
   bin:
     prettier: bin/prettier.cjs
   checksum: 10/26a249f321b97d26c04483f1bf2eeb22e082a76f4222a2c922bebdc60111691aad4ec3979610e83942e0b956058ec361d9e9c81c185172264eb6db9aa678082b
-  languageName: node
-  linkType: hard
-
-"prettier@npm:3.2.5":
-  version: 3.2.5
-  resolution: "prettier@npm:3.2.5"
-  bin:
-    prettier: bin/prettier.cjs
-  checksum: 10/d509f9da0b70e8cacc561a1911c0d99ec75117faed27b95cc8534cb2349667dee6351b0ca83fa9d5703f14127faa52b798de40f5705f02d843da133fc3aa416a
   languageName: node
   linkType: hard
 
@@ -13440,56 +13417,6 @@ __metadata:
   checksum: 10/756419f2fa99aa119c46a9fc03e09d84ecf5421a80a72d1944c5088c9e4671e77128527a900a313ed9d3fdbdd37e2ae05486cd7e9116d5812d8c31f2399d7c86
   languageName: node
   linkType: hard
-
-"rn-demo-app@workspace:rn-demo-app/app":
-  version: 0.0.0-use.local
-  resolution: "rn-demo-app@workspace:rn-demo-app/app"
-  dependencies:
-    "@babel/core": "npm:7.24.5"
-    "@babel/preset-env": "npm:^7.20.0"
-    "@babel/runtime": "npm:^7.20.0"
-    "@navigations/tab-layout": "workspace:0.0.1"
-    "@notifee/react-native": "npm:7.8.2"
-    "@react-native-async-storage/async-storage": "npm:1.23.1"
-    "@react-native-community/eslint-config": "npm:3.2.0"
-    "@react-native-community/push-notification-ios": "npm:1.11.0"
-    "@react-native-firebase/app": "npm:19.2.2"
-    "@react-native-firebase/messaging": "npm:19.2.2"
-    "@react-native/babel-preset": "npm:0.74.83"
-    "@react-native/eslint-config": "npm:0.74.83"
-    "@react-native/metro-config": "npm:0.74.83"
-    "@react-native/typescript-config": "npm:0.74.83"
-    "@react-navigation/bottom-tabs": "npm:6.5.20"
-    "@react-navigation/native": "npm:6.1.17"
-    "@rees46/react-native-sdk": "npm:1.7.1"
-    "@stores/rn-sdk": "workspace:0.0.1"
-    "@types/react": "npm:^18.2.6"
-    "@types/react-native-push-notification": "npm:8"
-    "@types/react-native-vector-icons": "npm:6.4.18"
-    "@types/react-test-renderer": "npm:^18.0.0"
-    babel-jest: "npm:^29.6.3"
-    eslint: "npm:^8.19.0"
-    eslint-config-prettier: "npm:9.1.0"
-    eslint-plugin-prettier: "npm:5.1.3"
-    eslint-plugin-react-hooks: "npm:4.6.2"
-    i18next: "npm:23.11.4"
-    jest: "npm:^29.6.3"
-    prettier: "npm:3.2.5"
-    react: "npm:18.2.0"
-    react-i18next: "npm:14.1.1"
-    react-native: "npm:0.74.1"
-    react-native-device-info: "npm:10.13.2"
-    react-native-localize: "npm:3.1.0"
-    react-native-paper: "npm:5.12.3"
-    react-native-push-notification: "npm:8.1.1"
-    react-native-safe-area-context: "npm:4.10.1"
-    react-native-screens: "npm:3.31.1"
-    react-native-vector-icons: "npm:10.1.0"
-    react-native-webview: "npm:13.10.2"
-    react-test-renderer: "npm:18.2.0"
-    typescript: "npm:5.0.4"
-  languageName: unknown
-  linkType: soft
 
 "rsvp@npm:^4.8.4":
   version: 4.8.5
