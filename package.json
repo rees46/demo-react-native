@@ -18,12 +18,14 @@
     "rn-demo-app/navigations/**/*"
   ],
   "devDependencies": {
+    "@atls/prettier-plugin": "0.0.8",
     "@jest/core": "29.7.0",
     "@types/eslint": "8.56.2",
     "@types/jest": "29.5.12",
     "@types/node": "18.19.17",
     "eslint": "8.56.0",
     "husky": "8.0.3",
+    "prettier": "3.1.1",
     "typescript": "5.4.5"
   },
   "packageManager": "yarn@4.2.2",
