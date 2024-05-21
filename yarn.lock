@@ -1922,6 +1922,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@fragments/rubricator@workspace:rn-demo-app/fragments/rubricator":
+  version: 0.0.0-use.local
+  resolution: "@fragments/rubricator@workspace:rn-demo-app/fragments/rubricator"
+  dependencies:
+    "@types/react": "npm:^18.2.6"
+    react: "npm:18.2.0"
+    react-native: "npm:0.74.1"
+  languageName: unknown
+  linkType: soft
+
 "@globals/constants@workspace:0.0.1, @globals/constants@workspace:rn-demo-app/globals/constants":
   version: 0.0.0-use.local
   resolution: "@globals/constants@workspace:rn-demo-app/globals/constants"

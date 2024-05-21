@@ -1,8 +1,8 @@
-import HomeScreen from "@screens/home";
-import ProductScreen from "@screens/product";
-import { appRoutes } from "@navigations/constants";
-import CategoryScreen from "@screens/category";
-import ProductSearchScreen from "@screens/product-search";
+import HomeScreen from '@screens/home';
+import ProductScreen from '@screens/product';
+import { appRoutes } from '@navigations/constants';
+import CategoryScreen from '@screens/category';
+import ProductSearchScreen from '@screens/product-search';
 
 export const homeStackParams = [
   {

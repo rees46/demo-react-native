@@ -1,12 +1,18 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { View, Text, TouchableOpacity, SectionList } from "react-native";
-import { Searchbar } from "react-native-paper";
-import { useProductSearch } from "./campaing-services";
-import { Condition } from "@ui/condition";
-import { useTranslation } from "react-i18next";
-import { appRoutes } from "@navigations/constants";
-import { getStyles } from "./product-search.styles";
-import { ItemType, ProductSearchProps } from "./product-search.interfaces";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
+import { View, Text, TouchableOpacity, SectionList } from 'react-native';
+import { Searchbar } from 'react-native-paper';
+import { useProductSearch } from './campaing-services';
+import { Condition } from '@ui/condition';
+import { useTranslation } from 'react-i18next';
+import { appRoutes } from '@navigations/constants';
+import { getStyles } from './product-search.styles';
+import { ItemType, ProductSearchProps } from './product-search.interfaces';
 
 export const ProductSearch = ({
   navigation,
@@ -24,62 +30,79 @@ export const ProductSearch = ({
     }
   }, [viewOnly]);
 
-  const handleFocus = () => {
+  const handleFocus = useCallback(() => {
     if (searchbarRef.current && viewOnly) {
       navigation.navigate(appRoutes.ProductSearch.name);
     }
-  };
+  }, [navigation, viewOnly]);
 
-  const handleSearch = (query: string) => {
-    setSearchQuery(query);
-  };
+  const handleSearch = useCallback(
+    (query: string) => {
+      setSearchQuery(query);
+    },
+    [setSearchQuery],
+  );
 
-  const handleProductPress = (productId: string) => {
-    navigation.navigate(appRoutes.Product.name, { productId });
-  };
+  const handleProductPress = useCallback(
+    (productId: string) => {
+      navigation.navigate(appRoutes.Product.name, { productId });
+    },
+    [navigation],
+  );
 
-  const handleCategoryPress = (categoryId: string) => {
-    navigation.navigate(appRoutes.Category.name, { categoryId });
-  };
+  const handleCategoryPress = useCallback(
+    (categoryId: string) => {
+      navigation.navigate(appRoutes.Category.name, { categoryId });
+    },
+    [navigation],
+  );
 
   const sections = useMemo(
     () => [
       {
-        title: t("fragments.product-search.products-title"),
+        title: t('fragments.product-search.products-title'),
         data: items,
         keyExtractor: (item: ItemType) => item.id,
         renderItem: ({ item }: { item: ItemType }) => (
           <TouchableOpacity
             style={styles.item}
-            onPress={() => handleProductPress(item.id)}
-          >
+            onPress={() => handleProductPress(item.id)}>
             <Text style={styles.itemName}>{item.name}</Text>
             <Text style={styles.itemPrice}>{item.price_full_formatted}</Text>
           </TouchableOpacity>
         ),
       },
       {
-        title: t("fragments.product-search.categories-title"),
+        title: t('fragments.product-search.categories-title'),
         data: categories,
         keyExtractor: (item: ItemType) => item.id,
         renderItem: ({ item }: { item: ItemType }) => (
           <TouchableOpacity
             style={styles.category}
-            onPress={() => handleCategoryPress(item.id)}
-          >
+            onPress={() => handleCategoryPress(item.id)}>
             <Text>{item.name}</Text>
           </TouchableOpacity>
         ),
       },
     ],
-    [t, items, categories]
+    [
+      t,
+      items,
+      categories,
+      styles.item,
+      styles.itemName,
+      styles.itemPrice,
+      styles.category,
+      handleProductPress,
+      handleCategoryPress,
+    ],
   );
 
   return (
     <View style={styles.container}>
       <Searchbar
         ref={searchbarRef}
-        placeholder={t("fragments.product-search.placeholder")}
+        placeholder={t('fragments.product-search.placeholder')}
         onChangeText={viewOnly ? undefined : handleSearch}
         value={searchQuery}
         style={styles.searchbar}
@@ -99,7 +122,7 @@ export const ProductSearch = ({
         </Condition>
         <Condition condition={!totalResults}>
           <View>
-            <Text>{t("fragments.product-search.empty")}</Text>
+            <Text>{t('fragments.product-search.empty')}</Text>
           </View>
         </Condition>
       </Condition>
