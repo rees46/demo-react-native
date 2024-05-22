@@ -1,3 +1,5 @@
+import { HeaderFragment }           from '@fragments/header'
+
 import React                        from 'react'
 import Icon                         from 'react-native-vector-icons/Ionicons'
 import { memo }                     from 'react'
@@ -15,14 +17,19 @@ export const TabLayoutNavigation = memo(() => {
 
   const tabScreens = useMemo(
     () =>
-      SCREEN_OPTIONS.map(({ name, title, component, unfocusedIconName, focusedIconName }) => (
+      SCREEN_OPTIONS.map(({
+        name,
+        title,
+        component: Component,
+        unfocusedIconName,
+        focusedIconName,
+      }) => (
         <Tab.Screen
           key={name}
           name={name}
-          component={component}
           options={{
             title: t(`navigations.titles.${title}`),
-            tabBarIcon: ({ focused, color }) => {
+            tabBarIcon: ({ focused, color }: { focused: boolean; color: string }) => {
               return (
                 <Icon
                   name={focused ? focusedIconName : unfocusedIconName}
@@ -34,7 +41,9 @@ export const TabLayoutNavigation = memo(() => {
             },
             tabBarStyle: { height: 50, paddingBottom: 5 },
           }}
-        />
+        >
+          {(props: any) => <Component {...props} />}
+        </Tab.Screen>
       )),
     [t]
   )
@@ -44,6 +53,7 @@ export const TabLayoutNavigation = memo(() => {
       screenOptions={{
         tabBarActiveTintColor: 'green',
         tabBarInactiveTintColor: 'gray',
+        header: (props: any) => <HeaderFragment {...props} />,
       }}
     >
       {tabScreens}

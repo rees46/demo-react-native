@@ -1,0 +1,20 @@
+{
+  "name": "@fragments/header",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "private": true,
+  "dependencies": {
+    "@ui/icons": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/spacer": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "@ui/theme": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.6",
+    "react-native": "0.74.1"
+  },
+  "peerDependencies": {
+    "react": "18.2.0"
+  }
+}

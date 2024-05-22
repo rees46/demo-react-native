@@ -1,12 +1,12 @@
-import React                from 'react'
-import { useEffect } from 'react'
-import { Text }             from 'react-native'
-import { View }       from 'react-native'
-import { useTranslation }   from 'react-i18next'
+import React              from 'react'
+import { Text }           from 'react-native'
+import { View }           from 'react-native'
+import { useEffect }      from 'react'
+import { useTranslation } from 'react-i18next'
 
-import { useSDK }           from '@stores/rn-sdk'
+import { useSDK }         from '@stores/rn-sdk'
 
-import { styles }           from './catalog.styles'
+import { styles }         from './catalog.styles'
 
 const CatalogScreen = () => {
   const sdk = useSDK()

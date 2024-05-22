@@ -1,5 +1,5 @@
-const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
-const path = require('path');
+const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config')
+const path = require('path')
 
 /**
  * Metro configuration
@@ -35,20 +35,17 @@ const config = {
         moduleName.startsWith('react') ||
         moduleName.startsWith('@react-native') ||
         moduleName.startsWith('@react-native-community') ||
-        moduleName.startsWith('@your-org')
+        moduleName.startsWith('@your-org') ||
+        moduleName.startsWith('@emotion')
       ) {
-        const pathToResolve = path.resolve(
-          __dirname,
-          'node_modules',
-          moduleName,
-        );
-        return context.resolveRequest(context, pathToResolve, platform);
+        const pathToResolve = path.resolve(__dirname, 'node_modules', moduleName)
+        return context.resolveRequest(context, pathToResolve, platform)
       }
       // Optionally, chain to the standard Metro resolver.
-      return context.resolveRequest(context, moduleName, platform);
+      return context.resolveRequest(context, moduleName, platform)
     },
   },
   nodeModulesPaths: [path.resolve(path.join(__dirname, './node_modules'))],
-};
+}
 
-module.exports = mergeConfig(getDefaultConfig(__dirname), config);
+module.exports = mergeConfig(getDefaultConfig(__dirname), config)

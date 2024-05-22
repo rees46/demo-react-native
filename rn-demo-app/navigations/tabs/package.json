@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "private": true,
   "dependencies": {
+    "@fragments/header": "workspace:0.0.1",
     "@navigations/constants": "workspace:0.0.1",
     "@navigations/home-stack": "workspace:0.0.1",
     "@react-navigation/bottom-tabs": "6.5.20",

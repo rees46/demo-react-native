@@ -1,0 +1,21 @@
+{
+  "name": "@ui/layout",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "private": true,
+  "devDependencies": {
+    "@emotion/native": "11.11.0",
+    "@emotion/react": "11.11.4",
+    "@types/prop-types": "^15",
+    "@types/react": "^18.2.6",
+    "@ui/theme": "workspace:0.0.1",
+    "react-native": "0.74.1"
+  },
+  "peerDependencies": {
+    "@emotion/native": "*",
+    "@emotion/react": "*",
+    "prop-types": "*",
+    "react": "*",
+    "react-native": "*"
+  }
+}
