@@ -1,6 +1,6 @@
 import React           from 'react'
 
-import { BaseBoxProps } from '../box/box.interfaces'
+import { BaseBoxProps } from '../base-box.interfaces'
 import { RowElement }  from './row.element'
 
 export const Row = ({ children, ...props }: BaseBoxProps) => {

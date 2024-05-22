@@ -17,6 +17,7 @@
     "navigations.titles.catalog": "Каталог",
     "navigations.titles.profile": "Профиль",
     "navigations.titles.category": "Категория",
-    "navigations.titles.product": "Товар"
+    "navigations.titles.product": "Товар",
+    "navigations.titles.productsearch": "Поиск"
   }
 }

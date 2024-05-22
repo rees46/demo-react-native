@@ -17,6 +17,7 @@
     "navigations.titles.catalog": "Catalog",
     "navigations.titles.profile": "Profile",
     "navigations.titles.category": "Category",
-    "navigations.titles.product": "Product"
+    "navigations.titles.product": "Product",
+    "navigations.titles.productsearch": "Search"
   }
 }

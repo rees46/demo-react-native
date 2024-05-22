@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "private": true,
   "dependencies": {
+    "@fragments/screen-layout": "workspace:0.0.1",
     "@stores/rn-sdk": "workspace:0.0.1"
   },
   "devDependencies": {

@@ -2085,6 +2085,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@fragments/screen-layout@workspace:0.0.1, @fragments/screen-layout@workspace:rn-demo-app/fragments/screen-layout":
+  version: 0.0.0-use.local
+  resolution: "@fragments/screen-layout@workspace:rn-demo-app/fragments/screen-layout"
+  dependencies:
+    "@navigations/constants": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    "@types/react-native-vector-icons": "npm:6.4.18"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/spacer": "workspace:0.0.1"
+    "@ui/theme": "workspace:0.0.1"
+  peerDependencies:
+    react: 18.2.0
+    react-i18next: 14.1.1
+    react-native: 0.74.1
+    react-native-vector-icons: 10.1.0
+  languageName: unknown
+  linkType: soft
+
 "@globals/api-service@workspace:0.0.1, @globals/api-service@workspace:rn-demo-app/globals/api-service":
   version: 0.0.0-use.local
   resolution: "@globals/api-service@workspace:rn-demo-app/globals/api-service"
@@ -2700,6 +2718,8 @@ __metadata:
   dependencies:
     "@navigations/constants": "workspace:0.0.1"
     "@navigations/screen-stack-framgent": "workspace:0.0.1"
+    "@screens/cart": "workspace:0.0.1"
+    "@screens/catalog": "workspace:0.0.1"
     "@screens/category": "workspace:0.0.1"
     "@screens/home": "workspace:0.0.1"
     "@screens/product": "workspace:0.0.1"
@@ -2737,6 +2757,7 @@ __metadata:
     "@screens/catalog": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     "@types/react-native-vector-icons": "npm:6.4.18"
+    "@ui/theme": "workspace:0.0.1"
     react-i18next: "npm:14.1.1"
   peerDependencies:
     react: 18.2.0
@@ -4123,6 +4144,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@screens/cart@workspace:rn-demo-app/screens/cart"
   dependencies:
+    "@fragments/screen-layout": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react-i18next: "npm:14.1.1"
@@ -4138,6 +4160,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@screens/catalog@workspace:rn-demo-app/screens/catalog"
   dependencies:
+    "@fragments/screen-layout": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react-i18next: "npm:14.1.1"
@@ -4153,6 +4176,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@screens/category@workspace:rn-demo-app/screens/category"
   dependencies:
+    "@fragments/screen-layout": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react-i18next: "npm:14.1.1"
@@ -4168,8 +4192,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@screens/home@workspace:rn-demo-app/screens/home"
   dependencies:
-    "@fragments/product-search": "workspace:0.0.1"
     "@fragments/recommendations-block": "workspace:0.0.1"
+    "@fragments/screen-layout": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react: "npm:18.2.0"
@@ -4183,6 +4207,7 @@ __metadata:
   resolution: "@screens/product-search@workspace:rn-demo-app/screens/product-search"
   dependencies:
     "@fragments/product-search": "workspace:0.0.1"
+    "@fragments/screen-layout": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react-native: "npm:0.74.1"
   peerDependencies:
@@ -4195,6 +4220,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@screens/product@workspace:rn-demo-app/screens/product"
   dependencies:
+    "@fragments/screen-layout": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     react-i18next: "npm:14.1.1"

@@ -17,8 +17,8 @@ export const SCREEN_OPTIONS: ScreenOptions[] = [
     name: APP_ROUTES.CATALOG.tabName,
     title: 'catalog',
     component: CatalogScreen,
-    focusedIconName: 'list',
-    unfocusedIconName: 'list-outline',
+    focusedIconName: 'folder',
+    unfocusedIconName: 'folder-outline',
   },
   {
     name: APP_ROUTES.CART.tabName,
@@ -28,3 +28,5 @@ export const SCREEN_OPTIONS: ScreenOptions[] = [
     unfocusedIconName: 'cart-outline',
   },
 ]
+
+export const TAB_BAR_HEIGHT = 64

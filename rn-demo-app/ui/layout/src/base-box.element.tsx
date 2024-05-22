@@ -1,6 +1,6 @@
 import styled           from '@emotion/native'
 
-import { BaseBoxProps } from './box.interfaces'
+import { BaseBoxProps } from './base-box.interfaces'
 
 export const BaseBox = styled.View<BaseBoxProps>`
   background-color: ${(props) => props.theme.colors[props.backgroundColor ?? '']};

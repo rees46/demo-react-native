@@ -1,19 +1,21 @@
-import { HeaderFragment }           from '@fragments/header'
-
 import React                        from 'react'
 import Icon                         from 'react-native-vector-icons/Ionicons'
 import { memo }                     from 'react'
 import { useMemo }                  from 'react'
 import { useTranslation }           from 'react-i18next'
 
+import { HeaderFragment }           from '@fragments/header'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { useTheme }                 from '@ui/theme'
 
 import { SCREEN_OPTIONS }           from './tab-layout.constants'
+import { TAB_BAR_HEIGHT }           from './tab-layout.constants'
 
 const Tab = createBottomTabNavigator()
 
 export const TabLayoutNavigation = memo(() => {
   const { t } = useTranslation()
+  const theme = useTheme()
 
   const tabScreens = useMemo(
     () =>
@@ -33,13 +35,11 @@ export const TabLayoutNavigation = memo(() => {
               return (
                 <Icon
                   name={focused ? focusedIconName : unfocusedIconName}
-                  size={24}
+                  size={32}
                   color={color}
-                  style={{ marginBottom: -5 }}
                 />
               )
             },
-            tabBarStyle: { height: 50, paddingBottom: 5 },
           }}
         >
           {(props: any) => <Component {...props} />}
@@ -51,9 +51,14 @@ export const TabLayoutNavigation = memo(() => {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: 'green',
-        tabBarInactiveTintColor: 'gray',
+        tabBarActiveTintColor: theme.colors.white,
+        tabBarInactiveTintColor: theme.colors.gray,
         header: (props: any) => <HeaderFragment {...props} />,
+        tabBarStyle: {
+          backgroundColor: theme.colors.black,
+          height: TAB_BAR_HEIGHT,
+        },
+        tabBarLabel: () => null,
       }}
     >
       {tabScreens}
