@@ -2040,6 +2040,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@fragments/product-info@workspace:0.0.1, @fragments/product-info@workspace:rn-demo-app/fragments/product-info":
+  version: 0.0.0-use.local
+  resolution: "@fragments/product-info@workspace:rn-demo-app/fragments/product-info"
+  dependencies:
+    "@globals/api-service": "workspace:0.0.1"
+    "@globals/constants": "workspace:0.0.1"
+    "@globals/types": "workspace:0.0.1"
+    "@navigations/constants": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/spacer": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/theme": "workspace:0.0.1"
+    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: 18.2.0
+    react-native-vector-icons: 10.1.0
+  languageName: unknown
+  linkType: soft
+
 "@fragments/product-search@workspace:0.0.1, @fragments/product-search@workspace:rn-demo-app/fragments/product-search":
   version: 0.0.0-use.local
   resolution: "@fragments/product-search@workspace:rn-demo-app/fragments/product-search"
@@ -2066,10 +2088,12 @@ __metadata:
     "@globals/api-service": "workspace:0.0.1"
     "@globals/constants": "workspace:0.0.1"
     "@globals/types": "workspace:0.0.1"
+    "@navigations/constants": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     "@types/react-native-vector-icons": "npm:6.4.18"
     "@ui/condition": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/spacer": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
@@ -2128,12 +2152,24 @@ __metadata:
 "@globals/constants@workspace:0.0.1, @globals/constants@workspace:rn-demo-app/globals/constants":
   version: 0.0.0-use.local
   resolution: "@globals/constants@workspace:rn-demo-app/globals/constants"
+  dependencies:
+    "@types/react": "npm:^18.2.6"
+    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: 18.2.0
+    react-native: 0.74.1
   languageName: unknown
   linkType: soft
 
 "@globals/types@workspace:0.0.1, @globals/types@workspace:rn-demo-app/globals/types":
   version: 0.0.0-use.local
   resolution: "@globals/types@workspace:rn-demo-app/globals/types"
+  dependencies:
+    "@types/react": "npm:^18.2.6"
+    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: 18.2.0
+    react-native: 0.74.1
   languageName: unknown
   linkType: soft
 
@@ -4237,6 +4273,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@screens/product@workspace:rn-demo-app/screens/product"
   dependencies:
+    "@fragments/product-info": "workspace:0.0.1"
     "@fragments/screen-layout": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
@@ -4934,6 +4971,25 @@ __metadata:
     react: 18.2.0
     react-native: 0.74.1
     react-native-svg: 15.3.0
+  languageName: unknown
+  linkType: soft
+
+"@ui/image@workspace:0.0.1, @ui/image@workspace:rn-demo-app/ui/image":
+  version: 0.0.0-use.local
+  resolution: "@ui/image@workspace:rn-demo-app/ui/image"
+  dependencies:
+    "@emotion/native": "npm:11.11.0"
+    "@emotion/react": "npm:11.11.4"
+    "@types/prop-types": "npm:^15"
+    "@types/react": "npm:^18.2.6"
+    "@ui/theme": "workspace:0.0.1"
+    react-native: "npm:0.74.1"
+  peerDependencies:
+    "@emotion/native": "*"
+    "@emotion/react": "*"
+    prop-types: "*"
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 

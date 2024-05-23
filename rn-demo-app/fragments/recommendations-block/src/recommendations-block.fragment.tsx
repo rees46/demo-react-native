@@ -4,6 +4,8 @@ import { FlatList }                  from 'react-native'
 import { memo }                      from 'react'
 import { useCallback }               from 'react'
 
+import { APP_ROUTES }                from '@navigations/constants'
+import { Condition }                 from '@ui/condition'
 import { Box }                       from '@ui/layout'
 import { Column }                    from '@ui/layout'
 import { Row }                       from '@ui/layout'
@@ -12,11 +14,14 @@ import { TextComponent }             from '@ui/text'
 import { useTheme }                  from '@ui/theme'
 
 import { Show }                      from './components'
-import { RecommendationItem }        from './recommendation-item'
+import { RecommendationItem }        from './components/recommendation-item'
 import { RecommendationsBlockProps } from './recommendations-block.interfaces'
 import { useRecommendations }        from './campaign-services'
 
-export const RecommendationsBlock = memo(({ recommenderCode }: RecommendationsBlockProps) => {
+export const RecommendationsBlock = memo(({
+  navigation,
+  recommenderCode,
+}: RecommendationsBlockProps) => {
   const { loadRecommendations, recommendations, blockTitle, loading } = useRecommendations({
     recommenderCode,
   })
@@ -29,6 +34,10 @@ export const RecommendationsBlock = memo(({ recommenderCode }: RecommendationsBl
       </Box>
     ) : null
   }, [loading])
+
+  const handleProductPress = useCallback((id: string) => {
+    navigation.navigate(APP_ROUTES.PRODUCT.name, { id })
+  }, [])
 
   return (
     <Column>
@@ -46,16 +55,18 @@ export const RecommendationsBlock = memo(({ recommenderCode }: RecommendationsBl
               {blockTitle}
             </TextComponent>
           </Box>
-          <Row>
-            <Show />
-            <Spacer space={16} />
-          </Row>
+          <Condition condition={!loading}>
+            <Row alignItems='flex-end'>
+              <Show />
+              <Spacer space={16} />
+            </Row>
+          </Condition>
         </Row>
       </Row>
       <Spacer height={16} />
       <FlatList
         data={recommendations}
-        renderItem={({ item }) => <RecommendationItem item={item} />}
+        renderItem={({ item }) => <RecommendationItem item={item} onPress={handleProductPress} />}
         keyExtractor={({ id }) => id}
         horizontal
         showsHorizontalScrollIndicator={false}

@@ -1,5 +1,5 @@
 {
-  "name": "@fragments/recommendations-block",
+  "name": "@fragments/product-info",
   "version": "0.0.1",
   "main": "src/index.ts",
   "private": true,
@@ -7,7 +7,6 @@
     "@globals/api-service": "workspace:0.0.1",
     "@globals/constants": "workspace:0.0.1",
     "@navigations/constants": "workspace:0.0.1",
-    "@stores/rn-sdk": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/image": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
@@ -18,13 +17,10 @@
   },
   "devDependencies": {
     "@globals/types": "workspace:0.0.1",
-    "@types/react": "^18.2.6",
-    "@types/react-native-vector-icons": "6.4.18",
-    "react-i18next": "14.1.1"
+    "@types/react": "^18.2.6"
   },
   "peerDependencies": {
     "react": "18.2.0",
-    "react-i18next": "14.1.1",
     "react-native-vector-icons": "10.1.0"
   }
 }

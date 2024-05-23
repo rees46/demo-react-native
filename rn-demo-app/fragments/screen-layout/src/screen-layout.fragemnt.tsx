@@ -1,14 +1,13 @@
-import { Box }                from '@ui/layout'
-import { Column }        from '@ui/layout'
-import { Row }               from '@ui/layout'
-import { Spacer }            from '@ui/spacer'
-
 import React                 from 'react'
 import Icon                  from 'react-native-vector-icons/Ionicons'
+import { ScrollView }        from 'react-native'
 import { TouchableOpacity }  from 'react-native'
 import { useCallback }       from 'react'
 
 import { APP_ROUTES }        from '@navigations/constants'
+import { Box }               from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Spacer }            from '@ui/spacer'
 import { useTheme }          from '@ui/theme'
 
 import { CART_ICON }         from './screen-layout.constants'
@@ -49,7 +48,7 @@ export const ScreenLayout = ({ children, navigation }: ScreenLayoutProps) => {
         <Spacer space={12} />
       </Row>
       <Spacer space={7} />
-      {children}
+      <ScrollView>{children}</ScrollView>
     </Box>
   )
 }

@@ -1,5 +1,6 @@
 export const fontSize = {
   small: 12,
+  smallText: 13,
   semi: 14,
   normal: 16,
   big: 18,

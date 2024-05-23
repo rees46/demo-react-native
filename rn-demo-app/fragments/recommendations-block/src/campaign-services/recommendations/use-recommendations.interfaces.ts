@@ -1,4 +1,4 @@
-import { RecommendationsBlockType } from '../../recommendations-block.interfaces'
+import { ProductType } from '@globals/types'
 
 export interface UseRecommendationsProps {
   recommenderCode: string
@@ -6,7 +6,7 @@ export interface UseRecommendationsProps {
 
 export interface UseRecommendationsReturnedType {
   loading: boolean
-  recommendations: RecommendationsBlockType[]
+  recommendations: ProductType[]
   blockTitle: string
   loadRecommendations: () => void
   error?: Error

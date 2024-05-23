@@ -1,6 +1,5 @@
 import React                    from 'react'
 import { Fragment }             from 'react'
-import { ScrollView }           from 'react-native'
 import { useEffect }            from 'react'
 
 import { RecommendationsBlock } from '@fragments/recommendations-block'
@@ -20,17 +19,15 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <ScreenLayout navigation={navigation}>
-      <ScrollView>
-        <Spacer height={16} />
-        {RECOMMENDER_CODES.map((code, index) => (
-          <Fragment key={code}>
-            <Condition condition={!!index}>
-              <Spacer height={16} />
-            </Condition>
-            <RecommendationsBlock recommenderCode={code} />
-          </Fragment>
-        ))}
-      </ScrollView>
+      <Spacer height={16} />
+      {RECOMMENDER_CODES.map((code, index) => (
+        <Fragment key={code}>
+          <Condition condition={!!index}>
+            <Spacer height={16} />
+          </Condition>
+          <RecommendationsBlock recommenderCode={code} navigation={navigation} />
+        </Fragment>
+      ))}
     </ScreenLayout>
   )
 }

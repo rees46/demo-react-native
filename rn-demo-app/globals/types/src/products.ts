@@ -1,26 +1,42 @@
 import { CategoryType } from './categories'
 
 export interface ProductType {
-  _id: string
+  _id?: string
   brand: string
   categories: CategoryType[]
-  category_ids: number[]
+  category_ids: string[]
   currency: string
   description: string
   id: string
-  image_url: string
-  image_url_handle: string
+  image_url?: string
+  image_url_handle?: string
   name: string
   picture: string
-  price: number
-  image_url_resized: Record<string, string>
-  price_formatted: string
-  price_full: number
+  price: string
+  image_url_resized?: Record<string, string>
+  price_formatted?: string
+  price_full?: number
   oldprice_full?: number
-  price_full_formatted: string
+  price_full_formatted?: string
   url: string
-  url_handle: string
-  fashion_feature?: string
-  fashion_gender?: string
-  fashion_wear_type?: string
+  url_handle?: string
+  discount?: boolean
+  ignored?: boolean
+  image_download_data?: {
+    could_be_widgetable?: boolean
+    image?: string
+    image_changed?: boolean
+    name?: string
+    persisted?: boolean
+    price?: string
+    time?: string
+    url?: string
+    widgetable?: boolean
+  }
+  image_download_start_at?: string
+  is_available?: boolean
+  locations?: Record<string, unknown>
+  oldprice: string
+  sales_rate?: number
+  widgetable?: boolean
 }

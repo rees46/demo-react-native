@@ -1,8 +1,12 @@
-import { useMemo }       from 'react'
+import { useMemo }         from 'react'
 
-import { axiosInstance } from './axios-instance'
+import { privateInstance } from './axios-instance'
+import { publicInstance }  from './axios-instance'
 
 export const useApi = () =>
   useMemo(() => {
-    return axiosInstance
+    return {
+      privateApi: privateInstance,
+      publicApi: publicInstance,
+    }
   }, [])

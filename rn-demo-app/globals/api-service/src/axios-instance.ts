@@ -1,14 +1,17 @@
-import axios                      from 'axios'
+import axios           from 'axios'
 
-import { APP_DOMAIN }             from '@globals/constants'
+import { WHITE_LABEL } from '@globals/constants'
+import { AUTH_TOKEN }  from '@globals/constants'
 
-import { AUTH_TOKEN } from '@globals/constants'
-
-export const axiosInstance = axios.create({
-  baseURL: `${APP_DOMAIN}/api/v2`,
+export const publicInstance = axios.create({
+  baseURL: `${WHITE_LABEL === 'rees46' ? 'https://api.rees46.ru' : 'https://api.rees46.ru'}`,
 })
 
-axiosInstance.interceptors.request.use(
+export const privateInstance = axios.create({
+  baseURL: `${WHITE_LABEL === 'rees46' ? 'https://app.rees46.ru' : 'https://app.rees46.ru'}/api/v2`,
+})
+
+privateInstance.interceptors.request.use(
   (config) => {
     config.headers.Authorization = `Bearer ${AUTH_TOKEN}`
     return config

@@ -1,25 +1,16 @@
-import React                from 'react'
-import { useEffect } from 'react'
-import { Text }             from 'react-native'
-import { View }       from 'react-native'
-import { useTranslation }   from 'react-i18next'
+import { ProductInfo }  from '@fragments/product-info'
 
-import { useSDK }           from '@stores/rn-sdk'
+import React            from 'react'
 
-import { styles }           from './product.styles'
+import { ScreenLayout } from '@fragments/screen-layout'
 
-const ProductScreen = () => {
-  const sdk = useSDK()
-  const { t } = useTranslation()
-
-  useEffect(() => {
-    sdk.track('wish', [])
-  }, [sdk])
+const ProductScreen = ({ navigation, route }) => {
+  const { id } = route.params
 
   return (
-    <View style={styles.container}>
-      <Text>{t('screens.product.title')}</Text>
-    </View>
+    <ScreenLayout navigation={navigation}>
+      <ProductInfo id={id} />
+    </ScreenLayout>
   )
 }
 
