@@ -1,10 +1,5 @@
-export interface RecommendationItemType {
-  id: string
-  name: string
-  image: string
-  price: string
-}
+import { ProductType } from '@globals/types'
 
 export interface RecommendationItemProps {
-  item: RecommendationItemType
+  item: ProductType
 }

@@ -2065,12 +2065,21 @@ __metadata:
   dependencies:
     "@globals/api-service": "workspace:0.0.1"
     "@globals/constants": "workspace:0.0.1"
+    "@globals/types": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
+    "@types/react-native-vector-icons": "npm:6.4.18"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/spacer": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/theme": "workspace:0.0.1"
+    react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   peerDependencies:
     react: 18.2.0
     react-i18next: 14.1.1
+    react-native-vector-icons: 10.1.0
   languageName: unknown
   linkType: soft
 
@@ -2119,6 +2128,12 @@ __metadata:
 "@globals/constants@workspace:0.0.1, @globals/constants@workspace:rn-demo-app/globals/constants":
   version: 0.0.0-use.local
   resolution: "@globals/constants@workspace:rn-demo-app/globals/constants"
+  languageName: unknown
+  linkType: soft
+
+"@globals/types@workspace:0.0.1, @globals/types@workspace:rn-demo-app/globals/types":
+  version: 0.0.0-use.local
+  resolution: "@globals/types@workspace:rn-demo-app/globals/types"
   languageName: unknown
   linkType: soft
 
@@ -4196,6 +4211,8 @@ __metadata:
     "@fragments/screen-layout": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/spacer": "workspace:0.0.1"
     react: "npm:18.2.0"
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"

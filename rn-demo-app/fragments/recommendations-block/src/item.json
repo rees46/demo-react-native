@@ -1,0 +1,74 @@
+{
+  "_id": "1243396608406585641",
+  "brand": "Burberry",
+  "categories": [
+    {
+      "id": "313",
+      "level": "1",
+      "name": "Apparel",
+      "name_with_parent": "Apparel",
+      "url": "https://demo.rees46.com/categories/apparel?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7",
+      "url_handle": "/categories/apparel?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7"
+    },
+    {
+      "id": "14",
+      "level": "2",
+      "name": "Men",
+      "name_with_parent": "Apparel - Men",
+      "parent_id": "313",
+      "url": "https://demo.rees46.com/categories/men?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7",
+      "url_handle": "/categories/men?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7"
+    },
+    {
+      "id": "40",
+      "level": "3",
+      "name": "Shoes",
+      "name_with_parent": "Men - Shoes",
+      "parent_id": "14",
+      "url": "https://demo.rees46.com/categories/mens-shoes?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7",
+      "url_handle": "/categories/mens-shoes?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7"
+    }
+  ],
+  "category_ids": [
+    "313",
+    "14",
+    "40"
+  ],
+  "currency": "₽",
+  "description": "Comfort and durability are what get you through the day. This classic pair of men's shoes does the job in style. This design will take you through the all seasons with ease. Soft and supple material provides a luxurious look that's perfect for any oc",
+  "fashion_feature": "adult",
+  "fashion_gender": "m",
+  "fashion_original_sizes": [
+    "39",
+    "47"
+  ],
+  "fashion_sizes": [
+    "39",
+    "47"
+  ],
+  "fashion_wear_type": "shoe",
+  "id": "771",
+  "image": "https://demo.rees46.com/uploads/product/image/771/01_808.jpg",
+  "image_url": "https://demo.rees46.com/uploads/product/image/771/01_808.jpg",
+  "image_url_handle": "/uploads/product/image/771/01_808.jpg",
+  "image_url_resized": {
+    "120": "https://pictures.rees46.ru/resize-images/120/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+    "140": "https://pictures.rees46.ru/resize-images/140/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+    "160": "https://pictures.rees46.ru/resize-images/160/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+    "180": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+    "200": "https://pictures.rees46.ru/resize-images/200/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+    "220": "https://pictures.rees46.ru/resize-images/220/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+    "310": "https://pictures.rees46.ru/resize-images/310/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+    "520": "https://pictures.rees46.ru/resize-images/520/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg"
+  },
+  "name": "Burberry Men's Shoes",
+  "picture": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+  "price": "815 ₽",
+  "price_formatted": "815 ₽",
+  "price_full": 815.83,
+  "price_full_formatted": "815.83 ₽",
+  "relative_sales_rate": 20.55,
+  "sales_rate": 567,
+  "url": "https://demo.rees46.com/products/771?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7",
+  "url_handle": "/products/771?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7"
+}

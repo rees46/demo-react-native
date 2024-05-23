@@ -1,15 +1,16 @@
-import { useCallback }              from 'react'
-import { useEffect }                from 'react'
-import { useState }                 from 'react'
+import { ProductType }         from '@globals/types'
 
-import { useSDK }                   from '@stores/rn-sdk'
+import { useCallback }        from 'react'
+import { useEffect }          from 'react'
+import { useState }           from 'react'
 
-import { RecommendationsBlockType } from '../../recommendations-block.interfaces'
-import { UseRecommendations }       from './use-recommendations.interfaces'
-import { defaultOptions }           from '../../recommendations-block.constants'
+import { useSDK }             from '@stores/rn-sdk'
+
+import { UseRecommendations } from './use-recommendations.interfaces'
+import { defaultOptions }     from '../../recommendations-block.constants'
 
 export const useRecommendations: UseRecommendations = ({ recommenderCode }) => {
-  const [recommendations, setRecommendations] = useState<RecommendationsBlockType[]>([])
+  const [recommendations, setRecommendations] = useState<ProductType[]>([])
   const [loading, setLoading] = useState(false)
   const [page, setPage] = useState(1)
   const sdk = useSDK()

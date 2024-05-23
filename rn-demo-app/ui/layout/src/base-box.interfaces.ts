@@ -1,9 +1,8 @@
-import { ReactNode }            from 'react'
-import { ViewProps }            from 'react-native'
+import { ReactNode }  from 'react'
+import { ViewProps }  from 'react-native'
 
-import { ColorsType }            from '@ui/theme'
-
-import { ThemeType } from '@ui/theme'
+import { ColorsType } from '@ui/theme'
+import { ThemeType }  from '@ui/theme'
 
 export interface BaseBoxProps extends ViewProps {
   children: ReactNode
@@ -19,4 +18,5 @@ export interface BaseBoxProps extends ViewProps {
     | 'space-around'
     | 'space-evenly'
   alignItems?: 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch'
+  overflow?: 'hidden' | 'auto'
 }

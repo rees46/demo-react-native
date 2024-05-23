@@ -1,4 +1,5 @@
-import { Column }            from '@ui/layout'
+import { Box }                from '@ui/layout'
+import { Column }        from '@ui/layout'
 import { Row }               from '@ui/layout'
 import { Spacer }            from '@ui/spacer'
 
@@ -27,7 +28,7 @@ export const ScreenLayout = ({ children, navigation }: ScreenLayoutProps) => {
   )
 
   return (
-    <Column backgroundColor='white'>
+    <Box backgroundColor='white' fullHeight>
       <Spacer space={11} />
       <Row justifyContent='space-between' alignItems='center'>
         <TouchableOpacity onPress={handlePress(APP_ROUTES.CATALOG.name)}>
@@ -49,6 +50,6 @@ export const ScreenLayout = ({ children, navigation }: ScreenLayoutProps) => {
       </Row>
       <Spacer space={7} />
       {children}
-    </Column>
+    </Box>
   )
 }

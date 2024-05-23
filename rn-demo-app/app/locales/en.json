@@ -7,6 +7,7 @@
     "screens.product.title": "Product",
     "screens.category.title": "Category",
     "fragments.recommendations-block.title": "Recommendations",
+    "fragments.recommendations-block.show": "Show all",
     "fragments.product-search.placeholder": "Search",
     "fragments.product-search.products-title": "Products",
     "fragments.product-search.categories-title": "Categories",

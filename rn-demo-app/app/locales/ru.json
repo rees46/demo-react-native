@@ -7,6 +7,7 @@
     "screens.product.title": "Товар",
     "screens.category.title": "Категория",
     "fragments.recommendations-block.title": "Рекомендации",
+    "fragments.recommendations-block.show": "Просмотреть все",
     "fragments.product-search.placeholder": "Найти",
     "fragments.product-search.products-title": "Товары:",
     "fragments.product-search.categories-title": "Категории:",

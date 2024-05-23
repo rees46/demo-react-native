@@ -11,4 +11,6 @@ export interface ExtendedTextProps extends TextProps {
   fontColor?: ColorsType
   children: string
   theme?: ThemeType
+  lineHeight?: number
+  lineTrough?: boolean
 }
