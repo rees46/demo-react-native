@@ -23,4 +23,7 @@ export const APP_ROUTES = {
   PRODUCT_SEARCH: {
     name: 'ProductSearch',
   },
+  SEARCH_RESULTS: {
+    name: 'SearchResults',
+  },
 } as const

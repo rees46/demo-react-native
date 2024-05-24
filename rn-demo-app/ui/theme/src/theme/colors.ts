@@ -7,4 +7,4 @@ export const colors = {
   lightGray: '#E8E8E8',
 }
 
-export type ColorsType = keyof typeof colors
+export type ColorType = keyof typeof colors

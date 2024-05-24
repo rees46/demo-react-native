@@ -4,6 +4,7 @@ import { FlatList }                  from 'react-native'
 import { memo }                      from 'react'
 import { useCallback }               from 'react'
 
+import { ProductCard }               from '@fragments/product-card'
 import { APP_ROUTES }                from '@navigations/constants'
 import { Condition }                 from '@ui/condition'
 import { Box }                       from '@ui/layout'
@@ -14,13 +15,13 @@ import { TextComponent }             from '@ui/text'
 import { useTheme }                  from '@ui/theme'
 
 import { Show }                      from './components'
-import { RecommendationItem }        from './components/recommendation-item'
 import { RecommendationsBlockProps } from './recommendations-block.interfaces'
 import { useRecommendations }        from './campaign-services'
 
 export const RecommendationsBlock = memo(({
   navigation,
   recommenderCode,
+  titleVariant = 'smallTitle',
 }: RecommendationsBlockProps) => {
   const { loadRecommendations, recommendations, blockTitle, loading } = useRecommendations({
     recommenderCode,
@@ -46,7 +47,7 @@ export const RecommendationsBlock = memo(({
         <Row justifyContent='space-between' flex={1}>
           <Box width='50%'>
             <TextComponent
-              fontSize='smallTitle'
+              fontSize={titleVariant}
               fontWeight='semibold'
               lineHeight={1}
               numberOfLines={1}
@@ -66,7 +67,7 @@ export const RecommendationsBlock = memo(({
       <Spacer height={16} />
       <FlatList
         data={recommendations}
-        renderItem={({ item }) => <RecommendationItem item={item} onPress={handleProductPress} />}
+        renderItem={({ item }) => <ProductCard item={item} onPress={handleProductPress} />}
         keyExtractor={({ id }) => id}
         horizontal
         showsHorizontalScrollIndicator={false}

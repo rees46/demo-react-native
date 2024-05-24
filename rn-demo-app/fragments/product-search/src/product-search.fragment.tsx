@@ -1,52 +1,45 @@
-import React                  from 'react'
-import { SectionList }        from 'react-native'
-import { Text }               from 'react-native'
-import { TouchableOpacity }   from 'react-native'
-import { View }               from 'react-native'
-import { Searchbar }          from 'react-native-paper'
-import { useCallback }        from 'react'
-import { useEffect }          from 'react'
-import { useMemo }            from 'react'
-import { useRef }             from 'react'
-import { useState }           from 'react'
-import { useTranslation }     from 'react-i18next'
+import React                      from 'react'
+import { SectionList }            from 'react-native'
+import { TextInput }              from 'react-native'
+import { useCallback }            from 'react'
+import { useEffect }              from 'react'
+import { useMemo }                from 'react'
+import { useRef }                 from 'react'
+import { useTranslation }         from 'react-i18next'
 
-import { APP_ROUTES }         from '@navigations/constants'
-import { Condition }          from '@ui/condition'
+import { APP_ROUTES }             from '@navigations/constants'
+import { ButtonComponent }        from '@ui/button'
+import { Condition }              from '@ui/condition'
+import { Box }                    from '@ui/layout'
+import { Column }                 from '@ui/layout'
+import { Row }                    from '@ui/layout'
+import { Spacer }                 from '@ui/spacer'
+import { TextComponent }          from '@ui/text'
+import { useKeyboardHeight }      from '@shared/utils'
 
-import { ItemType }           from './product-search.interfaces'
-import { ProductSearchProps } from './product-search.interfaces'
-import { useProductSearch }   from './campaign-services'
-import { getStyles }          from './product-search.styles'
+import { CategoryItem }           from './components'
+import { ProductItem }            from './components'
+import { SearchComponent }        from './components'
+import { ItemType }               from './product-search.interfaces'
+import { ProductSearchProps }     from './product-search.interfaces'
+import { useProductSearch }       from './campaign-services'
+import { getSearchContentHeight } from './utils'
 
-export const ProductSearch = ({ navigation, viewOnly = true }: ProductSearchProps) => {
+export const ProductSearch = ({ navigation }: ProductSearchProps) => {
   const { searchQuery, setSearchQuery, totalResults, items, categories } = useProductSearch()
   const { t } = useTranslation()
-  const searchbarRef = useRef<any>(null)
-  const [styles] = useState(getStyles(viewOnly))
+  const searchbarRef = useRef<TextInput>(null)
+  const keyboardHeight = useKeyboardHeight()
 
   useEffect(() => {
-    if (searchbarRef.current && !viewOnly) {
+    if (searchbarRef.current) {
       searchbarRef.current.focus()
     }
-  }, [viewOnly])
-
-  const handleFocus = useCallback(() => {
-    if (searchbarRef.current && viewOnly) {
-      navigation.navigate(APP_ROUTES.PRODUCT_SEARCH.name)
-    }
-  }, [navigation, viewOnly])
-
-  const handleSearch = useCallback(
-    (query: string) => {
-      setSearchQuery(query)
-    },
-    [setSearchQuery]
-  )
+  }, [])
 
   const handleProductPress = useCallback(
     (productId: string) => {
-      navigation.navigate(APP_ROUTES.PRODUCT.name, { productId })
+      navigation.navigate(APP_ROUTES.PRODUCT.name, { id: productId })
     },
     [navigation]
   )
@@ -58,71 +51,100 @@ export const ProductSearch = ({ navigation, viewOnly = true }: ProductSearchProp
     [navigation]
   )
 
+  const handleClose = useCallback(() => navigation.navigate(APP_ROUTES.HOME.name), [navigation])
+
+  const handleSearchSubmit = useCallback(
+    () => navigation.navigate(APP_ROUTES.SEARCH_RESULTS.name),
+    [navigation]
+  )
+
   const sections = useMemo(
     () => [
       {
-        title: t('fragments.product-search.products-title'),
-        data: items,
-        keyExtractor: (item: ItemType) => item.id,
-        renderItem: ({ item }: { item: ItemType }) => (
-          <TouchableOpacity style={styles.item} onPress={() => handleProductPress(item.id)}>
-            <Text style={styles.itemName}>{item.name}</Text>
-            <Text style={styles.itemPrice}>{item.price_full_formatted}</Text>
-          </TouchableOpacity>
-        ),
-      },
-      {
-        title: t('fragments.product-search.categories-title'),
+        title: t('fragments.product-search.categories-title').toUpperCase(),
         data: categories,
         keyExtractor: (item: ItemType) => item.id,
         renderItem: ({ item }: { item: ItemType }) => (
-          <TouchableOpacity style={styles.category} onPress={() => handleCategoryPress(item.id)}>
-            <Text>{item.name}</Text>
-          </TouchableOpacity>
+          <CategoryItem item={item} onPress={handleCategoryPress} />
+        ),
+      },
+      {
+        title: t('fragments.product-search.products-title').toUpperCase(),
+        data: items,
+        keyExtractor: (item: ItemType) => item.id,
+        renderItem: ({ item }: { item: ItemType }) => (
+          <ProductItem item={item} onPress={handleProductPress} />
         ),
       },
     ],
-    [
-      t,
-      items,
-      categories,
-      styles.item,
-      styles.itemName,
-      styles.itemPrice,
-      styles.category,
-      handleProductPress,
-      handleCategoryPress,
-    ]
+    [t, items, categories, handleProductPress, handleCategoryPress]
   )
 
   return (
-    <View style={styles.container}>
-      <Searchbar
-        ref={searchbarRef}
-        placeholder={t('fragments.product-search.placeholder')}
-        onChangeText={viewOnly ? undefined : handleSearch}
-        value={searchQuery}
-        style={styles.searchbar}
-        onFocus={handleFocus}
-        onClearIconPress={() => navigation.navigate(APP_ROUTES.HOME.name)}
-      />
-      <Condition condition={!viewOnly}>
+    <Column>
+      <Spacer height={12} />
+      <Row>
+        <Spacer space={12} />
+        <Box flex={1}>
+          <SearchComponent
+            ref={searchbarRef}
+            value={searchQuery}
+            onChangeText={setSearchQuery}
+            placeholder={t('fragments.product-search.placeholder')}
+            onClose={handleClose}
+            clearable
+          />
+        </Box>
+        <Spacer space={12} />
+      </Row>
+      <Box height={getSearchContentHeight(keyboardHeight)}>
         <Condition condition={!!totalResults}>
           <SectionList
             sections={sections}
             keyExtractor={(item, index) => item.id + index}
             renderSectionHeader={({ section: { title } }) => (
-              <Text style={styles.header}>{title}</Text>
+              <Column>
+                <Spacer height={12} />
+                <Box height={1} backgroundColor='lightGray' fullWidth />
+                <Row>
+                  <Spacer space={16} />
+                  <Column>
+                    <Spacer height={8} />
+                    <TextComponent fontColor='gray' fontSize='smallTitle' lineHeight={1.3}>
+                      {title}
+                    </TextComponent>
+                  </Column>
+                  <Spacer space={16} />
+                </Row>
+              </Column>
             )}
             keyboardShouldPersistTaps='always'
           />
+          <Column>
+            <Spacer height={16} />
+            <Box flexDirection='row' fullWidth>
+              <Spacer space={16} />
+              <ButtonComponent
+                variant='secondary'
+                title={t('fragments.product-search.total', { total: totalResults })}
+                onPress={handleSearchSubmit}
+              />
+              <Spacer space={16} />
+            </Box>
+            <Spacer height={16} />
+          </Column>
         </Condition>
         <Condition condition={!totalResults}>
-          <View>
-            <Text>{t('fragments.product-search.empty')}</Text>
-          </View>
+          <Row>
+            <Spacer space={16} />
+            <Column>
+              <Spacer height={12} />
+              <TextComponent>{t('fragments.product-search.empty')}</TextComponent>
+            </Column>
+            <Spacer space={16} />
+          </Row>
         </Condition>
-      </Condition>
-    </View>
+      </Box>
+    </Column>
   )
 }

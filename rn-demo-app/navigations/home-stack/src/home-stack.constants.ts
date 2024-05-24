@@ -1,3 +1,5 @@
+import SearchResultsScreen from '@screens/search-results'
+
 import CartScreen          from '@screens/cart'
 import CatalogScreen       from '@screens/catalog'
 import CategoryScreen      from '@screens/category'
@@ -25,6 +27,13 @@ export const HOME_STACK_OPTIONS = [
   {
     name: APP_ROUTES.PRODUCT_SEARCH.name,
     component: ProductSearchScreen,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    name: APP_ROUTES.SEARCH_RESULTS.name,
+    component: SearchResultsScreen,
   },
   {
     name: APP_ROUTES.PRODUCT.name,

@@ -1,13 +1,13 @@
-import { ReactNode }  from 'react'
-import { ViewProps }  from 'react-native'
+import { ReactNode } from 'react'
+import { ViewProps } from 'react-native'
 
-import { ColorsType } from '@ui/theme'
-import { ThemeType }  from '@ui/theme'
+import { ColorType } from '@ui/theme'
+import { ThemeType } from '@ui/theme'
 
 export interface BaseBoxProps extends ViewProps {
-  children: ReactNode
+  children?: ReactNode
   theme?: ThemeType
-  backgroundColor?: ColorsType
+  backgroundColor?: ColorType
   flex?: number
   gap?: number
   justifyContent?:

@@ -1,5 +1,3 @@
-import { ImageComponent }    from '@ui/image'
-
 import React                 from 'react'
 import { ActivityIndicator } from 'react-native'
 import { memo }              from 'react'
@@ -8,6 +6,7 @@ import { useEffect }         from 'react'
 import { SHOP_ID }           from '@globals/constants'
 import { ProductType }       from '@globals/types'
 import { Condition }         from '@ui/condition'
+import { ImageComponent }    from '@ui/image'
 import { Box }               from '@ui/layout'
 import { Row }               from '@ui/layout'
 import { Spacer }            from '@ui/spacer'
@@ -95,7 +94,7 @@ export const ProductInfo = memo(({ id }: ProductInfoProps) => {
           >{`${product?.oldprice} ${product!.currency}`}</TextComponent>
           <Spacer height={4} />
         </Condition>
-        <TextComponent fontWeight='bold' fontSize='title' lineHeight={1}>
+        <TextComponent fontWeight='semibold' fontSize='title' lineHeight={1}>
           {`${product!.price} ${product!.currency}`}
         </TextComponent>
       </Box>

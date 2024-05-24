@@ -9,16 +9,19 @@
     "fragments.recommendations-block.title": "Рекомендации",
     "fragments.recommendations-block.show": "Просмотреть все",
     "fragments.product-search.placeholder": "Найти",
-    "fragments.product-search.products-title": "Товары:",
-    "fragments.product-search.categories-title": "Категории:",
-    "fragments.product-search.total": "Всего найдено товаров: {{total}}",
+    "fragments.product-search.products-title": "Подходящие товары:",
+    "fragments.product-search.categories-title": "Подходящие категории:",
+    "fragments.product-search.total": "Просмотреть все ({{total}})",
     "fragments.product-search.empty":  "Товары не найдены",
+    "fragments.product-search.total_results": "найдено товаров: {{total}}",
+    "fragments.product-search.empty_results": "По вашему запросу ничего не найдено.",
     "navigations.titles.home": "Главная",
     "navigations.titles.cart": "Корзина",
     "navigations.titles.catalog": "Каталог",
     "navigations.titles.profile": "Профиль",
     "navigations.titles.category": "Категория",
     "navigations.titles.product": "Товар",
-    "navigations.titles.productsearch": "Поиск"
+    "navigations.titles.productsearch": "Поиск",
+    "navigations.titles.searchresults": "Результаты поиска"
   }
 }

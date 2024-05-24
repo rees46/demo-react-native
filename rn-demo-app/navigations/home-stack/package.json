@@ -11,7 +11,8 @@
     "@screens/category": "workspace:0.0.1",
     "@screens/home": "workspace:0.0.1",
     "@screens/product": "workspace:0.0.1",
-    "@screens/product-search": "workspace:0.0.1"
+    "@screens/product-search": "workspace:0.0.1",
+    "@screens/search-results": "workspace:0.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.6"

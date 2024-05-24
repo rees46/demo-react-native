@@ -10,8 +10,9 @@ import { useTheme }                 from '@ui/theme'
 
 import { SCREEN_OPTIONS }           from './tab-layout.constants'
 import { TAB_BAR_HEIGHT }           from './tab-layout.constants'
+import { TabParamList }              from './tab-layout.interfaces'
 
-const Tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator<TabParamList>()
 
 export const TabLayoutNavigation = memo(() => {
   const { t } = useTranslation()

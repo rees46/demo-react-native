@@ -11,7 +11,13 @@ export const BoxElement = styled(BaseBox)<BoxProps>`
     const value = props.theme.radii[props.radius ?? '']
 
     if (value && typeof value === 'number') return `${value}px`
-    if (value && !value.endsWith('%')) return `${value}px`
+    if (value && value === 'rounded')
+      return `${
+        Math.max(
+          typeof props.width === 'number' ? props.width : 0,
+          typeof props.height === 'number' ? props.height : 0
+        ) / 2
+      }px`
 
     return value
   }};

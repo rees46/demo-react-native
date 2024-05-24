@@ -34,6 +34,7 @@ export interface ItemType {
   id: string
   name: string
   price_full_formatted?: string
+  image_url?: string
 }
 
 interface QueryType {
@@ -55,5 +56,4 @@ export interface SearchResponse {
 
 export interface ProductSearchProps {
   navigation: any
-  viewOnly?: boolean
 }

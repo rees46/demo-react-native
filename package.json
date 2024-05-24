@@ -15,7 +15,8 @@
     "rn-demo-app/stores/**/*",
     "rn-demo-app/ui/**/*",
     "rn-demo-app/globals/**/*",
-    "rn-demo-app/navigations/**/*"
+    "rn-demo-app/navigations/**/*",
+    "rn-demo-app/shared/**/*"
   ],
   "devDependencies": {
     "@atls/prettier-plugin": "0.0.8",

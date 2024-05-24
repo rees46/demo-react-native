@@ -1,6 +1,6 @@
 import { TextProps }      from 'react-native'
 
-import { ColorsType }     from '@ui/theme'
+import { ColorType }      from '@ui/theme'
 import { ThemeType }      from '@ui/theme'
 import { FontSizeType }   from '@ui/theme'
 import { FontWeightType } from '@ui/theme'
@@ -8,7 +8,7 @@ import { FontWeightType } from '@ui/theme'
 export interface ExtendedTextProps extends TextProps {
   fontSize?: FontSizeType
   fontWeight?: FontWeightType
-  fontColor?: ColorsType
+  fontColor?: ColorType
   children: string
   theme?: ThemeType
   lineHeight?: number

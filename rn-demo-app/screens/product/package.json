@@ -5,8 +5,10 @@
   "private": true,
   "dependencies": {
     "@fragments/product-info": "workspace:0.0.1",
+    "@fragments/recommendations-block": "workspace:0.0.1",
     "@fragments/screen-layout": "workspace:0.0.1",
-    "@stores/rn-sdk": "workspace:0.0.1"
+    "@stores/rn-sdk": "workspace:0.0.1",
+    "@ui/spacer": "workspace:0.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.6",

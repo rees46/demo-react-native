@@ -17,6 +17,7 @@ const config = {
     path.resolve(__dirname, '../ui'),
     path.resolve(__dirname, '../globals'),
     path.resolve(__dirname, '../navigations'),
+    path.resolve(__dirname, '../shared'),
   ],
   transformer: {
     getTransformOptions: async () => ({
