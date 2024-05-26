@@ -12,13 +12,15 @@
     "@screens/home": "workspace:0.0.1",
     "@screens/product": "workspace:0.0.1",
     "@screens/product-search": "workspace:0.0.1",
-    "@screens/search-results": "workspace:0.0.1"
+    "@screens/search-results": "workspace:0.0.1",
+    "@screens/subcategories": "workspace:0.0.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.6"
+    "@types/react": "^18.2.6",
+    "react-native": "0.74.1"
   },
   "peerDependencies": {
-    "react": "18.2.0",
-    "react-native": "0.74.1"
+    "react": "*",
+    "react-native": "*"
   }
 }

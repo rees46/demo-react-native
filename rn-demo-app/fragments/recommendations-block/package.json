@@ -24,8 +24,9 @@
     "react-native": "0.74.1"
   },
   "peerDependencies": {
-    "react": "18.2.0",
-    "react-i18next": "14.1.1",
-    "react-native-vector-icons": "10.1.0"
+    "react": "*",
+    "react-i18next": "*",
+    "react-native": "*",
+    "react-native-vector-icons": "*"
   }
 }

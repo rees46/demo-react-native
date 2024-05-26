@@ -34,7 +34,7 @@ const SearchResultsScreen = ({ navigation }: SearchResultsProps) => {
       </Box>
       <RecommendationsBlock
         navigation={navigation}
-        // TODO: add "You also may like" recommender instead of string
+        // TODO: replace by necessary recommender
         recommenderCode='1efd76c810cc2364ff89677af3e076c7'
         titleVariant='title'
       />

@@ -5,7 +5,9 @@ import { RecommendationsBlock } from '@fragments/recommendations-block'
 import { ScreenLayout }         from '@fragments/screen-layout'
 import { Spacer }               from '@ui/spacer'
 
-const ProductScreen = ({ navigation, route }) => {
+import { ProductProps }          from './product.interfaces'
+
+const ProductScreen = ({ navigation, route }: ProductProps) => {
   const { id } = route.params
 
   return (
@@ -14,7 +16,7 @@ const ProductScreen = ({ navigation, route }) => {
       <Spacer height={16} />
       <RecommendationsBlock
         navigation={navigation}
-        // TODO: add "You also may like" recommender instead of string
+        // TODO: replace by necessary recommender
         recommenderCode='1efd76c810cc2364ff89677af3e076c7'
         titleVariant='title'
       />

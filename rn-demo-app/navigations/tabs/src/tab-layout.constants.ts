@@ -28,5 +28,3 @@ export const SCREEN_OPTIONS: ScreenOptions[] = [
     unfocusedIconName: 'cart-outline',
   },
 ]
-
-export const TAB_BAR_HEIGHT = 64

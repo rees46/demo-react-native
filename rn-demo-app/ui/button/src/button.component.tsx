@@ -45,7 +45,7 @@ export const ButtonComponent = memo(({
               alignItems='center'
               fullWidth
             >
-              <TextComponent fontColor='black' fontSize='normal' fontWeight='medium'>
+              <TextComponent fontColor='black' fontSize='normal' fontWeight='medium' lineHeight={1}>
                 {title ?? ''}
               </TextComponent>
             </Box>

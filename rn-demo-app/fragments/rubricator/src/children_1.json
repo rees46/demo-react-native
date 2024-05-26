@@ -1,0 +1,58 @@
+{
+  "children_1": [
+    {
+      "children": [],
+      "external_id": "41",
+      "id": 1243396609220281300,
+      "name": "T-shirts",
+      "parent_external_id": "14",
+      "parent_id": 1218754549804696000,
+      "url": "https://demo.rees46.com/categories/4587bc47-f2d3-4314-b79d-53dc1c576046"
+    },
+    {
+      "children": [],
+      "external_id": "38",
+      "id": 1243396609102840800,
+      "name": "Jeans",
+      "parent_external_id": "14",
+      "parent_id": 1218754549804696000,
+      "url": "https://demo.rees46.com/categories/15e02960-bd6a-437c-be91-ec85440e97c9"
+    },
+    {
+      "children": [],
+      "external_id": "40",
+      "id": 1243396609178338300,
+      "name": "Shoes",
+      "parent_external_id": "14",
+      "parent_id": 1218754549804696000,
+      "url": "https://demo.rees46.com/categories/mens-shoes"
+    },
+    {
+      "children": [],
+      "external_id": "37",
+      "id": 1243396609060897800,
+      "name": "Suits",
+      "parent_external_id": "14",
+      "parent_id": 1218754549804696000,
+      "url": "https://demo.rees46.com/categories/5c162655-41aa-4878-90f4-a87de9e827bd"
+    },
+    {
+      "children": [],
+      "external_id": "36",
+      "id": 1243396609262224400,
+      "name": "Coats",
+      "parent_external_id": "14",
+      "parent_id": 1218754549804696000,
+      "url": "https://demo.rees46.com/categories/c0514eb5-4417-4376-be74-3310acd9d78b"
+    },
+    {
+      "children": [],
+      "external_id": "39",
+      "id": 1243396609136395300,
+      "name": "Shirts",
+      "parent_external_id": "14",
+      "parent_id": 1218754549804696000,
+      "url": "https://demo.rees46.com/categories/5a5aa539-e21e-441c-8eb3-152d91be5261"
+    }
+  ]
+}

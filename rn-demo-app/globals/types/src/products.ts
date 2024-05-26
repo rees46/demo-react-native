@@ -1,9 +1,9 @@
-import { CategoryType } from './categories'
+import { SearchCategory } from './categories'
 
 export interface ProductType {
   _id?: string
   brand: string
-  categories: CategoryType[]
+  categories: SearchCategory[]
   category_ids: string[]
   currency: string
   description: string

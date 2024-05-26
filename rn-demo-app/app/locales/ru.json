@@ -3,6 +3,7 @@
     "screens.home.title": "Главная",
     "screens.cart.title": "Корзина",
     "screens.catalog.title": "Каталог",
+    "screens.catalog.shopping-cart": "Корзина",
     "screens.profile.title": "Профиль",
     "screens.product.title": "Товар",
     "screens.category.title": "Категория",
@@ -22,6 +23,7 @@
     "navigations.titles.category": "Категория",
     "navigations.titles.product": "Товар",
     "navigations.titles.productsearch": "Поиск",
-    "navigations.titles.searchresults": "Результаты поиска"
+    "navigations.titles.searchresults": "Результаты поиска",
+    "navigations.back": "Назад"
   }
 }

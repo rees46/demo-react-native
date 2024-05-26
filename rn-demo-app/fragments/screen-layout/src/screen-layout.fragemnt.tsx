@@ -1,54 +1,37 @@
-import React                 from 'react'
-import Icon                  from 'react-native-vector-icons/Ionicons'
-import { ScrollView }        from 'react-native'
-import { TouchableOpacity }  from 'react-native'
-import { useCallback }       from 'react'
+import React                         from 'react'
+import { ScrollView }                from 'react-native'
 
-import { APP_ROUTES }        from '@navigations/constants'
-import { Box }               from '@ui/layout'
-import { Row }               from '@ui/layout'
-import { Spacer }            from '@ui/spacer'
-import { useTheme }          from '@ui/theme'
+import { SCREEN_HEADER_HEIGHT }      from '@globals/constants'
+import { Condition }                 from '@ui/condition'
+import { Box }                       from '@ui/layout'
 
-import { CART_ICON }         from './screen-layout.constants'
-import { ICON_SIZE }         from './screen-layout.constants'
-import { CATALOG_ICON }      from './screen-layout.constants'
-import { SEARCH_ICON }       from './screen-layout.constants'
-import { ScreenLayoutProps } from './screen-layout.interfaces'
+import { MenuHeader }                from './components'
+import { NavigationHeaderComponent } from './components'
+import { ScreenLayoutProps }         from './screen-layout.interfaces'
 
-export const ScreenLayout = ({ children, navigation }: ScreenLayoutProps) => {
-  const theme = useTheme()
-
-  const handlePress = useCallback(
-    (route: string) => () => {
-      navigation.navigate(route)
-    },
-    [navigation]
-  )
-
+export const ScreenLayout = ({
+  children,
+  navigation,
+  menuVariant = 'menu',
+  navigationIconName = 'back',
+  scrollable = true,
+}: ScreenLayoutProps) => {
   return (
     <Box backgroundColor='white' fullHeight>
-      <Spacer space={11} />
-      <Row justifyContent='space-between' alignItems='center'>
-        <TouchableOpacity onPress={handlePress(APP_ROUTES.CATALOG.name)}>
-          <Row>
-            <Spacer space={12} />
-            <Icon name={CATALOG_ICON} size={ICON_SIZE} color={theme.colors.black} />
-          </Row>
-        </TouchableOpacity>
-        <Row justifyContent='flex-end' flex={1}>
-          <TouchableOpacity onPress={handlePress(APP_ROUTES.PRODUCT_SEARCH.name)}>
-            <Icon name={SEARCH_ICON} size={ICON_SIZE} color={theme.colors.black} />
-          </TouchableOpacity>
-          <Spacer space={8} />
-          <TouchableOpacity onPress={handlePress(APP_ROUTES.CART.name)}>
-            <Icon name={CART_ICON} size={ICON_SIZE} color={theme.colors.black} />
-          </TouchableOpacity>
-        </Row>
-        <Spacer space={12} />
-      </Row>
-      <Spacer space={7} />
-      <ScrollView>{children}</ScrollView>
+      <Condition condition={menuVariant === 'menu'}>
+        <Box height={SCREEN_HEADER_HEIGHT} justifyContent='center'>
+          <MenuHeader navigation={navigation} />
+        </Box>
+      </Condition>
+      <Condition condition={menuVariant === 'navigation'}>
+        <Box height={SCREEN_HEADER_HEIGHT} justifyContent='center'>
+          <NavigationHeaderComponent navigation={navigation} variant={navigationIconName} />
+        </Box>
+      </Condition>
+      <Condition condition={scrollable}>
+        <ScrollView>{children}</ScrollView>
+      </Condition>
+      <Condition condition={!scrollable}>{children}</Condition>
     </Box>
   )
 }

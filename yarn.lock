@@ -2046,10 +2046,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fragments/header@workspace:0.0.1, @fragments/header@workspace:rn-demo-app/fragments/header":
+"@fragments/app-headers@workspace:0.0.1, @fragments/app-headers@workspace:rn-demo-app/fragments/app-headers":
   version: 0.0.0-use.local
-  resolution: "@fragments/header@workspace:rn-demo-app/fragments/header"
+  resolution: "@fragments/app-headers@workspace:rn-demo-app/fragments/app-headers"
   dependencies:
+    "@globals/constants": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -2058,7 +2059,8 @@ __metadata:
     "@ui/theme": "workspace:0.0.1"
     react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -2073,10 +2075,12 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/spacer": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-i18next: 14.1.1
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -2097,8 +2101,9 @@ __metadata:
     "@ui/theme": "workspace:0.0.1"
     react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-native-vector-icons: 10.1.0
+    react: "*"
+    react-native: "*"
+    react-native-vector-icons: "*"
   languageName: unknown
   linkType: soft
 
@@ -2106,6 +2111,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/product-search@workspace:rn-demo-app/fragments/product-search"
   dependencies:
+    "@globals/constants": "workspace:0.0.1"
     "@navigations/constants": "workspace:0.0.1"
     "@shared/utils": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
@@ -2124,6 +2130,7 @@ __metadata:
     react-native: "npm:0.74.1"
   peerDependencies:
     react: "*"
+    react-i18next: "*"
     react-native: "*"
     react-native-vector-icons: "*"
   languageName: unknown
@@ -2150,20 +2157,34 @@ __metadata:
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-i18next: 14.1.1
-    react-native-vector-icons: 10.1.0
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
+    react-native-vector-icons: "*"
   languageName: unknown
   linkType: soft
 
-"@fragments/rubricator@workspace:rn-demo-app/fragments/rubricator":
+"@fragments/rubricator@workspace:0.0.1, @fragments/rubricator@workspace:rn-demo-app/fragments/rubricator":
   version: 0.0.0-use.local
   resolution: "@fragments/rubricator@workspace:rn-demo-app/fragments/rubricator"
   dependencies:
+    "@globals/constants": "workspace:0.0.1"
+    "@globals/types": "workspace:0.0.1"
+    "@navigations/constants": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
+    "@types/react-native-vector-icons": "npm:6.4.18"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/spacer": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/theme": "workspace:0.0.1"
+    react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
+    react-native-vector-icons: "*"
   languageName: unknown
   linkType: soft
 
@@ -2171,17 +2192,21 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/screen-layout@workspace:rn-demo-app/fragments/screen-layout"
   dependencies:
+    "@globals/constants": "workspace:0.0.1"
     "@navigations/constants": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     "@types/react-native-vector-icons": "npm:6.4.18"
+    "@ui/condition": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/spacer": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
     "@ui/theme": "workspace:0.0.1"
+    react-i18next: "npm:14.1.1"
   peerDependencies:
-    react: 18.2.0
-    react-i18next: 14.1.1
-    react-native: 0.74.1
-    react-native-vector-icons: 10.1.0
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
+    react-native-vector-icons: "*"
   languageName: unknown
   linkType: soft
 
@@ -2192,21 +2217,16 @@ __metadata:
     "@globals/constants": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     axios: "npm:1.7.0"
+    react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-native: 0.74.1
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
 "@globals/constants@workspace:0.0.1, @globals/constants@workspace:rn-demo-app/globals/constants":
   version: 0.0.0-use.local
   resolution: "@globals/constants@workspace:rn-demo-app/globals/constants"
-  dependencies:
-    "@types/react": "npm:^18.2.6"
-    react-native: "npm:0.74.1"
-  peerDependencies:
-    react: 18.2.0
-    react-native: 0.74.1
   languageName: unknown
   linkType: soft
 
@@ -2217,8 +2237,8 @@ __metadata:
     "@types/react": "npm:^18.2.6"
     react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-native: 0.74.1
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -2825,10 +2845,12 @@ __metadata:
     "@screens/product": "workspace:0.0.1"
     "@screens/product-search": "workspace:0.0.1"
     "@screens/search-results": "workspace:0.0.1"
+    "@screens/subcategories": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
+    react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-native: 0.74.1
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -2839,10 +2861,11 @@ __metadata:
     "@react-navigation/native-stack": "npm:6.9.26"
     "@types/react": "npm:^18.2.6"
     react-i18next: "npm:14.1.1"
+    react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-i18next: 14.1.1
-    react-native: 0.74.1
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -2850,7 +2873,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@navigations/tab-layout@workspace:rn-demo-app/navigations/tabs"
   dependencies:
-    "@fragments/header": "workspace:0.0.1"
+    "@fragments/app-headers": "workspace:0.0.1"
+    "@globals/constants": "workspace:0.0.1"
     "@navigations/constants": "workspace:0.0.1"
     "@navigations/home-stack": "workspace:0.0.1"
     "@react-navigation/bottom-tabs": "npm:6.5.20"
@@ -2860,11 +2884,12 @@ __metadata:
     "@types/react-native-vector-icons": "npm:6.4.18"
     "@ui/theme": "workspace:0.0.1"
     react-i18next: "npm:14.1.1"
+    react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-i18next: 14.1.1
-    react-native: 0.74.1
-    react-native-vector-icons: 10.1.0
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
+    react-native-vector-icons: "*"
   languageName: unknown
   linkType: soft
 
@@ -4251,9 +4276,9 @@ __metadata:
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-i18next: 14.1.1
-    react-native: 0.74.1
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -4261,15 +4286,24 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@screens/catalog@workspace:rn-demo-app/screens/catalog"
   dependencies:
+    "@fragments/rubricator": "workspace:0.0.1"
     "@fragments/screen-layout": "workspace:0.0.1"
+    "@globals/api-service": "workspace:0.0.1"
+    "@globals/constants": "workspace:0.0.1"
+    "@globals/types": "workspace:0.0.1"
+    "@navigations/constants": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
-    react-i18next: "npm:14.1.1"
+    "@types/react-native-vector-icons": "npm:6.4.18"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/spacer": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/theme": "workspace:0.0.1"
     react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-i18next: 14.1.1
-    react-native: 0.74.1
+    react: "*"
+    react-native: "*"
+    react-native-vector-icons: "*"
   languageName: unknown
   linkType: soft
 
@@ -4283,9 +4317,9 @@ __metadata:
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-i18next: 14.1.1
-    react-native: 0.74.1
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -4299,9 +4333,12 @@ __metadata:
     "@types/react": "npm:^18.2.6"
     "@ui/condition": "workspace:0.0.1"
     "@ui/spacer": "workspace:0.0.1"
-    react: "npm:18.2.0"
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
+  peerDependencies:
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -4315,8 +4352,8 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-native: 0.74.1
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -4333,9 +4370,9 @@ __metadata:
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-i18next: 14.1.1
-    react-native: 0.74.1
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -4351,9 +4388,27 @@ __metadata:
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-i18next: 14.1.1
-    react-native: 0.74.1
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
+"@screens/subcategories@workspace:0.0.1, @screens/subcategories@workspace:rn-demo-app/screens/subcategories":
+  version: 0.0.0-use.local
+  resolution: "@screens/subcategories@workspace:rn-demo-app/screens/subcategories"
+  dependencies:
+    "@fragments/rubricator": "workspace:0.0.1"
+    "@fragments/screen-layout": "workspace:0.0.1"
+    "@globals/types": "workspace:0.0.1"
+    "@stores/rn-sdk": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    react-i18next: "npm:14.1.1"
+    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -4364,8 +4419,8 @@ __metadata:
     "@types/react": "npm:^18.2.6"
     react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-native: 0.74.1
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -4448,10 +4503,12 @@ __metadata:
     "@rees46/react-native-sdk": "npm:1.7.1"
     "@types/react": "npm:^18.2.6"
     "@types/react-native-push-notification": "npm:8"
-    react: "npm:18.2.0"
     react-native: "npm:0.74.1"
     react-native-device-info: "npm:10.13.2"
     react-native-push-notification: "npm:8.1.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -5053,8 +5110,8 @@ __metadata:
     "@types/react": "npm:^18.2.6"
     react-native: "npm:0.74.1"
   peerDependencies:
-    react: 18.2.0
-    react-native: 0.74.1
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -5066,9 +5123,9 @@ __metadata:
     react-native: "npm:0.74.1"
     react-native-svg: "npm:15.3.0"
   peerDependencies:
-    react: 18.2.0
-    react-native: 0.74.1
-    react-native-svg: 15.3.0
+    react: "*"
+    react-native: "*"
+    react-native-svg: "*"
   languageName: unknown
   linkType: soft
 

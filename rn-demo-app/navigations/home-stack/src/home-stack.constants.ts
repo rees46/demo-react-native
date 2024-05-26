@@ -1,11 +1,11 @@
-import SearchResultsScreen from '@screens/search-results'
-
 import CartScreen          from '@screens/cart'
 import CatalogScreen       from '@screens/catalog'
 import CategoryScreen      from '@screens/category'
 import HomeScreen          from '@screens/home'
 import ProductScreen       from '@screens/product'
 import ProductSearchScreen from '@screens/product-search'
+import SearchResultsScreen from '@screens/search-results'
+import SubcategoriesScreen from '@screens/subcategories'
 import { APP_ROUTES }      from '@navigations/constants'
 
 export const HOME_STACK_OPTIONS = [
@@ -23,6 +23,16 @@ export const HOME_STACK_OPTIONS = [
   {
     name: APP_ROUTES.CATALOG.name,
     component: CatalogScreen,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    name: APP_ROUTES.SUBCATEGORIES.name,
+    component: SubcategoriesScreen,
+    options: {
+      headerShown: false,
+    },
   },
   {
     name: APP_ROUTES.PRODUCT_SEARCH.name,

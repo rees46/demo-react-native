@@ -4,13 +4,13 @@ import { memo }                     from 'react'
 import { useMemo }                  from 'react'
 import { useTranslation }           from 'react-i18next'
 
-import { HeaderFragment }           from '@fragments/header'
+import { MainHeaderFragment }       from '@fragments/app-headers'
+import { TAB_BAR_HEIGHT }           from '@globals/constants'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { useTheme }                 from '@ui/theme'
 
 import { SCREEN_OPTIONS }           from './tab-layout.constants'
-import { TAB_BAR_HEIGHT }           from './tab-layout.constants'
-import { TabParamList }              from './tab-layout.interfaces'
+import { TabParamList }             from './tab-layout.interfaces'
 
 const Tab = createBottomTabNavigator<TabParamList>()
 
@@ -54,7 +54,7 @@ export const TabLayoutNavigation = memo(() => {
       screenOptions={{
         tabBarActiveTintColor: theme.colors.white,
         tabBarInactiveTintColor: theme.colors.gray,
-        header: (props: any) => <HeaderFragment {...props} />,
+        header: (props: any) => <MainHeaderFragment {...props} />,
         tabBarStyle: {
           backgroundColor: theme.colors.black,
           height: TAB_BAR_HEIGHT,

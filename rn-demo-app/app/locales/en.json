@@ -3,6 +3,7 @@
     "screens.home.title": "Home",
     "screens.cart.title": "Cart",
     "screens.catalog.title": "Catalog",
+    "screens.catalog.shopping-cart": "Shopping cart",
     "screens.profile.title": "Profile",
     "screens.product.title": "Product",
     "screens.category.title": "Category",
@@ -22,6 +23,7 @@
     "navigations.titles.category": "Category",
     "navigations.titles.product": "Product",
     "navigations.titles.productsearch": "Search",
-    "navigations.titles.searchresults": "Search results"
+    "navigations.titles.searchresults": "Search results",
+    "navigations.back": "Back"
   }
 }

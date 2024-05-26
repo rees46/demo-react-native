@@ -1,19 +1,18 @@
-import { Dimensions }                                       from 'react-native'
+import { Dimensions }               from 'react-native'
 
-import { SEARCH_HEIGHT }                                    from '../product-search.constants'
+import { TAB_BAR_HEIGHT }           from '@globals/constants'
+import { APP_HEADER_HEIGHT_MEDIUM } from '@globals/constants'
 
-import { TAB_BAR_HEIGHT }                    from '../product-search.constants'
-
-import { TAB_HEADER_HEIGHT } from '../product-search.constants'
+import { SEARCH_HEIGHT }            from '../product-search.constants'
 
 const { height } = Dimensions.get('window')
 
-const contentVerticalPadding = 12
+const contentVerticalPadding = 16
 
 export const getSearchContentHeight = (keyboardHeight: number) =>
   height -
   TAB_BAR_HEIGHT -
-  TAB_HEADER_HEIGHT -
-  keyboardHeight -
+  APP_HEADER_HEIGHT_MEDIUM -
   SEARCH_HEIGHT -
-  contentVerticalPadding * 2
+  contentVerticalPadding * 2 -
+  keyboardHeight

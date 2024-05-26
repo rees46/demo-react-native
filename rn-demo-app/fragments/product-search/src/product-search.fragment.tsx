@@ -120,19 +120,22 @@ export const ProductSearch = ({ navigation }: ProductSearchProps) => {
             )}
             keyboardShouldPersistTaps='always'
           />
-          <Column>
-            <Spacer height={16} />
-            <Box flexDirection='row' fullWidth>
-              <Spacer space={16} />
-              <ButtonComponent
-                variant='secondary'
-                title={t('fragments.product-search.total', { total: totalResults })}
-                onPress={handleSearchSubmit}
-              />
-              <Spacer space={16} />
-            </Box>
-            <Spacer height={16} />
-          </Column>
+          <Box
+            flexDirection='row'
+            fullWidth
+            height={70}
+            justifyContent='center'
+            alignItems='center'
+            backgroundColor='white'
+          >
+            <Spacer space={16} />
+            <ButtonComponent
+              variant='secondary'
+              title={t('fragments.product-search.total', { total: totalResults })}
+              onPress={handleSearchSubmit}
+            />
+            <Spacer space={16} />
+          </Box>
         </Condition>
         <Condition condition={!totalResults}>
           <Row>

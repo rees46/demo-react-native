@@ -14,6 +14,9 @@ export const APP_ROUTES = {
     tabName: 'CartTab',
     groupName: 'CartStack',
   },
+  SUBCATEGORIES: {
+    name: 'Subcategories',
+  },
   CATEGORY: {
     name: 'Category',
   },

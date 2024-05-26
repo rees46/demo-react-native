@@ -37,7 +37,7 @@ export const RecommendationsBlock = memo(({
   }, [loading])
 
   const handleProductPress = useCallback((id: string) => {
-    navigation.navigate(APP_ROUTES.PRODUCT.name, { id })
+    navigation.push(APP_ROUTES.PRODUCT.name, { id })
   }, [])
 
   return (

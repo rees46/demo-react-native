@@ -1,20 +1,19 @@
-import React                 from 'react'
-import { ActivityIndicator } from 'react-native'
-import { memo }              from 'react'
-import { useEffect }         from 'react'
+import React                from 'react'
+import { memo }             from 'react'
+import { useEffect }        from 'react'
 
-import { SHOP_ID }           from '@globals/constants'
-import { ProductType }       from '@globals/types'
-import { Condition }         from '@ui/condition'
-import { ImageComponent }    from '@ui/image'
-import { Box }               from '@ui/layout'
-import { Row }               from '@ui/layout'
-import { Spacer }            from '@ui/spacer'
-import { TextComponent }     from '@ui/text'
-import { useApi }            from '@globals/api-service'
-import { useTheme }          from '@ui/theme'
+import { SHOP_ID }          from '@globals/constants'
+import { ProductType }      from '@globals/types'
+import { Condition }        from '@ui/condition'
+import { ImageComponent }   from '@ui/image'
+import { Box }              from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { Spacer }           from '@ui/spacer'
+import { TextComponent }    from '@ui/text'
+import { useApi }           from '@globals/api-service'
+import { useTheme }         from '@ui/theme'
 
-import { ProductInfoProps }  from './product-info.interfaces'
+import { ProductInfoProps } from './product-info.interfaces'
 
 export const ProductInfo = memo(({ id }: ProductInfoProps) => {
   const { publicApi } = useApi()
@@ -42,11 +41,7 @@ export const ProductInfo = memo(({ id }: ProductInfoProps) => {
   }, [])
 
   if (loading) {
-    return (
-      <Box flex={1} justifyContent='center' alignItems='center'>
-        <ActivityIndicator size='large' color={theme.colors.black} />
-      </Box>
-    )
+    return null
   }
 
   return (

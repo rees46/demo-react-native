@@ -1,25 +1,55 @@
-import React              from 'react'
-import { Text }           from 'react-native'
-import { View }           from 'react-native'
-import { useEffect }      from 'react'
-import { useTranslation } from 'react-i18next'
+import React                  from 'react'
+import { useState }           from 'react'
+import { useEffect }          from 'react'
 
-import { useSDK }         from '@stores/rn-sdk'
+import { RubricatorFragment } from '@fragments/rubricator'
+import { ScreenLayout }       from '@fragments/screen-layout'
+import { SHOP_ID }            from '@globals/constants'
+import { SHOP_SECRET }        from '@globals/constants'
+import { RubricatorCategory } from '@globals/types'
+import { useApi }             from '@globals/api-service'
+import { useSDK }             from '@stores/rn-sdk'
 
-import { styles }         from './catalog.styles'
+import { CatalogProps }       from './catalog.interfaces'
 
-const CatalogScreen = () => {
+const CatalogScreen = ({ navigation }: CatalogProps) => {
   const sdk = useSDK()
-  const { t } = useTranslation()
+  const { publicApi } = useApi()
+  const [loading, setLoading] = useState(true)
+  const [categories, setCategories] = useState<RubricatorCategory[]>([])
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await publicApi.get('/products/categories', {
+          params: {
+            shop_id: SHOP_ID,
+            shop_secret: SHOP_SECRET,
+          },
+        })
+        setCategories(response.data)
+        setLoading(false)
+      } catch (e) {
+        console.error('Failed to fetch product ', e)
+      }
+    }
+
+    fetchCategories()
+  }, [])
 
   useEffect(() => {
     sdk.track('wish', [])
   }, [sdk])
 
   return (
-    <View style={styles.container}>
-      <Text>{t('screens.catalog.title')}</Text>
-    </View>
+    <ScreenLayout
+      navigation={navigation}
+      menuVariant='navigation'
+      navigationIconName='home'
+      scrollable={false}
+    >
+      <RubricatorFragment navigation={navigation} loading={loading} categories={categories} />
+    </ScreenLayout>
   )
 }
 
