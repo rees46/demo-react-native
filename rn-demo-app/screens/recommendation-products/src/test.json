@@ -1,0 +1,412 @@
+{
+  "products": [
+    {
+      "_id": "1550750760520647194",
+      "brand": "Yuong toys",
+      "categories": [
+        [
+          Object
+        ],
+        [
+          Object
+        ]
+      ],
+      "category_ids": [
+        "479",
+        "15"
+      ],
+      "currency": "₽",
+      "description": "The hero of the cartoon \"Tobot\" will love Your child!Using a special key, the robot quickly turns into a vehicle with raised wheels and Vice versa. This toy will contribute to the development of imagination, thinking and fine motorik...",
+      "id": "1846",
+      "image_url": "https://demo.rees46.com/uploads/product/image/1846/5028889-01.jpg_x_",
+      "image_url_handle": "/uploads/product/image/1846/5028889-01.jpg_x_",
+      "image_url_resized": {
+        "120": "https://pictures.rees46.ru/resize-images/120/357382bf66ac0ce2f1722677c59511/1550750760520647194.jpg",
+        "140": "https://pictures.rees46.ru/resize-images/140/357382bf66ac0ce2f1722677c59511/1550750760520647194.jpg",
+        "160": "https://pictures.rees46.ru/resize-images/160/357382bf66ac0ce2f1722677c59511/1550750760520647194.jpg",
+        "180": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1550750760520647194.jpg",
+        "200": "https://pictures.rees46.ru/resize-images/200/357382bf66ac0ce2f1722677c59511/1550750760520647194.jpg",
+        "220": "https://pictures.rees46.ru/resize-images/220/357382bf66ac0ce2f1722677c59511/1550750760520647194.jpg",
+        "310": "https://pictures.rees46.ru/resize-images/310/357382bf66ac0ce2f1722677c59511/1550750760520647194.jpg",
+        "520": "https://pictures.rees46.ru/resize-images/520/357382bf66ac0ce2f1722677c59511/1550750760520647194.jpg"
+      },
+      "name": "Yuong toys Transformer \"Tobot evolution X\"",
+      "picture": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1550750760520647194.jpg",
+      "price": 2969,
+      "price_formatted": "2 969 ₽",
+      "price_full": 2969,
+      "price_full_formatted": "2 969.00 ₽",
+      "relative_sales_rate": 100,
+      "sales_rate": 2758,
+      "url": "https://demo.rees46.com/products/1846?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7",
+      "url_handle": "/products/1846?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7"
+    },
+    {
+      "_id": "1550750760663253638",
+      "brand": "Hasbro",
+      "categories": [
+        [
+          Object
+        ],
+        [
+          Object
+        ]
+      ],
+      "category_ids": [
+        "479",
+        "15"
+      ],
+      "currency": "₽",
+      "description": "Hasbro Figure Star Wars 10 cm",
+      "id": "1943",
+      "image_url": "https://demo.rees46.com/uploads/product/image/1943/5473708-01.jpg_x_",
+      "image_url_handle": "/uploads/product/image/1943/5473708-01.jpg_x_",
+      "image_url_resized": {
+        "120": "https://pictures.rees46.ru/resize-images/120/357382bf66ac0ce2f1722677c59511/1550750760663253638.jpg",
+        "140": "https://pictures.rees46.ru/resize-images/140/357382bf66ac0ce2f1722677c59511/1550750760663253638.jpg",
+        "160": "https://pictures.rees46.ru/resize-images/160/357382bf66ac0ce2f1722677c59511/1550750760663253638.jpg",
+        "180": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1550750760663253638.jpg",
+        "200": "https://pictures.rees46.ru/resize-images/200/357382bf66ac0ce2f1722677c59511/1550750760663253638.jpg",
+        "220": "https://pictures.rees46.ru/resize-images/220/357382bf66ac0ce2f1722677c59511/1550750760663253638.jpg",
+        "310": "https://pictures.rees46.ru/resize-images/310/357382bf66ac0ce2f1722677c59511/1550750760663253638.jpg",
+        "520": "https://pictures.rees46.ru/resize-images/520/357382bf66ac0ce2f1722677c59511/1550750760663253638.jpg"
+      },
+      "name": "Star Wars",
+      "picture": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1550750760663253638.jpg",
+      "price": 1825,
+      "price_formatted": "1 825 ₽",
+      "price_full": 1825,
+      "price_full_formatted": "1 825.00 ₽",
+      "relative_sales_rate": 98.8,
+      "sales_rate": 2725,
+      "url": "https://demo.rees46.com/products/1943?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7",
+      "url_handle": "/products/1943?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7"
+    },
+    {
+      "_id": "1247065831775404616",
+      "brand": "-",
+      "categories": [
+        [
+          Object
+        ],
+        [
+          Object
+        ],
+        [
+          Object
+        ]
+      ],
+      "category_ids": [
+        "22",
+        "51",
+        "52"
+      ],
+      "currency": "₽",
+      "description": "This bag features an exclusive seamless construction, functional design and elegant finish. The adjustable handles make it particularly comfortable to carry. Two-way zip along the sides and base of the bag, which can be opened to make it more spaciou",
+      "fashion_feature": "adult",
+      "fashion_gender": "f",
+      "id": "1473",
+      "image_url": "https://demo.rees46.com/uploads/product/image/1473/188497.970.jpg",
+      "image_url_handle": "/uploads/product/image/1473/188497.970.jpg",
+      "image_url_resized": {
+        "120": "https://pictures.rees46.ru/resize-images/120/357382bf66ac0ce2f1722677c59511/1247065831775404616.jpg",
+        "140": "https://pictures.rees46.ru/resize-images/140/357382bf66ac0ce2f1722677c59511/1247065831775404616.jpg",
+        "160": "https://pictures.rees46.ru/resize-images/160/357382bf66ac0ce2f1722677c59511/1247065831775404616.jpg",
+        "180": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1247065831775404616.jpg",
+        "200": "https://pictures.rees46.ru/resize-images/200/357382bf66ac0ce2f1722677c59511/1247065831775404616.jpg",
+        "220": "https://pictures.rees46.ru/resize-images/220/357382bf66ac0ce2f1722677c59511/1247065831775404616.jpg",
+        "310": "https://pictures.rees46.ru/resize-images/310/357382bf66ac0ce2f1722677c59511/1247065831775404616.jpg",
+        "520": "https://pictures.rees46.ru/resize-images/520/357382bf66ac0ce2f1722677c59511/1247065831775404616.jpg"
+      },
+      "name": "Bag ELEGANZZA Z-1412902 salmon (Bag на руку)",
+      "picture": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1247065831775404616.jpg",
+      "price": 455,
+      "price_formatted": "455 ₽",
+      "price_full": 455,
+      "price_full_formatted": "455.00 ₽",
+      "relative_sales_rate": 98.73,
+      "sales_rate": 2723,
+      "url": "https://demo.rees46.com/products/1473?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7",
+      "url_handle": "/products/1473?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7"
+    },
+    {
+      "_id": "1247065831767016007",
+      "brand": "Zara",
+      "categories": [
+        [
+          Object
+        ],
+        [
+          Object
+        ],
+        [
+          Object
+        ]
+      ],
+      "category_ids": [
+        "22",
+        "51",
+        "52"
+      ],
+      "currency": "₽",
+      "description": "This bag features an exclusive seamless construction, functional design and elegant finish. The adjustable handles make it particularly comfortable to carry. Two-way zip along the sides and base of the bag, which can be opened to make it more spaciou",
+      "fashion_feature": "adult",
+      "fashion_gender": "f",
+      "id": "1474",
+      "image_url": "https://demo.rees46.com/uploads/product/image/1474/188494.970.jpg",
+      "image_url_handle": "/uploads/product/image/1474/188494.970.jpg",
+      "image_url_resized": {
+        "120": "https://pictures.rees46.ru/resize-images/120/357382bf66ac0ce2f1722677c59511/1247065831767016007.jpg",
+        "140": "https://pictures.rees46.ru/resize-images/140/357382bf66ac0ce2f1722677c59511/1247065831767016007.jpg",
+        "160": "https://pictures.rees46.ru/resize-images/160/357382bf66ac0ce2f1722677c59511/1247065831767016007.jpg",
+        "180": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1247065831767016007.jpg",
+        "200": "https://pictures.rees46.ru/resize-images/200/357382bf66ac0ce2f1722677c59511/1247065831767016007.jpg",
+        "220": "https://pictures.rees46.ru/resize-images/220/357382bf66ac0ce2f1722677c59511/1247065831767016007.jpg",
+        "310": "https://pictures.rees46.ru/resize-images/310/357382bf66ac0ce2f1722677c59511/1247065831767016007.jpg",
+        "520": "https://pictures.rees46.ru/resize-images/520/357382bf66ac0ce2f1722677c59511/1247065831767016007.jpg"
+      },
+      "name": "ELEGANZZA Women's Bag",
+      "picture": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1247065831767016007.jpg",
+      "price": 547,
+      "price_formatted": "547 ₽",
+      "price_full": 547.67,
+      "price_full_formatted": "547.67 ₽",
+      "relative_sales_rate": 98.4,
+      "sales_rate": 2714,
+      "url": "https://demo.rees46.com/products/1474?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7",
+      "url_handle": "/products/1474?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7"
+    },
+    {
+      "_id": "1550750760931689287",
+      "brand": "Master City",
+      "categories": [
+        [
+          Object
+        ],
+        [
+          Object
+        ]
+      ],
+      "category_ids": [
+        "479",
+        "15"
+      ],
+      "currency": "₽",
+      "description": "Age: 6+ years",
+      "id": "2122",
+      "image_url": "https://demo.rees46.com/uploads/product/image/2122/4950463-01.jpg_x_",
+      "image_url_handle": "/uploads/product/image/2122/4950463-01.jpg_x_",
+      "image_url_resized": {
+        "120": "https://pictures.rees46.ru/resize-images/120/357382bf66ac0ce2f1722677c59511/1550750760931689287.jpg",
+        "140": "https://pictures.rees46.ru/resize-images/140/357382bf66ac0ce2f1722677c59511/1550750760931689287.jpg",
+        "160": "https://pictures.rees46.ru/resize-images/160/357382bf66ac0ce2f1722677c59511/1550750760931689287.jpg",
+        "180": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1550750760931689287.jpg",
+        "200": "https://pictures.rees46.ru/resize-images/200/357382bf66ac0ce2f1722677c59511/1550750760931689287.jpg",
+        "220": "https://pictures.rees46.ru/resize-images/220/357382bf66ac0ce2f1722677c59511/1550750760931689287.jpg",
+        "310": "https://pictures.rees46.ru/resize-images/310/357382bf66ac0ce2f1722677c59511/1550750760931689287.jpg",
+        "520": "https://pictures.rees46.ru/resize-images/520/357382bf66ac0ce2f1722677c59511/1550750760931689287.jpg"
+      },
+      "name": "City of Masters Building Set",
+      "picture": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1550750760931689287.jpg",
+      "price": 519,
+      "price_formatted": "519 ₽",
+      "price_full": 519,
+      "price_full_formatted": "519.00 ₽",
+      "relative_sales_rate": 98.15,
+      "sales_rate": 2707,
+      "url": "https://demo.rees46.com/products/2122?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7",
+      "url_handle": "/products/2122?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7"
+    },
+    {
+      "_id": "1243396608540803430",
+      "brand": "Bottega Veneta",
+      "categories": [
+        [
+          Object
+        ],
+        [
+          Object
+        ],
+        [
+          Object
+        ]
+      ],
+      "category_ids": [
+        "22",
+        "49",
+        "50"
+      ],
+      "currency": "₽",
+      "description": "This brieface can provide a separated space for your A4 files, iPad, laptop, tablet, pens, wallet, keys, clothes and more. Made from durable eco-friendly fabric provides waterproof function and can be more durable. This product page is for demo purpo",
+      "fashion_feature": "adult",
+      "fashion_gender": "m",
+      "id": "1017",
+      "image_url": "https://demo.rees46.com/uploads/product/image/1017/01_808.jpg",
+      "image_url_handle": "/uploads/product/image/1017/01_808.jpg",
+      "image_url_resized": {
+        "120": "https://pictures.rees46.ru/resize-images/120/357382bf66ac0ce2f1722677c59511/1243396608540803430.jpg",
+        "140": "https://pictures.rees46.ru/resize-images/140/357382bf66ac0ce2f1722677c59511/1243396608540803430.jpg",
+        "160": "https://pictures.rees46.ru/resize-images/160/357382bf66ac0ce2f1722677c59511/1243396608540803430.jpg",
+        "180": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1243396608540803430.jpg",
+        "200": "https://pictures.rees46.ru/resize-images/200/357382bf66ac0ce2f1722677c59511/1243396608540803430.jpg",
+        "220": "https://pictures.rees46.ru/resize-images/220/357382bf66ac0ce2f1722677c59511/1243396608540803430.jpg",
+        "310": "https://pictures.rees46.ru/resize-images/310/357382bf66ac0ce2f1722677c59511/1243396608540803430.jpg",
+        "520": "https://pictures.rees46.ru/resize-images/520/357382bf66ac0ce2f1722677c59511/1243396608540803430.jpg"
+      },
+      "name": "Bottega Veneta Men's Briefcase",
+      "picture": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1243396608540803430.jpg",
+      "price": 4083,
+      "price_formatted": "4 083 ₽",
+      "price_full": 4083.33,
+      "price_full_formatted": "4 083.33 ₽",
+      "relative_sales_rate": 96.63,
+      "sales_rate": 2665,
+      "url": "https://demo.rees46.com/products/1017?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7",
+      "url_handle": "/products/1017?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7"
+    },
+    {
+      "_id": "1550750760654865015",
+      "brand": "Hasbro",
+      "categories": [
+        [
+          Object
+        ],
+        [
+          Object
+        ]
+      ],
+      "category_ids": [
+        "479",
+        "15"
+      ],
+      "currency": "₽",
+      "description": "Characteristics of product:• age from 3 years;• material: plastic;• robot height 13 cm;• packing size 24,1x16,2x5,8cm;• package weight 140 gr.;• the country the manufacturer: China.Transformers-dinosaurs Playskool Heroes — the characters of the famou",
+      "id": "1930",
+      "image_url": "https://demo.rees46.com/uploads/product/image/1930/5622049-01.jpg_x_",
+      "image_url_handle": "/uploads/product/image/1930/5622049-01.jpg_x_",
+      "image_url_resized": {
+        "120": "https://pictures.rees46.ru/resize-images/120/357382bf66ac0ce2f1722677c59511/1550750760654865015.jpg",
+        "140": "https://pictures.rees46.ru/resize-images/140/357382bf66ac0ce2f1722677c59511/1550750760654865015.jpg",
+        "160": "https://pictures.rees46.ru/resize-images/160/357382bf66ac0ce2f1722677c59511/1550750760654865015.jpg",
+        "180": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1550750760654865015.jpg",
+        "200": "https://pictures.rees46.ru/resize-images/200/357382bf66ac0ce2f1722677c59511/1550750760654865015.jpg",
+        "220": "https://pictures.rees46.ru/resize-images/220/357382bf66ac0ce2f1722677c59511/1550750760654865015.jpg",
+        "310": "https://pictures.rees46.ru/resize-images/310/357382bf66ac0ce2f1722677c59511/1550750760654865015.jpg",
+        "520": "https://pictures.rees46.ru/resize-images/520/357382bf66ac0ce2f1722677c59511/1550750760654865015.jpg"
+      },
+      "name": "Hasbro Transformer, Playskool heroes Optimus Prime",
+      "picture": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1550750760654865015.jpg",
+      "price": 843,
+      "price_formatted": "843 ₽",
+      "price_full": 843,
+      "price_full_formatted": "843.00 ₽",
+      "relative_sales_rate": 96.12,
+      "sales_rate": 2651,
+      "url": "https://demo.rees46.com/products/1930?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7",
+      "url_handle": "/products/1930?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7"
+    },
+    {
+      "_id": "1243396608515637596",
+      "brand": "Bottega Veneta",
+      "categories": [
+        [
+          Object
+        ],
+        [
+          Object
+        ],
+        [
+          Object
+        ]
+      ],
+      "category_ids": [
+        "22",
+        "49",
+        "50"
+      ],
+      "currency": "₽",
+      "description": "This brieface can provide a separated space for your A4 files, iPad, laptop, tablet, pens, wallet, keys, clothes and more. Made from durable eco-friendly fabric provides waterproof function and can be more durable. This product page is for demo purpo",
+      "fashion_feature": "adult",
+      "fashion_gender": "m",
+      "id": "1018",
+      "image_url": "https://demo.rees46.com/uploads/product/image/1018/01_808.jpg",
+      "image_url_handle": "/uploads/product/image/1018/01_808.jpg",
+      "image_url_resized": {
+        "120": "https://pictures.rees46.ru/resize-images/120/357382bf66ac0ce2f1722677c59511/1243396608515637596.jpg",
+        "140": "https://pictures.rees46.ru/resize-images/140/357382bf66ac0ce2f1722677c59511/1243396608515637596.jpg",
+        "160": "https://pictures.rees46.ru/resize-images/160/357382bf66ac0ce2f1722677c59511/1243396608515637596.jpg",
+        "180": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1243396608515637596.jpg",
+        "200": "https://pictures.rees46.ru/resize-images/200/357382bf66ac0ce2f1722677c59511/1243396608515637596.jpg",
+        "220": "https://pictures.rees46.ru/resize-images/220/357382bf66ac0ce2f1722677c59511/1243396608515637596.jpg",
+        "310": "https://pictures.rees46.ru/resize-images/310/357382bf66ac0ce2f1722677c59511/1243396608515637596.jpg",
+        "520": "https://pictures.rees46.ru/resize-images/520/357382bf66ac0ce2f1722677c59511/1243396608515637596.jpg"
+      },
+      "name": "Bottega Veneta Men's Briefcase",
+      "picture": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1243396608515637596.jpg",
+      "price": 3150,
+      "price_formatted": "3 150 ₽",
+      "price_full": 3150,
+      "price_full_formatted": "3 150.00 ₽",
+      "relative_sales_rate": 95,
+      "sales_rate": 2620,
+      "url": "https://demo.rees46.com/products/1018?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7",
+      "url_handle": "/products/1018?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7"
+    },
+    {
+      "_id": "1243396608406585641",
+      "brand": "Burberry",
+      "categories": [
+        [
+          Object
+        ],
+        [
+          Object
+        ],
+        [
+          Object
+        ]
+      ],
+      "category_ids": [
+        "313",
+        "14",
+        "40"
+      ],
+      "currency": "₽",
+      "description": "Comfort and durability are what get you through the day. This classic pair of men's shoes does the job in style. This design will take you through the all seasons with ease. Soft and supple material provides a luxurious look that's perfect for any oc",
+      "fashion_feature": "adult",
+      "fashion_gender": "m",
+      "fashion_original_sizes": [
+        "39",
+        "47"
+      ],
+      "fashion_sizes": [
+        "39",
+        "47"
+      ],
+      "fashion_wear_type": "shoe",
+      "id": "771",
+      "image_url": "https://demo.rees46.com/uploads/product/image/771/01_808.jpg",
+      "image_url_handle": "/uploads/product/image/771/01_808.jpg",
+      "image_url_resized": {
+        "120": "https://pictures.rees46.ru/resize-images/120/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+        "140": "https://pictures.rees46.ru/resize-images/140/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+        "160": "https://pictures.rees46.ru/resize-images/160/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+        "180": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+        "200": "https://pictures.rees46.ru/resize-images/200/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+        "220": "https://pictures.rees46.ru/resize-images/220/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+        "310": "https://pictures.rees46.ru/resize-images/310/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+        "520": "https://pictures.rees46.ru/resize-images/520/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg"
+      },
+      "name": "Burberry Men's Shoes",
+      "picture": "https://pictures.rees46.ru/resize-images/180/357382bf66ac0ce2f1722677c59511/1243396608406585641.jpg",
+      "price": 815,
+      "price_formatted": "815 ₽",
+      "price_full": 815.83,
+      "price_full_formatted": "815.83 ₽",
+      "relative_sales_rate": 20.74,
+      "sales_rate": 572,
+      "url": "https://demo.rees46.com/products/771?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7",
+      "url_handle": "/products/771?recommended_by=dynamic&recommended_code=1efd76c810cc2364ff89677af3e076c7"
+    }
+  ]
+}

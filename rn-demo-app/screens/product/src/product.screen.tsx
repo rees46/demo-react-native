@@ -20,6 +20,7 @@ const ProductScreen = ({ navigation, route }: ProductProps) => {
         recommenderCode='1efd76c810cc2364ff89677af3e076c7'
         titleVariant='title'
       />
+      <Spacer height={16} />
     </ScreenLayout>
   )
 }

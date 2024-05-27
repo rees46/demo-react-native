@@ -17,7 +17,7 @@ const SearchResultsScreen = ({ navigation }: SearchResultsProps) => {
 
   return (
     <Box backgroundColor='white' fullHeight flex={1}>
-      <Box flexDirection='row' height={height - 80 - 370}>
+      <Box flexDirection='row' height={height - 80 - 390}>
         <Spacer space={16} />
         <Column>
           <Spacer height={16} />

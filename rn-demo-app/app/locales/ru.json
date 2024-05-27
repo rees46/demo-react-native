@@ -12,7 +12,7 @@
     "fragments.product-search.placeholder": "Найти",
     "fragments.product-search.products-title": "Подходящие товары:",
     "fragments.product-search.categories-title": "Подходящие категории:",
-    "fragments.product-search.total": "Просмотреть все ({{total}})",
+    "fragments.product-search.total": "Просмотреть ещё ({{total}})",
     "fragments.product-search.empty":  "Товары не найдены",
     "fragments.product-search.total_results": "найдено товаров: {{total}}",
     "fragments.product-search.empty_results": "По вашему запросу ничего не найдено.",
@@ -24,6 +24,7 @@
     "navigations.titles.product": "Товар",
     "navigations.titles.productsearch": "Поиск",
     "navigations.titles.searchresults": "Результаты поиска",
-    "navigations.back": "Назад"
+    "navigations.back": "Назад",
+    "fragments.product-list.show-more": "Просмотреть ещё"
   }
 }

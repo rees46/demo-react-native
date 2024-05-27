@@ -9,7 +9,7 @@ import { useSDK }             from '@stores/rn-sdk'
 import { UseRecommendations } from './use-recommendations.interfaces'
 import { defaultOptions }     from '../../recommendations-block.constants'
 
-export const useRecommendations: UseRecommendations = ({ recommenderCode }) => {
+export const useRecommendations: UseRecommendations = ({ recommenderCode, options = {} }) => {
   const [recommendations, setRecommendations] = useState<ProductType[]>([])
   const [loading, setLoading] = useState(false)
   const [page, setPage] = useState(1)
@@ -19,13 +19,14 @@ export const useRecommendations: UseRecommendations = ({ recommenderCode }) => {
   const [error, setError] = useState<Error>()
 
   const loadRecommendations = useCallback(async () => {
-    if (loading || error) return
+    if (!recommenderCode || loading || error) return
 
     setLoading(true)
     setError(undefined)
     try {
       const newRecommendations = await sdk.recommend(recommenderCode, {
         ...defaultOptions,
+        ...options,
         page,
       })
 

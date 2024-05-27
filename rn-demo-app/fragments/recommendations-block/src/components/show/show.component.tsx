@@ -6,13 +6,15 @@ import { useTranslation }   from 'react-i18next'
 
 import { Row }              from '@ui/layout'
 import { TextComponent }    from '@ui/text'
+import {ShowComponentProps} from "./show.interfaces";
+import { APP_ROUTES } from '@navigations/constants'
 
-export const Show = () => {
+export const Show = ({ navigation, recommenderCode }: ShowComponentProps) => {
   const { t } = useTranslation()
 
   const handlePress = useCallback(() => {
-    //
-  }, [])
+    navigation.push(APP_ROUTES.RECOMMENDATION_PRODUCTS.name, { recommenderCode })
+  }, [navigation, recommenderCode])
 
   return (
     <TouchableOpacity onPress={handlePress}>

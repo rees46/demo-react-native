@@ -58,7 +58,7 @@ export const RecommendationsBlock = memo(({
           </Box>
           <Condition condition={!loading}>
             <Row alignItems='flex-end'>
-              <Show />
+              <Show navigation={navigation} recommenderCode={recommenderCode} />
               <Spacer space={16} />
             </Row>
           </Condition>

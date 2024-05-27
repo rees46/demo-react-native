@@ -2107,6 +2107,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@fragments/product-list@workspace:0.0.1, @fragments/product-list@workspace:rn-demo-app/fragments/product-list":
+  version: 0.0.0-use.local
+  resolution: "@fragments/product-list@workspace:rn-demo-app/fragments/product-list"
+  dependencies:
+    "@fragments/product-card": "workspace:0.0.1"
+    "@globals/types": "workspace:0.0.1"
+    "@navigations/constants": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/spacer": "workspace:0.0.1"
+    react-i18next: "npm:14.1.1"
+    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@fragments/product-search@workspace:0.0.1, @fragments/product-search@workspace:rn-demo-app/fragments/product-search":
   version: 0.0.0-use.local
   resolution: "@fragments/product-search@workspace:rn-demo-app/fragments/product-search"
@@ -2826,6 +2847,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@navigations/catalog-stack@workspace:0.0.1, @navigations/catalog-stack@workspace:rn-demo-app/navigations/catalog-stack":
+  version: 0.0.0-use.local
+  resolution: "@navigations/catalog-stack@workspace:rn-demo-app/navigations/catalog-stack"
+  dependencies:
+    "@navigations/constants": "workspace:0.0.1"
+    "@navigations/screen-stack-framgent": "workspace:0.0.1"
+    "@screens/cart": "workspace:0.0.1"
+    "@screens/catalog": "workspace:0.0.1"
+    "@screens/category": "workspace:0.0.1"
+    "@screens/home": "workspace:0.0.1"
+    "@screens/product": "workspace:0.0.1"
+    "@screens/product-search": "workspace:0.0.1"
+    "@screens/recommendation-products": "workspace:0.0.1"
+    "@screens/search-results": "workspace:0.0.1"
+    "@screens/subcategories": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@navigations/constants@workspace:0.0.1, @navigations/constants@workspace:rn-demo-app/navigations/constants":
   version: 0.0.0-use.local
   resolution: "@navigations/constants@workspace:rn-demo-app/navigations/constants"
@@ -2844,6 +2888,7 @@ __metadata:
     "@screens/home": "workspace:0.0.1"
     "@screens/product": "workspace:0.0.1"
     "@screens/product-search": "workspace:0.0.1"
+    "@screens/recommendation-products": "workspace:0.0.1"
     "@screens/search-results": "workspace:0.0.1"
     "@screens/subcategories": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
@@ -2875,6 +2920,7 @@ __metadata:
   dependencies:
     "@fragments/app-headers": "workspace:0.0.1"
     "@globals/constants": "workspace:0.0.1"
+    "@navigations/catalog-stack": "workspace:0.0.1"
     "@navigations/constants": "workspace:0.0.1"
     "@navigations/home-stack": "workspace:0.0.1"
     "@react-navigation/bottom-tabs": "npm:6.5.20"
@@ -4376,6 +4422,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@screens/recommendation-products@workspace:0.0.1, @screens/recommendation-products@workspace:rn-demo-app/screens/recommendation-products":
+  version: 0.0.0-use.local
+  resolution: "@screens/recommendation-products@workspace:rn-demo-app/screens/recommendation-products"
+  dependencies:
+    "@fragments/product-list": "workspace:0.0.1"
+    "@fragments/recommendations-block": "workspace:0.0.1"
+    "@fragments/screen-layout": "workspace:0.0.1"
+    "@globals/types": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    "@ui/spacer": "workspace:0.0.1"
+    react-i18next: "npm:14.1.1"
+    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@screens/search-results@workspace:0.0.1, @screens/search-results@workspace:rn-demo-app/screens/serach-results":
   version: 0.0.0-use.local
   resolution: "@screens/search-results@workspace:rn-demo-app/screens/serach-results"
@@ -4403,6 +4468,9 @@ __metadata:
     "@globals/types": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/spacer": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   peerDependencies:
@@ -6342,9 +6410,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001587":
-  version: 1.0.30001621
-  resolution: "caniuse-lite@npm:1.0.30001621"
-  checksum: 10/238187b8565edd98b041829a4157ff23406e8b573a8f5a7f7d75fd6bd46c508e4d1a07eb4a0086cfa1bce2f45fcd3b08ea7ffc36584ef2b1d38f8215b7301853
+  version: 1.0.30001623
+  resolution: "caniuse-lite@npm:1.0.30001623"
+  checksum: 10/5bb1f007314d1b21f7fb65a3a05e11ed09b34d673ddef0040097e7be68180cb3f8e74acee0d8a30a086ad56fdd081a8ebe467d4ad727b7e7a3d2ce0a0ef67f75
   languageName: node
   linkType: hard
 
@@ -15579,9 +15647,9 @@ __metadata:
   linkType: hard
 
 "type-fest@npm:^4.2.0":
-  version: 4.18.2
-  resolution: "type-fest@npm:4.18.2"
-  checksum: 10/2c176de28384a247fac1503165774e874c15ac39434a775f32ecda3aef5a0cefcfa2f5fb670c3da1f81cf773c355999154078c8d9657db19b65de78334b27933
+  version: 4.18.3
+  resolution: "type-fest@npm:4.18.3"
+  checksum: 10/eb750920d0ef3639177f581edd6489d972c5c5827abb602a9c9662889aad148a7d558257e36c563f1beb81a2e417faec52ecec9799b28531d8335856f91e6dff
   languageName: node
   linkType: hard
 

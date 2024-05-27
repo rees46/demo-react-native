@@ -1,0 +1,12 @@
+**/.git
+**/.svn
+**/.hg
+**/app
+**/fragments/**/node_modules
+**/globals/**/node_modules
+**/navigations/**/node_modules
+**/screens/**/node_modules
+**/shared/**/node_modules
+**/stores/**/node_modules
+**/ui/**/node_modules
+**/js

@@ -4,7 +4,8 @@
   "private": true,
   "license": "BSD 3-Clause",
   "scripts": {
-    "clean": "rm -rf node_modules **/node_modules **/**/node_modules **/**/**/node_modules && rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clean"
+    "clean": "rm -rf node_modules **/node_modules **/**/node_modules **/**/**/node_modules && rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clean",
+    "format": "prettier --write"
   },
   "workspaces": [
     "app",

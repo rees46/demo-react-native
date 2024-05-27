@@ -24,6 +24,7 @@
     "navigations.titles.product": "Product",
     "navigations.titles.productsearch": "Search",
     "navigations.titles.searchresults": "Search results",
-    "navigations.back": "Back"
+    "navigations.back": "Back",
+    "fragments.product-list.show-more": "Show more"
   }
 }
