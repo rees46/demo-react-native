@@ -26,7 +26,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Bump version
-        if: ${{ !contains(github.event.pull_request.title, 'revert') || !contains(github.event.pull_request.title, 'chore') }}
+        if: ${{ !contains(github.event.pull_request.title, 'revert') && !contains(github.event.pull_request.title, 'chore') }}
         uses: rees46/workflow/.github/actions/js/version-js@master
         with:
           checkChanges: 'true'
@@ -36,7 +36,7 @@ jobs:
           exclude: '{.,sdkdev}'
 
       - name: Create changelog and publish
-        if: ${{ !contains(github.event.pull_request.title, 'revert') || !contains(github.event.pull_request.title, 'chore') }}
+        if: ${{ !contains(github.event.pull_request.title, 'revert') && !contains(github.event.pull_request.title, 'chore') }}
         uses: rees46/workflow/.github/actions/js/changelog-and-publish-js@master
         with:
           baseCommit: ${{ steps.base_commit.outputs.baseCommit }}
@@ -46,7 +46,7 @@ jobs:
           exclude: '{.,sdkdev}'
 
       - name: Commit changes
-        if: ${{ !contains(github.event.pull_request.title, 'revert') || !contains(github.event.pull_request.title, 'chore') }}
+        if: ${{ !contains(github.event.pull_request.title, 'revert') && !contains(github.event.pull_request.title, 'chore') }}
         uses: rees46/workflow/.github/actions/js/commit-js@master
         with:
           baseCommit: ${{ steps.base_commit.outputs.baseCommit }}
@@ -54,7 +54,7 @@ jobs:
           exclude: '{.,sdkdev}'
 
       - name: Create release
-        if: ${{ !contains(github.event.pull_request.title, 'revert') || !contains(github.event.pull_request.title, 'chore') }}
+        if: ${{ !contains(github.event.pull_request.title, 'revert') && !contains(github.event.pull_request.title, 'chore') }}
         uses: rees46/workflow/.github/actions/js/release-js@master
         with:
           isMonorepo: 'true'
