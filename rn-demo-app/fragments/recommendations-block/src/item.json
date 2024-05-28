@@ -15,10 +15,7 @@
       "url": "https://demo.rees46.com/categories/baby"
     }
   ],
-  "category_ids": [
-    "479",
-    "15"
-  ],
+  "category_ids": ["479", "15"],
   "child_age_max": 178956970,
   "child_age_min": 3,
   "child_gender": "m",

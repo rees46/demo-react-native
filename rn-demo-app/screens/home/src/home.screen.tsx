@@ -7,7 +7,7 @@ import { Condition }            from '@ui/condition'
 import { Spacer }               from '@ui/spacer'
 
 import { RECOMMENDER_CODES }    from './home.constants'
-import {HomeProps} from "./home.interfaces";
+import { HomeProps }            from './home.interfaces'
 
 const HomeScreen = ({ navigation }: HomeProps) => (
   <ScreenLayout navigation={navigation}>

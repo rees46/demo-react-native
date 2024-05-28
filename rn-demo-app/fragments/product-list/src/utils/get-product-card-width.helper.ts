@@ -1,8 +1,7 @@
-import { Dimensions } from "react-native";
+import { Dimensions } from 'react-native'
 
-const { width } = Dimensions.get('window');
+const { width } = Dimensions.get('window')
 
 export const getProductCardWidthHelper = () => {
-  return width  / 2
+  return width / 2
 }
-

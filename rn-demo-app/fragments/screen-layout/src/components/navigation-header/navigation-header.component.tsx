@@ -33,10 +33,15 @@ export const NavigationHeaderComponent = ({ navigation, variant }: HeaderProps) 
             <Icon
               name={variant === 'home' ? 'home' : 'arrow-back'}
               size={24}
-              color={theme.colors.gray}
+              color={theme.colors.black}
             />
-            <Spacer space={8} />
-            <TextComponent fontSize='big' lineHeight={1.5} fontWeight='medium' fontColor='black'>
+            <Spacer space={32} />
+            <TextComponent
+              fontSize='smallTitle'
+              lineHeight={1.5}
+              fontWeight='medium'
+              fontColor='black'
+            >
               {t(`${variant === 'home' ? 'screens.home.title' : 'navigations.back'}`)}
             </TextComponent>
           </Row>

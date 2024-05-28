@@ -1,13 +1,14 @@
-import React                from 'react'
-import Icon                 from 'react-native-vector-icons/Ionicons'
-import { TouchableOpacity } from 'react-native'
-import { useCallback }      from 'react'
-import { useTranslation }   from 'react-i18next'
+import React                  from 'react'
+import Icon                   from 'react-native-vector-icons/Ionicons'
+import { TouchableOpacity }   from 'react-native'
+import { useCallback }        from 'react'
+import { useTranslation }     from 'react-i18next'
 
-import { Row }              from '@ui/layout'
-import { TextComponent }    from '@ui/text'
-import {ShowComponentProps} from "./show.interfaces";
-import { APP_ROUTES } from '@navigations/constants'
+import { APP_ROUTES }         from '@navigations/constants'
+import { Row }                from '@ui/layout'
+import { TextComponent }      from '@ui/text'
+
+import { ShowComponentProps } from './show.interfaces'
 
 export const Show = ({ navigation, recommenderCode }: ShowComponentProps) => {
   const { t } = useTranslation()

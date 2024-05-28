@@ -1,8 +1,8 @@
 {
   "name": "@navigations/tab-layout",
   "version": "0.0.1",
-  "main": "src/index.ts",
   "private": true,
+  "main": "src/index.ts",
   "dependencies": {
     "@fragments/app-headers": "workspace:0.0.1",
     "@globals/constants": "workspace:0.0.1",

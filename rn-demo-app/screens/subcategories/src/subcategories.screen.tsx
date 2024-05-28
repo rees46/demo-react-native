@@ -2,11 +2,12 @@ import React                  from 'react'
 
 import { RubricatorFragment } from '@fragments/rubricator'
 import { ScreenLayout }       from '@fragments/screen-layout'
+import { Box }                from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Spacer }             from '@ui/spacer'
+import { TextComponent }      from '@ui/text'
 
 import { SubcategoriesProps } from './subcategories.interfaces'
-import {TextComponent} from "@ui/text";
-import {Box, Row} from '@ui/layout';
-import { Spacer } from '@ui/spacer';
 
 const SubcategoriesScreen = ({ navigation, route }: SubcategoriesProps) => {
   const { categories, parentCategoryName } = route.params
@@ -23,7 +24,9 @@ const SubcategoriesScreen = ({ navigation, route }: SubcategoriesProps) => {
         <Spacer height={16} />
         <Row>
           <Spacer space={16} />
-          <TextComponent fontColor='black' fontSize='title' fontWeight='semibold'>{parentCategoryName}</TextComponent>
+          <TextComponent fontColor='black' fontSize='title' fontWeight='semibold'>
+            {parentCategoryName}
+          </TextComponent>
           <Spacer space={16} />
         </Row>
         <Spacer height={16} />

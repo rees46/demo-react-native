@@ -1,4 +1,4 @@
-import React           from 'react'
+import React            from 'react'
 
 import { ImageElement } from './image.element'
 import { ImageProps }   from './image.interfaces'

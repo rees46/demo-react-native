@@ -25,6 +25,8 @@
     "navigations.titles.productsearch": "Search",
     "navigations.titles.searchresults": "Search results",
     "navigations.back": "Back",
-    "fragments.product-list.show-more": "Show more"
+    "fragments.product-list.show-more": "Show more",
+    "fragments.product-card.shop": "Shop",
+    "fragments.product-info.add-to-cart": "Add to cart"
   }
 }

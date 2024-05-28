@@ -36,9 +36,12 @@ export const RecommendationsBlock = memo(({
     ) : null
   }, [loading])
 
-  const handleProductPress = useCallback((id: string) => {
-    navigation.push(APP_ROUTES.PRODUCT.name, { id })
-  }, [])
+  const handleProductPress = useCallback(
+    (id: string) => () => {
+      navigation.push(APP_ROUTES.PRODUCT.name, { id })
+    },
+    [navigation]
+  )
 
   return (
     <Column>
@@ -67,7 +70,9 @@ export const RecommendationsBlock = memo(({
       <Spacer height={16} />
       <FlatList
         data={recommendations}
-        renderItem={({ item }) => <ProductCard item={item} onPress={handleProductPress} />}
+        renderItem={({ item }) => (
+          <ProductCard item={item} onItemPress={handleProductPress(item.id)} />
+        )}
         keyExtractor={({ id }) => id}
         horizontal
         showsHorizontalScrollIndicator={false}

@@ -1,7 +1,7 @@
-import React                 from 'react'
+import React                  from 'react'
 
-import { ProductSearch }     from '@fragments/product-search'
-import { Box }               from '@ui/layout'
+import { ProductSearch }      from '@fragments/product-search'
+import { Box }                from '@ui/layout'
 
 import { ProductSearchProps } from './product-search.interfaces'
 

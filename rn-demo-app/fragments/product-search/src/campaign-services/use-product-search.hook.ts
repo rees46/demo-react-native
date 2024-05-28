@@ -1,14 +1,13 @@
-import { useEffect }                 from 'react'
+import { useEffect }            from 'react'
+import { useState }             from 'react'
 
-import { useState }       from 'react'
+import { useSDK }               from '@stores/rn-sdk'
 
-import { useSDK }                    from '@stores/rn-sdk'
-
-import { SEARCH_TYPE }               from '../product-search.constants'
-import { CategoryType }              from '../product-search.interfaces'
-import { ProductType } from '../product-search.interfaces'
-import { UseProductSearchType }      from './use-product-search.interfaces'
-import { useDebounce }               from '../utils'
+import { SEARCH_TYPE }          from '../product-search.constants'
+import { CategoryType }         from '../product-search.interfaces'
+import { ProductType }          from '../product-search.interfaces'
+import { UseProductSearchType } from './use-product-search.interfaces'
+import { useDebounce }          from '../utils'
 
 export const useProductSearch: UseProductSearchType = () => {
   const [searchQuery, setSearchQuery] = useState('')

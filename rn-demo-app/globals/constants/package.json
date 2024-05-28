@@ -1,6 +1,6 @@
 {
   "name": "@globals/constants",
   "version": "0.0.1",
-  "main": "src/index.ts",
-  "private": true
+  "private": true,
+  "main": "src/index.ts"
 }

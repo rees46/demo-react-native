@@ -1,8 +1,8 @@
 {
   "name": "@navigations/screen-stack-framgent",
   "version": "0.0.1",
-  "main": "src/index.ts",
   "private": true,
+  "main": "src/index.ts",
   "dependencies": {
     "@react-navigation/native-stack": "6.9.26"
   },

@@ -1,10 +1,8 @@
-import { Dispatch }                  from 'react'
+import { Dispatch }       from 'react'
+import { SetStateAction } from 'react'
 
-import { SetStateAction }  from 'react'
-
-import { CategoryType }              from '../product-search.interfaces'
-
-import { ProductType } from '../product-search.interfaces'
+import { CategoryType }   from '../product-search.interfaces'
+import { ProductType }    from '../product-search.interfaces'
 
 interface UseProductSearchReturnedType {
   searchQuery: string

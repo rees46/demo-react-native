@@ -4,7 +4,7 @@ export interface SubcategoriesProps {
   navigation: any
   route: {
     params: {
-      parentCategoryName: string,
+      parentCategoryName: string
       categories: RubricatorCategory[]
     }
   }

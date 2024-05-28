@@ -1,5 +1,6 @@
-import { ProductType } from '@globals/types'
-import {RecommenderOptions} from "../../recommendations-block.interfaces";
+import { ProductType }        from '@globals/types'
+
+import { RecommenderOptions } from '../../recommendations-block.interfaces'
 
 export interface UseRecommendationsProps {
   recommenderCode?: string

@@ -2,6 +2,8 @@
 **/.svn
 **/.hg
 **/app
+**/.js
+**/.json
 **/fragments/**/node_modules
 **/globals/**/node_modules
 **/navigations/**/node_modules
@@ -9,4 +11,3 @@
 **/shared/**/node_modules
 **/stores/**/node_modules
 **/ui/**/node_modules
-**/js

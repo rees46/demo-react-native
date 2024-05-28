@@ -1,8 +1,8 @@
 {
   "name": "@screens/search-results",
   "version": "0.0.1",
-  "main": "src/index.ts",
   "private": true,
+  "main": "src/index.ts",
   "dependencies": {
     "@fragments/recommendations-block": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",

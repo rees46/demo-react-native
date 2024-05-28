@@ -2070,6 +2070,7 @@ __metadata:
   dependencies:
     "@globals/types": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
+    "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -2093,15 +2094,19 @@ __metadata:
     "@globals/types": "workspace:0.0.1"
     "@navigations/constants": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
+    "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
+    "@ui/input": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/spacer": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/theme": "workspace:0.0.1"
+    react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   peerDependencies:
     react: "*"
+    react-i18next: "*"
     react-native: "*"
     react-native-vector-icons: "*"
   languageName: unknown

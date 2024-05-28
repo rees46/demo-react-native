@@ -23,7 +23,10 @@ export const RubricatorFragment = ({ navigation, categories, loading }) => {
   const handleCategoryPress = useCallback(
     (category: RubricatorCategory) => () => {
       if (category.children.length > 0)
-        navigation.push(APP_ROUTES.SUBCATEGORIES.name, { categories: category.children, parentCategoryName: category.name })
+        navigation.push(APP_ROUTES.SUBCATEGORIES.name, {
+          categories: category.children,
+          parentCategoryName: category.name,
+        })
     },
     [navigation]
   )

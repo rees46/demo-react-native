@@ -1,13 +1,13 @@
-import CartScreen          from '@screens/cart'
-import CatalogScreen       from '@screens/catalog'
-import CategoryScreen      from '@screens/category'
-import HomeScreen          from '@screens/home'
-import ProductScreen       from '@screens/product'
-import ProductSearchScreen from '@screens/product-search'
-import SearchResultsScreen from '@screens/search-results'
+import CartScreen                   from '@screens/cart'
+import CatalogScreen                from '@screens/catalog'
+import CategoryScreen               from '@screens/category'
+import HomeScreen                   from '@screens/home'
+import ProductScreen                from '@screens/product'
+import ProductSearchScreen          from '@screens/product-search'
 import RecommendationProductsScreen from '@screens/recommendation-products'
-import SubcategoriesScreen from '@screens/subcategories'
-import { APP_ROUTES }      from '@navigations/constants'
+import SearchResultsScreen          from '@screens/search-results'
+import SubcategoriesScreen          from '@screens/subcategories'
+import { APP_ROUTES }               from '@navigations/constants'
 
 export const CATALOG_STACK_OPTIONS = [
   {

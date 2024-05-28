@@ -5,7 +5,7 @@ import { RecommendationsBlock } from '@fragments/recommendations-block'
 import { ScreenLayout }         from '@fragments/screen-layout'
 import { Spacer }               from '@ui/spacer'
 
-import { ProductProps }          from './product.interfaces'
+import { ProductProps }         from './product.interfaces'
 
 const ProductScreen = ({ navigation, route }: ProductProps) => {
   const { id } = route.params

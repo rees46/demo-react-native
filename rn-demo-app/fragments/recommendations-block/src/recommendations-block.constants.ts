@@ -1,4 +1,4 @@
-import {RecommenderOptions} from "./recommendations-block.interfaces";
+import { RecommenderOptions } from './recommendations-block.interfaces'
 
 export const IMAGE_SIZE = 140
 

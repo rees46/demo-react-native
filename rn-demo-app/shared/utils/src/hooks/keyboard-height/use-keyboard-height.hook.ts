@@ -1,6 +1,6 @@
-import { Keyboard }         from 'react-native'
-import { useEffect }        from 'react'
-import { useState }         from 'react'
+import { Keyboard }          from 'react-native'
+import { useEffect }         from 'react'
+import { useState }          from 'react'
 
 import { UseKeyboardHeight } from './use-keyboard-height.interfaces'
 

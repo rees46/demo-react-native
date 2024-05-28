@@ -5,7 +5,7 @@
   "license": "BSD 3-Clause",
   "scripts": {
     "clean": "rm -rf node_modules **/node_modules **/**/node_modules **/**/**/node_modules && rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clean",
-    "format": "prettier --write"
+    "format": "prettier ./rn-demo-app --write"
   },
   "workspaces": [
     "app",

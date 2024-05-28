@@ -1,8 +1,8 @@
 {
   "name": "@fragments/recommendations-block",
   "version": "0.0.1",
-  "main": "src/index.ts",
   "private": true,
+  "main": "src/index.ts",
   "dependencies": {
     "@fragments/product-card": "workspace:0.0.1",
     "@globals/api-service": "workspace:0.0.1",

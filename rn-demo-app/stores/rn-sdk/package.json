@@ -1,8 +1,8 @@
 {
   "name": "@stores/rn-sdk",
   "version": "0.0.1",
-  "main": "src/index.ts",
   "private": true,
+  "main": "src/index.ts",
   "dependencies": {
     "@globals/constants": "workspace:0.0.1",
     "@notifee/react-native": "7.8.2",

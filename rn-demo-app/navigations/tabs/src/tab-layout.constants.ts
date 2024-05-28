@@ -1,5 +1,4 @@
 import CatalogStack      from '@navigations/catalog-stack'
-
 import HomeStack         from '@navigations/home-stack'
 import CartScreen        from '@screens/cart'
 import { APP_ROUTES }    from '@navigations/constants'

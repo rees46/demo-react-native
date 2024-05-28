@@ -1,8 +1,8 @@
 {
   "name": "@screens/recommendation-products",
   "version": "0.0.1",
-  "main": "src/index.ts",
   "private": true,
+  "main": "src/index.ts",
   "dependencies": {
     "@fragments/product-list": "workspace:0.0.1",
     "@fragments/recommendations-block": "workspace:0.0.1",

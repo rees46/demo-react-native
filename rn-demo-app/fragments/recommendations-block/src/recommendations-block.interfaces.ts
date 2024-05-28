@@ -5,8 +5,8 @@ export interface RecommendationsBlockProps {
 }
 
 export interface RecommenderOptions {
-  limit: number,
-  extended?: 1 | 0,
-  resize_image?: number,
-  prevent_shuffle?: boolean,
+  limit: number
+  extended?: 1 | 0
+  resize_image?: number
+  prevent_shuffle?: boolean
 }

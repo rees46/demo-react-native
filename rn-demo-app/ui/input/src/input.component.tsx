@@ -10,11 +10,12 @@ import { Box }              from '@ui/layout'
 import { Spacer }           from '@ui/spacer'
 import { useTheme }         from '@ui/theme'
 
+import { NumericInput }      from './components'
 import { TextInputElement } from './input.element'
 import { InputProps }       from './input.interfaces'
 
 export const Input = forwardRef<TextInput, InputProps>((
-  { height = 44, clearable, placeholder, value, onChangeText }: InputProps,
+  { height = 44, clearable, placeholder, value, onChangeText, variant = 'text' }: InputProps,
   ref
 ) => {
   const theme = useTheme()
@@ -24,36 +25,51 @@ export const Input = forwardRef<TextInput, InputProps>((
   }, [onChangeText])
 
   return (
-    <Box
-      height={height}
-      flexDirection='row'
-      alignItems='center'
-      radius='normal'
-      border='bigGray'
-      flex={1}
-    >
-      <Spacer space={16} />
-      <TextInputElement
-        placeholder={placeholder}
-        value={value}
-        onChangeText={onChangeText}
-        ref={ref}
-      />
-      <Condition condition={clearable && !!value?.length}>
-        <TouchableOpacity onPress={handleClearPress}>
-          <Box
-            width={22}
-            height={22}
-            backgroundColor='gray'
-            justifyContent='center'
-            alignItems='center'
-            radius='rounded'
-          >
-            <Icon name='close' size={12} color={theme.colors.white} />
-          </Box>
-        </TouchableOpacity>
+    <>
+      <Condition condition={variant === 'text'}>
+        <Box
+          height={height}
+          flexDirection='row'
+          alignItems='center'
+          radius='normal'
+          border='bigGray'
+          flex={1}
+        >
+          <Spacer space={16} />
+          <TextInputElement
+            placeholder={placeholder}
+            value={value}
+            onChangeText={onChangeText}
+            ref={ref}
+          />
+          <Condition condition={clearable && !!value?.length}>
+            <TouchableOpacity onPress={handleClearPress}>
+              <Box
+                width={22}
+                height={22}
+                backgroundColor='gray'
+                justifyContent='center'
+                alignItems='center'
+                radius='rounded'
+              >
+                <Icon name='close' size={12} color={theme.colors.white} />
+              </Box>
+            </TouchableOpacity>
+          </Condition>
+          <Spacer space={16} />
+        </Box>
       </Condition>
-      <Spacer space={16} />
-    </Box>
+      <Condition condition={variant === 'numeric'}>
+        <NumericInput
+          ref={ref}
+          height={height}
+          clearable
+          placeholder={placeholder}
+          value={value}
+          onChangeText={onChangeText}
+          variant={variant}
+        />
+      </Condition>
+    </>
   )
 })

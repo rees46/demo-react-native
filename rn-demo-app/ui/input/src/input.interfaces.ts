@@ -7,4 +7,7 @@ export interface InputProps extends Omit<TextInputProps, 'value'> {
   height?: number
   clearable?: boolean
   value: string
+  variant?: 'text' | 'numeric'
+  min?: number
+  max?: number
 }

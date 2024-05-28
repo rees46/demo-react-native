@@ -25,6 +25,8 @@
     "navigations.titles.productsearch": "Поиск",
     "navigations.titles.searchresults": "Результаты поиска",
     "navigations.back": "Назад",
-    "fragments.product-list.show-more": "Просмотреть ещё"
+    "fragments.product-list.show-more": "Просмотреть ещё",
+    "fragments.product-card.shop": "Заказать",
+    "fragments.product-info.add-to-cart": "Добавить в корзину"
   }
 }

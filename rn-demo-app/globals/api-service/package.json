@@ -1,8 +1,8 @@
 {
   "name": "@globals/api-service",
   "version": "0.0.1",
-  "main": "src/index.ts",
   "private": true,
+  "main": "src/index.ts",
   "dependencies": {
     "@globals/constants": "workspace:0.0.1",
     "axios": "1.7.0"
