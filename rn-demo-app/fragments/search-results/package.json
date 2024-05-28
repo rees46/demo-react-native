@@ -1,15 +1,20 @@
 {
-  "name": "@screens/search-results",
+  "name": "@fragments/search-results",
   "version": "0.0.1",
   "private": true,
   "main": "src/index.ts",
   "dependencies": {
+    "@fragments/product-list": "workspace:0.0.1",
     "@fragments/recommendations-block": "workspace:0.0.1",
-    "@fragments/screen-layout": "workspace:0.0.1",
-    "@fragments/search-results": "workspace:0.0.1",
-    "@ui/spacer": "workspace:0.0.1"
+    "@globals/constants": "workspace:0.0.1",
+    "@stores/rn-sdk": "workspace:0.0.1",
+    "@ui/condition": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/spacer": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1"
   },
   "devDependencies": {
+    "@globals/types": "workspace:0.0.1",
     "@types/react": "^18.2.6",
     "react-i18next": "14.1.1",
     "react-native": "0.74.1"

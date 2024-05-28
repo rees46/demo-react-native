@@ -15,7 +15,7 @@ import { TextInputElement } from './input.element'
 import { InputProps }       from './input.interfaces'
 
 export const Input = forwardRef<TextInput, InputProps>((
-  { height = 44, clearable, placeholder, value, onChangeText, variant = 'text' }: InputProps,
+  { height = 44, clearable, placeholder, value, onChangeText, variant = 'text', ...props }: InputProps,
   ref
 ) => {
   const theme = useTheme()
@@ -41,6 +41,7 @@ export const Input = forwardRef<TextInput, InputProps>((
             value={value}
             onChangeText={onChangeText}
             ref={ref}
+            {...props}
           />
           <Condition condition={clearable && !!value?.length}>
             <TouchableOpacity onPress={handleClearPress}>
@@ -68,6 +69,7 @@ export const Input = forwardRef<TextInput, InputProps>((
           value={value}
           onChangeText={onChangeText}
           variant={variant}
+          {...props}
         />
       </Condition>
     </>

@@ -10,7 +10,7 @@ import { RECOMMENDER_CODES }    from './home.constants'
 import { HomeProps }            from './home.interfaces'
 
 const HomeScreen = ({ navigation }: HomeProps) => (
-  <ScreenLayout navigation={navigation}>
+  <ScreenLayout navigation={navigation} menuVariant='menu'>
     <Spacer height={16} />
     {RECOMMENDER_CODES.map((code, index) => (
       <Fragment key={code}>

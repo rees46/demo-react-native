@@ -14,7 +14,7 @@ import { Spacer }                    from '@ui/spacer'
 import { ProductListProps }          from './product-list.interfaces'
 import { getProductCardWidthHelper } from './utils'
 
-export const ProductList = ({ products, navigation, onLoad }: ProductListProps) => {
+export const ProductList = ({ products, navigation, onLoad, total }: ProductListProps) => {
   const handleProductPress = useCallback(
     (id: string) => () => {
       navigation.navigate(APP_ROUTES.PRODUCT.name, { id })
@@ -48,7 +48,7 @@ export const ProductList = ({ products, navigation, onLoad }: ProductListProps) 
       keyExtractor={(item) => item.id}
       numColumns={2}
       ListFooterComponent={
-        <Condition condition={products?.length > 0}>
+        <Condition condition={products?.length > 0 && (total ? products.length < total : true) }>
           <Box>
             <Row>
               <Spacer space={16} />

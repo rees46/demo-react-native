@@ -11,7 +11,7 @@ export interface UseRecommendationsReturnedType {
   loading: boolean
   recommendations: ProductType[]
   blockTitle: string
-  loadRecommendations: () => void
+  loadRecommendations: VoidFunction
   error?: Error
 }
 

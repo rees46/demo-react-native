@@ -2236,6 +2236,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@fragments/search-results@workspace:0.0.1, @fragments/search-results@workspace:rn-demo-app/fragments/search-results":
+  version: 0.0.0-use.local
+  resolution: "@fragments/search-results@workspace:rn-demo-app/fragments/search-results"
+  dependencies:
+    "@fragments/product-list": "workspace:0.0.1"
+    "@fragments/recommendations-block": "workspace:0.0.1"
+    "@globals/constants": "workspace:0.0.1"
+    "@globals/types": "workspace:0.0.1"
+    "@stores/rn-sdk": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/spacer": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react-i18next: "npm:14.1.1"
+    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@globals/api-service@workspace:0.0.1, @globals/api-service@workspace:rn-demo-app/globals/api-service":
   version: 0.0.0-use.local
   resolution: "@globals/api-service@workspace:rn-demo-app/globals/api-service"
@@ -4451,10 +4474,10 @@ __metadata:
   resolution: "@screens/search-results@workspace:rn-demo-app/screens/serach-results"
   dependencies:
     "@fragments/recommendations-block": "workspace:0.0.1"
+    "@fragments/screen-layout": "workspace:0.0.1"
+    "@fragments/search-results": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
-    "@ui/layout": "workspace:0.0.1"
     "@ui/spacer": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   peerDependencies:

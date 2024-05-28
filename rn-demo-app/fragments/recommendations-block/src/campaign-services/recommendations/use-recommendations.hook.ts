@@ -43,11 +43,9 @@ export const useRecommendations: UseRecommendations = ({ recommenderCode, option
   }, [loading, sdk, recommenderCode, page, error, initialized])
 
   useEffect(() => {
-    if (!loading && !initialized) {
-      loadRecommendations()
-    }
+    loadRecommendations()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loading, initialized])
+  }, [])
 
   return {
     loading,

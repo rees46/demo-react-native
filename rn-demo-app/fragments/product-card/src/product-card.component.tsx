@@ -1,6 +1,5 @@
 import React                        from 'react'
 import { TouchableWithoutFeedback } from 'react-native'
-import { useCallback }              from 'react'
 import { useMemo }                  from 'react'
 import { memo }                     from 'react'
 import { useTranslation }            from 'react-i18next'
@@ -103,7 +102,7 @@ export const ProductCard = memo(
                     variant='primary'
                     title={t('fragments.product-card.shop')}
                     height={28}
-                    onPress={onButtonPress}
+                    onPress={onButtonPress ?? onItemPress}
                   />
                 </Box>
               </Condition>

@@ -4,4 +4,5 @@ export interface ProductListProps {
   navigation: any
   products: ProductType[]
   onLoad?: VoidFunction
+  total?: number
 }

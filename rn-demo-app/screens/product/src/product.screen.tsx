@@ -11,7 +11,7 @@ const ProductScreen = ({ navigation, route }: ProductProps) => {
   const { id } = route.params
 
   return (
-    <ScreenLayout navigation={navigation}>
+    <ScreenLayout navigation={navigation} menuVariant='menu'>
       <ProductInfo id={id} />
       <Spacer height={16} />
       <RecommendationsBlock

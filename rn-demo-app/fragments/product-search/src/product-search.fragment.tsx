@@ -54,8 +54,8 @@ export const ProductSearch = ({ navigation }: ProductSearchProps) => {
   const handleClose = useCallback(() => navigation.navigate(APP_ROUTES.HOME.name), [navigation])
 
   const handleSearchSubmit = useCallback(
-    () => navigation.navigate(APP_ROUTES.SEARCH_RESULTS.name),
-    [navigation]
+    () => navigation.navigate(APP_ROUTES.SEARCH_RESULTS.name, { searchQuery }),
+    [navigation, searchQuery]
   )
 
   const sections = useMemo(
@@ -89,6 +89,7 @@ export const ProductSearch = ({ navigation }: ProductSearchProps) => {
           <SearchComponent
             ref={searchbarRef}
             value={searchQuery}
+            onSubmitEditing={handleSearchSubmit}
             onChangeText={setSearchQuery}
             placeholder={t('fragments.product-search.placeholder')}
             onClose={handleClose}

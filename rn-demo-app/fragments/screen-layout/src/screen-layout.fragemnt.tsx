@@ -12,7 +12,7 @@ import { ScreenLayoutProps }         from './screen-layout.interfaces'
 export const ScreenLayout = ({
   children,
   navigation,
-  menuVariant = 'menu',
+  menuVariant,
   navigationIconName = 'back',
   scrollable = true,
 }: ScreenLayoutProps) => {

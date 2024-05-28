@@ -5,4 +5,5 @@ export interface SearchProps {
   clearable?: boolean
   onClose: VoidFunction
   navigation?: any
+  onSubmitEditing?: VoidFunction
 }

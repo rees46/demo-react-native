@@ -1,1 +1,1 @@
-export { default } from './serach-results.screen'
+export { default } from './search-results.screen'
