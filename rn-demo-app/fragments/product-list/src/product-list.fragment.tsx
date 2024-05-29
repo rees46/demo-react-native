@@ -48,7 +48,7 @@ export const ProductList = ({ products, navigation, onLoad, total }: ProductList
       keyExtractor={(item) => item.id}
       numColumns={2}
       ListFooterComponent={
-        <Condition condition={products?.length > 0 && (total ? products.length < total : true) }>
+        <Condition condition={products?.length > 0 && (total ? products.length < total : true)}>
           <Box>
             <Row>
               <Spacer space={16} />

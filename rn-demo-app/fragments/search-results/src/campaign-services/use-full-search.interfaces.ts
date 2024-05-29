@@ -1,10 +1,9 @@
-import { ProductType }        from '@globals/types'
+import { ProductType } from '@globals/types'
 
 export interface FullSearchOptions {
   type: 'full_search'
   limit: number
 }
-
 
 export interface UseFullSearchProps {
   searchQuery?: string

@@ -1,1 +1,1 @@
-export  * from './search-results.fragment'
+export * from './search-results.fragment'

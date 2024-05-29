@@ -10,12 +10,20 @@ import { Box }              from '@ui/layout'
 import { Spacer }           from '@ui/spacer'
 import { useTheme }         from '@ui/theme'
 
-import { NumericInput }      from './components'
+import { NumericInput }     from './components'
 import { TextInputElement } from './input.element'
 import { InputProps }       from './input.interfaces'
 
 export const Input = forwardRef<TextInput, InputProps>((
-  { height = 44, clearable, placeholder, value, onChangeText, variant = 'text', ...props }: InputProps,
+  {
+    height = 44,
+    clearable,
+    placeholder,
+    value,
+    onChangeText,
+    variant = 'text',
+    ...props
+  }: InputProps,
   ref
 ) => {
   const theme = useTheme()

@@ -12,7 +12,7 @@ import { Spacer }           from '@ui/spacer'
 import { TextComponent }    from '@ui/text'
 import { useApi }           from '@globals/api-service'
 
-import { AddToCart }         from './components'
+import { AddToCart }        from './components'
 import { ProductInfoProps } from './product-info.interfaces'
 
 export const ProductInfo = memo(({ id }: ProductInfoProps) => {

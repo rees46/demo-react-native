@@ -3,34 +3,37 @@ import { useEffect }     from 'react'
 import { useState }      from 'react'
 
 import { ProductType }   from '@globals/types'
-import { useSDK }        from '@stores/rn-sdk'
+import { useApi }        from '@globals/api-service'
 
-import { UseFullSearch }  from './use-full-search.interfaces'
-import { defaultOptions } from './use-full-search.constants'
+import { defaultOptions } from './use-category-products.constants'
 
-export const useFullSearch: UseFullSearch = ({ searchQuery, options = {} }) => {
+export const useCategoryProduct = ({ categoryId, options = {} }) => {
   const [products, setProducts] = useState<ProductType[]>([])
   const [loading, setLoading] = useState(false)
   const [page, setPage] = useState(1)
   const [total, setTotal] = useState<number>()
-  const sdk = useSDK()
   const [error, setError] = useState<Error>()
+  const { publicApi } = useApi()
 
   const loadProducts = useCallback(async () => {
-    if (!searchQuery || loading || error) return
+    if (!categoryId || loading || error) return
 
     setLoading(true)
     setError(undefined)
     try {
-      const newProducts = await sdk.search({
-        ...defaultOptions,
-        ...options,
-        search_query: searchQuery,
-        page,
+      const { data } = await publicApi.get('/products', {
+        params: {
+          ...defaultOptions,
+          ...options,
+          categories: categoryId,
+          page,
+        },
       })
 
-      setProducts((prev) => [...prev, ...newProducts.products])
-      setTotal(newProducts.products_total)
+      console.log('data: ', data)
+
+      setProducts((prev) => [...prev, ...data.products])
+      setTotal(data.products_total)
       setPage((prevPage) => prevPage + 1)
     } catch (err) {
       console.error('Error loading search results:', err)
@@ -38,7 +41,7 @@ export const useFullSearch: UseFullSearch = ({ searchQuery, options = {} }) => {
     } finally {
       setLoading(false)
     }
-  }, [loading, sdk, searchQuery, page, error])
+  }, [loading, categoryId, page, error])
 
   useEffect(() => {
     if (!loading) {
@@ -49,7 +52,7 @@ export const useFullSearch: UseFullSearch = ({ searchQuery, options = {} }) => {
   return {
     loading,
     products,
-    loadResults: loadProducts,
+    loadProducts,
     error,
     total,
   }

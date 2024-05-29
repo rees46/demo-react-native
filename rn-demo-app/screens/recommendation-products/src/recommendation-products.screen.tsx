@@ -14,8 +14,6 @@ const RecommendationProductsScreen = ({ navigation, route }: RecommendationProdu
     recommenderCode,
     options: {
       limit: 8,
-      extended: 1,
-      prevent_shuffle: true,
     },
   })
 

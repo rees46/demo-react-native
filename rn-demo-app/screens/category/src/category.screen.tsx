@@ -1,26 +1,20 @@
-import React              from 'react'
-import { Text }           from 'react-native'
-import { View }           from 'react-native'
-import { useEffect }      from 'react'
-import { useTranslation } from 'react-i18next'
+import React               from 'react'
 
-import { useSDK }         from '@stores/rn-sdk'
+import { CategoryProducts } from '@fragments/category-products'
+import { ScreenLayout }    from '@fragments/screen-layout'
+import { Spacer }           from '@ui/spacer'
 
-import { styles }         from './category.styles'
+import { CategoryProps }    from './category.interfaces'
 
-const CategoryScreen = () => {
-  const sdk = useSDK()
-  const { t } = useTranslation()
-
-  useEffect(() => {
-    sdk.track('wish', [])
-  }, [sdk])
+const SearchResultsScreen = ({ navigation, route }: CategoryProps) => {
+  const { categoryId } = route.params
 
   return (
-    <View style={styles.container}>
-      <Text>{t('screens.category.title')}</Text>
-    </View>
+    <ScreenLayout navigation={navigation} scrollable={false} menuVariant='menu'>
+      <Spacer height={16} />
+      <CategoryProducts navigation={navigation} categoryId={categoryId} />
+    </ScreenLayout>
   )
 }
 
-export default CategoryScreen
+export default SearchResultsScreen

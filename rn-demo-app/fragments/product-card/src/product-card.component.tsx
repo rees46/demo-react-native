@@ -2,7 +2,7 @@ import React                        from 'react'
 import { TouchableWithoutFeedback } from 'react-native'
 import { useMemo }                  from 'react'
 import { memo }                     from 'react'
-import { useTranslation }            from 'react-i18next'
+import { useTranslation }           from 'react-i18next'
 
 import { ButtonComponent }          from '@ui/button'
 import { Condition }                from '@ui/condition'

@@ -1,4 +1,4 @@
-import {FullSearchOptions} from "./use-full-search.interfaces";
+import { FullSearchOptions } from './use-full-search.interfaces'
 
 export const SEARCH_TYPE = 'full_search'
 

@@ -17,7 +17,7 @@ export const useRecommendations: UseRecommendations = ({ recommenderCode, option
   const [initialized, setInitialized] = useState(false)
   const [error, setError] = useState<Error>()
 
-  const loadRecommendations = useCallback(async () => {
+  const loadProducts = useCallback(async () => {
     if (!recommenderCode || loading || error) return
 
     setLoading(true)
@@ -43,7 +43,7 @@ export const useRecommendations: UseRecommendations = ({ recommenderCode, option
   }, [loading, sdk, recommenderCode, page, error, initialized])
 
   useEffect(() => {
-    loadRecommendations()
+    loadProducts()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -51,7 +51,7 @@ export const useRecommendations: UseRecommendations = ({ recommenderCode, option
     loading,
     recommendations,
     blockTitle,
-    loadRecommendations,
+    loadRecommendations: loadProducts,
     error,
   }
 }

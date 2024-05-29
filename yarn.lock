@@ -2064,6 +2064,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@fragments/category-products@workspace:0.0.1, @fragments/category-products@workspace:rn-demo-app/fragments/category-products":
+  version: 0.0.0-use.local
+  resolution: "@fragments/category-products@workspace:rn-demo-app/fragments/category-products"
+  dependencies:
+    "@fragments/product-list": "workspace:0.0.1"
+    "@globals/api-service": "workspace:0.0.1"
+    "@globals/constants": "workspace:0.0.1"
+    "@globals/types": "workspace:0.0.1"
+    "@navigations/constants": "workspace:0.0.1"
+    "@stores/rn-sdk": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/spacer": "workspace:0.0.1"
+    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@fragments/product-card@workspace:0.0.1, @fragments/product-card@workspace:rn-demo-app/fragments/product-card":
   version: 0.0.0-use.local
   resolution: "@fragments/product-card@workspace:rn-demo-app/fragments/product-card"
@@ -4385,9 +4405,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@screens/category@workspace:rn-demo-app/screens/category"
   dependencies:
+    "@fragments/category-products": "workspace:0.0.1"
     "@fragments/screen-layout": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
+    "@ui/spacer": "workspace:0.0.1"
     react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   peerDependencies:
