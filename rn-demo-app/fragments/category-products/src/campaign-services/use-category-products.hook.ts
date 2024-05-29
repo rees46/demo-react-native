@@ -6,8 +6,9 @@ import { ProductType }   from '@globals/types'
 import { useApi }        from '@globals/api-service'
 
 import { defaultOptions } from './use-category-products.constants'
+import {UseCategoryProducts} from "./use-category-products.interfaces";
 
-export const useCategoryProduct = ({ categoryId, options = {} }) => {
+export const useCategoryProduct: UseCategoryProducts = ({ categoryId, options = {} }) => {
   const [products, setProducts] = useState<ProductType[]>([])
   const [loading, setLoading] = useState(false)
   const [page, setPage] = useState(1)
@@ -29,8 +30,6 @@ export const useCategoryProduct = ({ categoryId, options = {} }) => {
           page,
         },
       })
-
-      console.log('data: ', data)
 
       setProducts((prev) => [...prev, ...data.products])
       setTotal(data.products_total)
