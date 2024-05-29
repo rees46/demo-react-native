@@ -1,3 +1,20 @@
+## 1.7.2 (2024-05-29)
+
+
+### Features
+
+* add array to track wish request ([da7bc28](https://github.com/rees46/mobile/commit/da7bc284bcb48e2d7deb09718618587aba0e5deb))
+* add cart method ([7a0dd8b](https://github.com/rees46/mobile/commit/7a0dd8b65232155d8184c938e5e1977e5a4a8621))
+* add custom properties to track purchase request ([d58f5af](https://github.com/rees46/mobile/commit/d58f5af7dac7599e08946cd57d12144d8f78ebed))
+* add new action step to identify base commit in master ([95930a9](https://github.com/rees46/mobile/commit/95930a98b1e13456a84c5fb2531a5f5bbfc66365))
+* add persona-synchronization.yaml ([17ddf01](https://github.com/rees46/mobile/commit/17ddf01a79b79cebf898cd7d68c2cc5949b3840f))
+* BREAKING CHANGE use @notifee/react-native for requesting alarm permissions ([0e23088](https://github.com/rees46/mobile/commit/0e23088394e050aea1847206e3b372c8cd16c23b))
+* connect sdk to dev app ([48788fa](https://github.com/rees46/mobile/commit/48788fa9b393207266e55d62ee3f3cfb8954b525))
+* move to sdk ([85a1e1e](https://github.com/rees46/mobile/commit/85a1e1e6aa64d0ae962a5daa1c6eeab6af5fb1fe))
+* swap auto-changelog for standard-changelog ([ec88b46](https://github.com/rees46/mobile/commit/ec88b46a239c11e8e889eef34d9cee4e92243ac4))
+
+
+
 ## [1.7.1](https://github.com/rees46/mobile/compare/v1.6.33...v1.7.1) (2024-05-09)
 
 
