@@ -24,6 +24,7 @@ import { ItemType }               from './product-search.interfaces'
 import { ProductSearchProps }     from './product-search.interfaces'
 import { useProductSearch }       from './campaign-services'
 import { getSearchContentHeight } from './utils'
+import { Divider } from '@ui/divider'
 
 export const ProductSearch = ({ navigation }: ProductSearchProps) => {
   const { searchQuery, setSearchQuery, totalResults, items, categories } = useProductSearch()
@@ -106,7 +107,7 @@ export const ProductSearch = ({ navigation }: ProductSearchProps) => {
             renderSectionHeader={({ section: { title } }) => (
               <Column>
                 <Spacer height={12} />
-                <Box height={1} backgroundColor='lightGray' fullWidth />
+                <Divider />
                 <Row>
                   <Spacer space={16} />
                   <Column>

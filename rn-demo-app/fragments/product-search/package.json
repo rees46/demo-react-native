@@ -10,6 +10,7 @@
     "@stores/rn-sdk": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
+    "@ui/divider": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
     "@ui/image": "workspace:0.0.1",
     "@ui/input": "workspace:0.0.1",

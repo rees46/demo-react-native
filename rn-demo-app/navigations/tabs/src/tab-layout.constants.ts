@@ -1,6 +1,6 @@
 import CatalogStack      from '@navigations/catalog-stack'
 import HomeStack         from '@navigations/home-stack'
-import CartScreen        from '@screens/cart'
+import CartStack        from '@navigations/cart-stack'
 import { APP_ROUTES }    from '@navigations/constants'
 
 import { ScreenOptions } from './tab-layout.interfaces'
@@ -23,7 +23,7 @@ export const SCREEN_OPTIONS: ScreenOptions[] = [
   {
     name: APP_ROUTES.CART.tabName,
     title: 'cart',
-    component: CartScreen,
+    component: CartStack,
     focusedIconName: 'cart',
     unfocusedIconName: 'cart-outline',
   },

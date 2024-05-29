@@ -2,6 +2,8 @@
   "translation": {
     "screens.home.title": "Главная",
     "screens.cart.title": "Корзина",
+    "screens.cart.shopping-cart": "Корзина",
+    "screens.cart.empty": "Корзина пуста",
     "screens.catalog.title": "Каталог",
     "screens.catalog.shopping-cart": "Корзина",
     "screens.profile.title": "Профиль",
@@ -26,7 +28,7 @@
     "navigations.titles.searchresults": "Результаты поиска",
     "navigations.back": "Назад",
     "fragments.product-list.show-more": "Просмотреть ещё",
-    "fragments.product-card.shop": "Смотреть",
+    "fragments.product-card.shop": "Заказать",
     "fragments.product-info.add-to-cart": "Добавить в корзину"
   }
 }

@@ -8,7 +8,7 @@ import { useSDK }             from '@stores/rn-sdk'
 import { UseRecommendations } from './use-recommendations.interfaces'
 import { defaultOptions }     from '../../recommendations-block.constants'
 
-export const useRecommendations: UseRecommendations = ({ recommenderCode, options = {} }) => {
+export const useRecommendations: UseRecommendations = ({ recommenderCode, options = {}, infiniteScroll }) => {
   const [recommendations, setRecommendations] = useState<ProductType[]>([])
   const [loading, setLoading] = useState(false)
   const [page, setPage] = useState(1)
@@ -19,17 +19,19 @@ export const useRecommendations: UseRecommendations = ({ recommenderCode, option
 
   const loadProducts = useCallback(async () => {
     if (!recommenderCode || loading || error) return
+    if (initialized && (!infiniteScroll || recommendations.length === 0)) return
 
     setLoading(true)
     setError(undefined)
     try {
       const newRecommendations = await sdk.recommend(recommenderCode, {
-        ...defaultOptions,
+        extended: true,
+        ...(infiniteScroll ? defaultOptions : {}),
         ...options,
         page,
       })
 
-      !initialized && setBlockTitle(newRecommendations.title)
+      setBlockTitle(newRecommendations.title)
 
       setRecommendations((prev) => [...prev, ...newRecommendations.recommends])
       setPage((prevPage) => prevPage + 1)
@@ -47,11 +49,11 @@ export const useRecommendations: UseRecommendations = ({ recommenderCode, option
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  return {
+  return initialized && recommendations.length > 0 ? {
     loading,
     recommendations,
     blockTitle,
     loadRecommendations: loadProducts,
     error,
-  }
+  } : {}
 }

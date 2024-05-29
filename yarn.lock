@@ -2064,6 +2064,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@fragments/cart-block@workspace:0.0.1, @fragments/cart-block@workspace:rn-demo-app/fragments/cart-block":
+  version: 0.0.0-use.local
+  resolution: "@fragments/cart-block@workspace:rn-demo-app/fragments/cart-block"
+  dependencies:
+    "@fragments/recommendations-block": "workspace:0.0.1"
+    "@globals/constants": "workspace:0.0.1"
+    "@globals/types": "workspace:0.0.1"
+    "@stores/rn-sdk": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/spacer": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react-i18next: "npm:14.1.1"
+    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: "*"
+    react-i18next: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@fragments/category-products@workspace:0.0.1, @fragments/category-products@workspace:rn-demo-app/fragments/category-products":
   version: 0.0.0-use.local
   resolution: "@fragments/category-products@workspace:rn-demo-app/fragments/category-products"
@@ -2113,6 +2136,7 @@ __metadata:
     "@globals/constants": "workspace:0.0.1"
     "@globals/types": "workspace:0.0.1"
     "@navigations/constants": "workspace:0.0.1"
+    "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
@@ -2165,6 +2189,7 @@ __metadata:
     "@types/react-native-vector-icons": "npm:6.4.18"
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/input": "workspace:0.0.1"
@@ -2895,6 +2920,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@navigations/cart-stack@workspace:0.0.1, @navigations/cart-stack@workspace:rn-demo-app/navigations/cart-stack":
+  version: 0.0.0-use.local
+  resolution: "@navigations/cart-stack@workspace:rn-demo-app/navigations/cart-stack"
+  dependencies:
+    "@navigations/constants": "workspace:0.0.1"
+    "@navigations/screen-stack-framgent": "workspace:0.0.1"
+    "@screens/cart": "workspace:0.0.1"
+    "@screens/catalog": "workspace:0.0.1"
+    "@screens/category": "workspace:0.0.1"
+    "@screens/home": "workspace:0.0.1"
+    "@screens/product": "workspace:0.0.1"
+    "@screens/product-search": "workspace:0.0.1"
+    "@screens/recommendation-products": "workspace:0.0.1"
+    "@screens/search-results": "workspace:0.0.1"
+    "@screens/subcategories": "workspace:0.0.1"
+    "@types/react": "npm:^18.2.6"
+    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@navigations/catalog-stack@workspace:0.0.1, @navigations/catalog-stack@workspace:rn-demo-app/navigations/catalog-stack":
   version: 0.0.0-use.local
   resolution: "@navigations/catalog-stack@workspace:rn-demo-app/navigations/catalog-stack"
@@ -2968,6 +3016,7 @@ __metadata:
   dependencies:
     "@fragments/app-headers": "workspace:0.0.1"
     "@globals/constants": "workspace:0.0.1"
+    "@navigations/cart-stack": "workspace:0.0.1"
     "@navigations/catalog-stack": "workspace:0.0.1"
     "@navigations/constants": "workspace:0.0.1"
     "@navigations/home-stack": "workspace:0.0.1"
@@ -4364,14 +4413,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@screens/cart@workspace:rn-demo-app/screens/cart"
   dependencies:
+    "@fragments/cart-block": "workspace:0.0.1"
     "@fragments/screen-layout": "workspace:0.0.1"
-    "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
-    react-i18next: "npm:14.1.1"
     react-native: "npm:0.74.1"
   peerDependencies:
     react: "*"
-    react-i18next: "*"
     react-native: "*"
   languageName: unknown
   linkType: soft
@@ -4518,6 +4565,7 @@ __metadata:
     "@globals/types": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
+    "@ui/divider": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/spacer": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
@@ -5226,6 +5274,19 @@ __metadata:
   resolution: "@ui/condition@workspace:rn-demo-app/ui/condition"
   dependencies:
     "@types/react": "npm:^18.2.6"
+    react-native: "npm:0.74.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/divider@workspace:0.0.1, @ui/divider@workspace:rn-demo-app/ui/divider":
+  version: 0.0.0-use.local
+  resolution: "@ui/divider@workspace:rn-demo-app/ui/divider"
+  dependencies:
+    "@types/react": "npm:^18.2.6"
+    "@ui/layout": "workspace:0.0.1"
     react-native: "npm:0.74.1"
   peerDependencies:
     react: "*"

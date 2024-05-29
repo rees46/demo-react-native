@@ -8,9 +8,9 @@ import { Row }      from '@ui/layout'
 import { Spacer }               from '@ui/spacer'
 import { TextComponent }        from '@ui/text'
 
-import { EmptySearchProps }      from './empty-search.interfaces'
+import {CartLayoutProps} from "./cart-layout.interfaces";
 
-export const EmptySearchComponent = ({ navigation }: EmptySearchProps) => {
+export const CartBlockLayout = ({ navigation, children }: CartLayoutProps) => {
   const { t } = useTranslation()
 
   return (
@@ -18,23 +18,18 @@ export const EmptySearchComponent = ({ navigation }: EmptySearchProps) => {
       <Row flex={1}>
         <Spacer space={16} />
         <Column flex={1}>
-          <TextComponent fontSize='semi'>
-            {t('fragments.product-search.total_results', { total: 0 })}
+          <TextComponent fontSize='bigTitle' fontColor='black' fontWeight='semibold'>
+            {t('screens.cart.shopping-cart')}
           </TextComponent>
-          <Box flex={1} justifyContent='center' alignItems='center'>
-            <TextComponent fontSize='big' fontColor='gray' fontWeight='semibold'>
-              {t('fragments.product-search.empty_results')}
-            </TextComponent>
-          </Box>
+          {children}
         </Column>
         <Spacer space={16} />
       </Row>
       <RecommendationsBlock
         navigation={navigation}
         // TODO: replace by necessary recommender
-        recommenderCode='6ffcb6d617e26ecb139b8fe0850f2ed8'
+        recommenderCode='1efd76c810cc2364ff89677af3e076c7'
         titleVariant='title'
-        infiniteScroll={false}
       />
     </Box>
   )

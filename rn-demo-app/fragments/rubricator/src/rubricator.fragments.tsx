@@ -41,8 +41,7 @@ export const RubricatorFragment = ({ navigation, categories, loading }) => {
   }
 
   return (
-    <Column>
-      <Box height={getListHeight()}>
+      <Box flex={1}>
         <FlatList
           data={categories}
           renderItem={({ item }) => (
@@ -68,6 +67,5 @@ export const RubricatorFragment = ({ navigation, categories, loading }) => {
           keyExtractor={({ id }) => id}
         />
       </Box>
-    </Column>
   )
 }

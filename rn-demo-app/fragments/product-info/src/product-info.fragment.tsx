@@ -17,7 +17,7 @@ import { ProductInfoProps } from './product-info.interfaces'
 
 export const ProductInfo = memo(({ id }: ProductInfoProps) => {
   const { publicApi } = useApi()
-  const [product, setProduct] = React.useState<ProductType>()
+  const [product, setProduct] = React.useState<ProductType & { uniqid: string, stock_quantity?: number } >()
   const [loading, setLoading] = React.useState<boolean>(true)
 
   useEffect(() => {
@@ -38,6 +38,7 @@ export const ProductInfo = memo(({ id }: ProductInfoProps) => {
 
     fetchProductInfo()
   }, [])
+
 
   if (loading || !product?.name) {
     return null
@@ -101,7 +102,7 @@ export const ProductInfo = memo(({ id }: ProductInfoProps) => {
         <Spacer space={16} />
       </Row>
       <Spacer height={16} />
-      <AddToCart />
+      <AddToCart productId={product.uniqid} max={product.stock_quantity} />
       <Spacer height={20} />
     </>
   )

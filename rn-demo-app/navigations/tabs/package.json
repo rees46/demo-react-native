@@ -6,6 +6,7 @@
   "dependencies": {
     "@fragments/app-headers": "workspace:0.0.1",
     "@globals/constants": "workspace:0.0.1",
+    "@navigations/cart-stack": "workspace:0.0.1",
     "@navigations/catalog-stack": "workspace:0.0.1",
     "@navigations/constants": "workspace:0.0.1",
     "@navigations/home-stack": "workspace:0.0.1",

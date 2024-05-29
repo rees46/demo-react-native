@@ -17,8 +17,10 @@ const ProductScreen = ({ navigation, route }: ProductProps) => {
       <RecommendationsBlock
         navigation={navigation}
         // TODO: replace by necessary recommender
-        recommenderCode='1efd76c810cc2364ff89677af3e076c7'
+        recommenderCode='88bbdbe3f9ea5e45dbc5be70738bdf28'
         titleVariant='title'
+        options={{ item: id }}
+        infiniteScroll={false}
       />
       <Spacer height={16} />
     </ScreenLayout>

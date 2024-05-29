@@ -1,25 +1,12 @@
 import React              from 'react'
-import { Text }           from 'react-native'
-import { View }           from 'react-native'
-import { useEffect }      from 'react'
-import { useTranslation } from 'react-i18next'
+import { CartBlock } from '@fragments/cart-block'
+import { ScreenLayout } from '@fragments/screen-layout'
 
-import { useSDK }         from '@stores/rn-sdk'
-
-import { styles }         from './cart.styles'
-
-const CartScreen = () => {
-  const sdk = useSDK()
-  const { t } = useTranslation()
-
-  useEffect(() => {
-    sdk.track('wish', [])
-  }, [sdk])
-
+const CartScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text>{t('screens.cart.title')}</Text>
-    </View>
+    <ScreenLayout navigation={navigation} scrollable={false} menuVariant='menu'>
+      <CartBlock navigation={navigation} />
+    </ScreenLayout>
   )
 }
 

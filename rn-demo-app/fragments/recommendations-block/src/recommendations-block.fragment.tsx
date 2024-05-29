@@ -22,9 +22,13 @@ export const RecommendationsBlock = memo(({
   navigation,
   recommenderCode,
   titleVariant = 'smallTitle',
+  options = {},
+  infiniteScroll = true
 }: RecommendationsBlockProps) => {
   const { loadRecommendations, recommendations, blockTitle, loading } = useRecommendations({
     recommenderCode,
+    options,
+    infiniteScroll
   })
   const theme = useTheme()
 
@@ -44,43 +48,45 @@ export const RecommendationsBlock = memo(({
   )
 
   return (
-    <Column>
-      <Row>
-        <Spacer space={16} />
-        <Row justifyContent='space-between' flex={1}>
-          <Box width='50%'>
-            <TextComponent
-              fontSize={titleVariant}
-              fontWeight='semibold'
-              lineHeight={1}
-              numberOfLines={1}
-              ellipsizeMode='tail'
-            >
-              {blockTitle}
-            </TextComponent>
-          </Box>
-          <Condition condition={!loading}>
-            <Row alignItems='flex-end'>
-              <Show navigation={navigation} recommenderCode={recommenderCode} />
-              <Spacer space={16} />
-            </Row>
-          </Condition>
+    <Condition condition={!!recommendations?.length}>
+      <Column>
+        <Row>
+          <Spacer space={16} />
+          <Row justifyContent='space-between' flex={1}>
+            <Box width='50%'>
+              <TextComponent
+                fontSize={titleVariant}
+                fontWeight='semibold'
+                lineHeight={1}
+                numberOfLines={1}
+                ellipsizeMode='tail'
+              >
+                {blockTitle ?? ''}
+              </TextComponent>
+            </Box>
+            <Condition condition={!loading}>
+              <Row alignItems='flex-end'>
+                <Show navigation={navigation} recommenderCode={recommenderCode} />
+                <Spacer space={16} />
+              </Row>
+            </Condition>
+          </Row>
         </Row>
-      </Row>
-      <Spacer height={16} />
-      <FlatList
-        data={recommendations}
-        renderItem={({ item }) => (
-          <ProductCard item={item} onItemPress={handleProductPress(item.id)} />
-        )}
-        keyExtractor={({ id }) => id}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        onEndReached={loadRecommendations}
-        onEndReachedThreshold={0.1}
-        ListFooterComponent={renderFooter}
-      />
-      <Spacer space={20} />
-    </Column>
+        <Spacer height={16} />
+        <FlatList
+          data={recommendations}
+          renderItem={({ item }) => (
+            <ProductCard item={item} onItemPress={handleProductPress(item.id)} />
+          )}
+          keyExtractor={({ id }) => id}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          onEndReached={loadRecommendations}
+          onEndReachedThreshold={0.1}
+          ListFooterComponent={renderFooter}
+        />
+        <Spacer space={20} />
+      </Column>
+    </Condition>
   )
 })

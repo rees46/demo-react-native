@@ -6,6 +6,7 @@ import { Box }                from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { Spacer }             from '@ui/spacer'
 import { TextComponent }      from '@ui/text'
+import { Divider } from '@ui/divider'
 
 import { SubcategoriesProps } from './subcategories.interfaces'
 
@@ -19,7 +20,7 @@ const SubcategoriesScreen = ({ navigation, route }: SubcategoriesProps) => {
       navigationIconName='back'
       scrollable={false}
     >
-      <Box height={1} backgroundColor='lightGray' fullWidth />
+      <Divider />
       <Box>
         <Spacer height={16} />
         <Row>
@@ -31,7 +32,7 @@ const SubcategoriesScreen = ({ navigation, route }: SubcategoriesProps) => {
         </Row>
         <Spacer height={16} />
       </Box>
-      <Box height={1} backgroundColor='lightGray' fullWidth />
+      <Divider />
       <Spacer height={16} />
       <RubricatorFragment navigation={navigation} loading={false} categories={categories} />
     </ScreenLayout>

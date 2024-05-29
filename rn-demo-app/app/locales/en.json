@@ -2,6 +2,8 @@
   "translation": {
     "screens.home.title": "Home",
     "screens.cart.title": "Cart",
+    "screens.cart.shopping-cart": "Shopping cart",
+    "screens.cart.empty": "Your shopping cart is empty",
     "screens.catalog.title": "Catalog",
     "screens.catalog.shopping-cart": "Shopping cart",
     "screens.profile.title": "Profile",
