@@ -304,6 +304,15 @@ rnsdk.recommend(recommender_code, params)
   })
 ```
 
+## Shopping cart
+
+```js
+rnsdk.cart() 
+  .then((res) => {
+    console.log(res);
+  })
+```
+
 ## Save profile settings
 
 ```js
