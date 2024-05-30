@@ -1,9 +1,9 @@
-import { useCallback }   from 'react'
-import { useEffect }     from 'react'
-import { useState }      from 'react'
+import { useCallback }    from 'react'
+import { useEffect }      from 'react'
+import { useState }       from 'react'
 
-import { ProductType }   from '@globals/types'
-import { useSDK }        from '@stores/rn-sdk'
+import { ProductType }    from '@globals/types'
+import { useSDK }         from '@stores/rn-sdk'
 
 import { UseFullSearch }  from './use-full-search.interfaces'
 import { defaultOptions } from './use-full-search.constants'

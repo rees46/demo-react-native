@@ -14,6 +14,7 @@ export interface UseRecommendationsReturnedType {
   blockTitle?: string
   loadRecommendations?: VoidFunction
   error?: Error
+  isOver?: boolean
 }
 
 export type UseRecommendations = (props: UseRecommendationsProps) => UseRecommendationsReturnedType

@@ -1,14 +1,15 @@
-import React                    from 'react'
-import { useTranslation }       from 'react-i18next'
+import React                      from 'react'
+import { useTranslation }         from 'react-i18next'
 
-import { RecommendationsBlock } from '@fragments/recommendations-block'
-import { Box }                   from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Row }      from '@ui/layout'
-import { Spacer }               from '@ui/spacer'
-import { TextComponent }        from '@ui/text'
+import { RecommendationsBlock }   from '@fragments/recommendations-block'
+import { RECOMMENDATIONS_BLOCKS } from '@globals/constants'
+import { Box }                    from '@ui/layout'
+import { Column }                 from '@ui/layout'
+import { Row }                    from '@ui/layout'
+import { Spacer }                 from '@ui/spacer'
+import { TextComponent }          from '@ui/text'
 
-import {CartLayoutProps} from "./cart-layout.interfaces";
+import { CartLayoutProps }         from './cart-layout.interfaces'
 
 export const CartBlockLayout = ({ navigation, children }: CartLayoutProps) => {
   const { t } = useTranslation()
@@ -27,9 +28,9 @@ export const CartBlockLayout = ({ navigation, children }: CartLayoutProps) => {
       </Row>
       <RecommendationsBlock
         navigation={navigation}
-        // TODO: replace by necessary recommender
-        recommenderCode='1efd76c810cc2364ff89677af3e076c7'
+        recommenderCode={RECOMMENDATIONS_BLOCKS.ALSO_BUY.code}
         titleVariant='title'
+        infiniteScroll={RECOMMENDATIONS_BLOCKS.ALSO_BUY.oneAlgorithm}
       />
     </Box>
   )

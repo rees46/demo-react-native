@@ -1,6 +1,6 @@
+import CartStack         from '@navigations/cart-stack'
 import CatalogStack      from '@navigations/catalog-stack'
 import HomeStack         from '@navigations/home-stack'
-import CartStack        from '@navigations/cart-stack'
 import { APP_ROUTES }    from '@navigations/constants'
 
 import { ScreenOptions } from './tab-layout.interfaces'

@@ -12,12 +12,12 @@ import { HomeProps }            from './home.interfaces'
 const HomeScreen = ({ navigation }: HomeProps) => (
   <ScreenLayout navigation={navigation} menuVariant='menu'>
     <Spacer height={16} />
-    {RECOMMENDER_CODES.map((code, index) => (
+    {RECOMMENDER_CODES.map(({ code, oneAlgorithm }, index) => (
       <Fragment key={code}>
         <Condition condition={!!index}>
           <Spacer height={16} />
         </Condition>
-        <RecommendationsBlock recommenderCode={code} navigation={navigation} />
+        <RecommendationsBlock recommenderCode={code} navigation={navigation} infiniteScroll={oneAlgorithm} />
       </Fragment>
     ))}
     <Spacer height={16} />

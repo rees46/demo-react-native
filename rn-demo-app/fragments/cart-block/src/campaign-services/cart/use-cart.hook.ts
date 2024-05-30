@@ -1,11 +1,11 @@
-import { useCallback }        from 'react'
-import { useEffect }          from 'react'
-import { useState }           from 'react'
+import { useCallback } from 'react'
+import { useEffect }   from 'react'
+import { useState }    from 'react'
 
-import { ProductType }        from '@globals/types'
-import { useSDK }             from '@stores/rn-sdk'
+import { ProductType } from '@globals/types'
+import { useSDK }      from '@stores/rn-sdk'
 
-import {UseCart} from './use-cart.interfaces'
+import { UseCart }      from './use-cart.interfaces'
 
 export const useCart: UseCart = () => {
   const [items, setItems] = useState<ProductType[]>([])
@@ -22,7 +22,6 @@ export const useCart: UseCart = () => {
       const { data } = await sdk.cart()
 
       console.log('cartItems', data)
-
 
       setItems((prev) => [...prev, ...data.items])
     } catch (err) {

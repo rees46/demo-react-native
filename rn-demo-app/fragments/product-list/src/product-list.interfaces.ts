@@ -5,4 +5,5 @@ export interface ProductListProps {
   products: ProductType[]
   onLoad?: VoidFunction
   total?: number
+  isOver?: boolean
 }

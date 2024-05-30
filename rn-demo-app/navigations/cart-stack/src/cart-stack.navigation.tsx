@@ -1,7 +1,7 @@
-import React                     from 'react'
+import React                  from 'react'
 
-import { APP_ROUTES }            from '@navigations/constants'
-import { ScreenStack }           from '@navigations/screen-stack-framgent'
+import { APP_ROUTES }         from '@navigations/constants'
+import { ScreenStack }        from '@navigations/screen-stack-framgent'
 
 import { CART_STACK_OPTIONS } from './cart-stack.constants'
 

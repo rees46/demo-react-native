@@ -1,7 +1,7 @@
-import React               from 'react'
+import React                from 'react'
 
 import { CategoryProducts } from '@fragments/category-products'
-import { ScreenLayout }    from '@fragments/screen-layout'
+import { ScreenLayout }     from '@fragments/screen-layout'
 import { Spacer }           from '@ui/spacer'
 
 import { CategoryProps }    from './category.interfaces'

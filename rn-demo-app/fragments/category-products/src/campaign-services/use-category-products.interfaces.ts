@@ -1,4 +1,4 @@
-import { ProductType } from "@globals/types"
+import { ProductType } from '@globals/types'
 
 export interface CategoryProductsOptions {
   limit: number
@@ -18,4 +18,6 @@ interface UseCategoryProductsReturnedType {
   total?: number
 }
 
-export type UseCategoryProducts = (props: UseCategoryProductsProps) => UseCategoryProductsReturnedType
+export type UseCategoryProducts = (
+  props: UseCategoryProductsProps
+) => UseCategoryProductsReturnedType

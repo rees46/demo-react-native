@@ -1,14 +1,15 @@
-import React                    from 'react'
-import { useTranslation }       from 'react-i18next'
+import React                      from 'react'
+import { useTranslation }         from 'react-i18next'
 
-import { RecommendationsBlock } from '@fragments/recommendations-block'
-import { Box }                   from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Row }      from '@ui/layout'
-import { Spacer }               from '@ui/spacer'
-import { TextComponent }        from '@ui/text'
+import { RecommendationsBlock }   from '@fragments/recommendations-block'
+import { RECOMMENDATIONS_BLOCKS } from '@globals/constants'
+import { Box }                    from '@ui/layout'
+import { Column }                 from '@ui/layout'
+import { Row }                    from '@ui/layout'
+import { Spacer }                 from '@ui/spacer'
+import { TextComponent }          from '@ui/text'
 
-import { EmptySearchProps }      from './empty-search.interfaces'
+import { EmptySearchProps }       from './empty-search.interfaces'
 
 export const EmptySearchComponent = ({ navigation }: EmptySearchProps) => {
   const { t } = useTranslation()
@@ -31,10 +32,9 @@ export const EmptySearchComponent = ({ navigation }: EmptySearchProps) => {
       </Row>
       <RecommendationsBlock
         navigation={navigation}
-        // TODO: replace by necessary recommender
-        recommenderCode='6ffcb6d617e26ecb139b8fe0850f2ed8'
+        recommenderCode={RECOMMENDATIONS_BLOCKS.TOP_SALES.code}
         titleVariant='title'
-        infiniteScroll={false}
+        infiniteScroll={RECOMMENDATIONS_BLOCKS.TOP_SALES.oneAlgorithm}
       />
     </Box>
   )

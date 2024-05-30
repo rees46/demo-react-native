@@ -1,4 +1,4 @@
-import { SHOP_ID }                from '@globals/constants'
+import { SHOP_ID }                 from '@globals/constants'
 
 import { CategoryProductsOptions } from './use-category-products.interfaces'
 

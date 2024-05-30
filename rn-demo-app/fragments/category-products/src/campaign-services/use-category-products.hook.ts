@@ -1,12 +1,12 @@
-import { useCallback }   from 'react'
-import { useEffect }     from 'react'
-import { useState }      from 'react'
+import { useCallback }        from 'react'
+import { useEffect }          from 'react'
+import { useState }           from 'react'
 
-import { ProductType }   from '@globals/types'
-import { useApi }        from '@globals/api-service'
+import { ProductType }        from '@globals/types'
+import { useApi }             from '@globals/api-service'
 
-import { defaultOptions } from './use-category-products.constants'
-import {UseCategoryProducts} from "./use-category-products.interfaces";
+import { UseCategoryProducts } from './use-category-products.interfaces'
+import { defaultOptions }     from './use-category-products.constants'
 
 export const useCategoryProduct: UseCategoryProducts = ({ categoryId, options = {} }) => {
   const [products, setProducts] = useState<ProductType[]>([])

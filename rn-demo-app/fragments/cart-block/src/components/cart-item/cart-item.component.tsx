@@ -1,9 +1,7 @@
+import React   from 'react'
+
 import { Box } from '@ui/layout'
-import React from 'react'
 
 export const CartItemComponent = ({ navigation }) => {
-
-  return <Box>
-
-  </Box>
+  return <Box></Box>
 }

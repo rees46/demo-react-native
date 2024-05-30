@@ -1,3 +1,4 @@
-import { BoxProps } from "@ui/layout";
+import { BoxProps } from '@ui/layout'
 
-export interface DividerProps extends Pick<BoxProps, 'height' | 'width' | 'fullWidth' | 'backgroundColor'> {}
+export interface DividerProps
+  extends Pick<BoxProps, 'height' | 'width' | 'fullWidth' | 'backgroundColor'> {}

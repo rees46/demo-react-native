@@ -1,10 +1,10 @@
-import React                   from 'react'
+import React                    from 'react'
 
-import { ProductList }         from '@fragments/product-list'
-import { Condition }           from '@ui/condition'
+import { ProductList }          from '@fragments/product-list'
+import { Condition }            from '@ui/condition'
 
 import { EmptySearchComponent } from './components'
-import { SearchResultsProps }  from './serach-results.interfaces'
+import { SearchResultsProps }   from './serach-results.interfaces'
 import { useFullSearch }        from './campaign-services'
 
 export const SearchResultsFragment = ({ navigation, searchQuery }: SearchResultsProps) => {
@@ -17,7 +17,7 @@ export const SearchResultsFragment = ({ navigation, searchQuery }: SearchResults
           products={products}
           navigation={navigation}
           onLoad={loadResults}
-          total={total}
+          isOver={!!total && total === products.length + 1}
         />
       </Condition>
       <Condition condition={!loading && products.length === 0}>

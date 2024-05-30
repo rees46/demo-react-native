@@ -17,7 +17,9 @@ import { ProductInfoProps } from './product-info.interfaces'
 
 export const ProductInfo = memo(({ id }: ProductInfoProps) => {
   const { publicApi } = useApi()
-  const [product, setProduct] = React.useState<ProductType & { uniqid: string, stock_quantity?: number } >()
+  const [product, setProduct] = React.useState<
+    ProductType & { uniqid: string; stock_quantity?: number }
+  >()
   const [loading, setLoading] = React.useState<boolean>(true)
 
   useEffect(() => {
@@ -38,7 +40,6 @@ export const ProductInfo = memo(({ id }: ProductInfoProps) => {
 
     fetchProductInfo()
   }, [])
-
 
   if (loading || !product?.name) {
     return null

@@ -2,11 +2,11 @@ import React                  from 'react'
 
 import { RubricatorFragment } from '@fragments/rubricator'
 import { ScreenLayout }       from '@fragments/screen-layout'
+import { Divider }            from '@ui/divider'
 import { Box }                from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { Spacer }             from '@ui/spacer'
 import { TextComponent }      from '@ui/text'
-import { Divider } from '@ui/divider'
 
 import { SubcategoriesProps } from './subcategories.interfaces'
 

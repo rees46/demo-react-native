@@ -10,7 +10,11 @@ import { RecommendationProductsProps } from './recommendation-products.interface
 const RecommendationProductsScreen = ({ navigation, route }: RecommendationProductsProps) => {
   const { recommenderCode } = route.params
 
-  const { recommendations, loadRecommendations, loading } = useRecommendations({
+  const {
+    recommendations = [],
+    loadRecommendations,
+    isOver,
+  } = useRecommendations({
     recommenderCode,
     options: {
       limit: 8,
@@ -29,6 +33,7 @@ const RecommendationProductsScreen = ({ navigation, route }: RecommendationProdu
         products={recommendations}
         navigation={navigation}
         onLoad={loadRecommendations}
+        isOver={isOver}
       />
     </ScreenLayout>
   )

@@ -10,6 +10,7 @@ import { useTranslation }         from 'react-i18next'
 import { APP_ROUTES }             from '@navigations/constants'
 import { ButtonComponent }        from '@ui/button'
 import { Condition }              from '@ui/condition'
+import { Divider }                from '@ui/divider'
 import { Box }                    from '@ui/layout'
 import { Column }                 from '@ui/layout'
 import { Row }                    from '@ui/layout'
@@ -24,7 +25,6 @@ import { ItemType }               from './product-search.interfaces'
 import { ProductSearchProps }     from './product-search.interfaces'
 import { useProductSearch }       from './campaign-services'
 import { getSearchContentHeight } from './utils'
-import { Divider } from '@ui/divider'
 
 export const ProductSearch = ({ navigation }: ProductSearchProps) => {
   const { searchQuery, setSearchQuery, totalResults, items, categories } = useProductSearch()

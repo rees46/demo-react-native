@@ -1,4 +1,4 @@
-import { ProductType }        from '@globals/types'
+import { ProductType } from '@globals/types'
 
 export interface UseCartReturnedType {
   loading: boolean

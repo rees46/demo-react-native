@@ -14,7 +14,7 @@ import { Spacer }                    from '@ui/spacer'
 import { TextComponent }             from '@ui/text'
 import { useTheme }                  from '@ui/theme'
 
-import { Show }                      from './components'
+import { ShowMore }                  from './components'
 import { RecommendationsBlockProps } from './recommendations-block.interfaces'
 import { useRecommendations }        from './campaign-services'
 
@@ -23,12 +23,12 @@ export const RecommendationsBlock = memo(({
   recommenderCode,
   titleVariant = 'smallTitle',
   options = {},
-  infiniteScroll = true
+  infiniteScroll = true,
 }: RecommendationsBlockProps) => {
   const { loadRecommendations, recommendations, blockTitle, loading } = useRecommendations({
     recommenderCode,
     options,
-    infiniteScroll
+    infiniteScroll,
   })
   const theme = useTheme()
 
@@ -53,7 +53,7 @@ export const RecommendationsBlock = memo(({
         <Row>
           <Spacer space={16} />
           <Row justifyContent='space-between' flex={1}>
-            <Box width='50%'>
+            <Box width='60%'>
               <TextComponent
                 fontSize={titleVariant}
                 fontWeight='semibold'
@@ -66,7 +66,11 @@ export const RecommendationsBlock = memo(({
             </Box>
             <Condition condition={!loading}>
               <Row alignItems='flex-end'>
-                <Show navigation={navigation} recommenderCode={recommenderCode} />
+                <ShowMore
+                  navigation={navigation}
+                  recommenderCode={recommenderCode}
+                  infiniteScroll={infiniteScroll}
+                />
                 <Spacer space={16} />
               </Row>
             </Condition>
@@ -75,7 +79,7 @@ export const RecommendationsBlock = memo(({
         <Spacer height={16} />
         <FlatList
           data={recommendations}
-          renderItem={({ item }) => (
+          renderItem={({ item, index }) => (
             <ProductCard item={item} onItemPress={handleProductPress(item.id)} />
           )}
           keyExtractor={({ id }) => id}

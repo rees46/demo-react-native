@@ -41,31 +41,31 @@ export const RubricatorFragment = ({ navigation, categories, loading }) => {
   }
 
   return (
-      <Box flex={1}>
-        <FlatList
-          data={categories}
-          renderItem={({ item }) => (
-            <Pressable onPress={handleCategoryPress(item)}>
-              <Row>
-                <Spacer space={16} />
-                <Box height={48} justifyContent='center' flex={1}>
-                  <Row justifyContent='space-between' flex={1}>
-                    <TextComponent fontSize='big' fontWeight='medium' fontColor='black'>
-                      {item.name?.toUpperCase() ?? ''}
-                    </TextComponent>
-                    <Condition condition={true}>
-                      <TouchableOpacity>
-                        <Icon name='chevron-forward' size={24} color={theme.colors.gray} />
-                      </TouchableOpacity>
-                    </Condition>
-                  </Row>
-                </Box>
-                <Spacer space={16} />
-              </Row>
-            </Pressable>
-          )}
-          keyExtractor={({ id }) => id}
-        />
-      </Box>
+    <Box flex={1}>
+      <FlatList
+        data={categories}
+        renderItem={({ item }) => (
+          <Pressable onPress={handleCategoryPress(item)}>
+            <Row>
+              <Spacer space={16} />
+              <Box height={48} justifyContent='center' flex={1}>
+                <Row justifyContent='space-between' flex={1}>
+                  <TextComponent fontSize='big' fontWeight='medium' fontColor='black'>
+                    {item.name?.toUpperCase() ?? ''}
+                  </TextComponent>
+                  <Condition condition={true}>
+                    <TouchableOpacity>
+                      <Icon name='chevron-forward' size={24} color={theme.colors.gray} />
+                    </TouchableOpacity>
+                  </Condition>
+                </Row>
+              </Box>
+              <Spacer space={16} />
+            </Row>
+          </Pressable>
+        )}
+        keyExtractor={({ id }) => id}
+      />
+    </Box>
   )
 }

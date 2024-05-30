@@ -6,6 +6,7 @@
   "dependencies": {
     "@fragments/recommendations-block": "workspace:0.0.1",
     "@fragments/screen-layout": "workspace:0.0.1",
+    "@globals/constants": "workspace:0.0.1",
     "@stores/rn-sdk": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/spacer": "workspace:0.0.1"
