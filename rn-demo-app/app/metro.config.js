@@ -10,7 +10,6 @@ const path = require('path')
  */
 const config = {
   watchFolders: [
-    path.resolve(__dirname, '../../sdk'),
     path.resolve(__dirname, '../fragments'),
     path.resolve(__dirname, '../screens'),
     path.resolve(__dirname, '../stores'),

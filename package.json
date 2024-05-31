@@ -8,16 +8,7 @@
     "format": "prettier ./rn-demo-app --write"
   },
   "workspaces": [
-    "app",
-    "sdk",
-    "rn-demo-app/app",
-    "rn-demo-app/fragments/**/*",
-    "rn-demo-app/screens/**/*",
-    "rn-demo-app/stores/**/*",
-    "rn-demo-app/ui/**/*",
-    "rn-demo-app/globals/**/*",
-    "rn-demo-app/navigations/**/*",
-    "rn-demo-app/shared/**/*"
+    "rn-demo-app/**"
   ],
   "devDependencies": {
     "@atls/prettier-plugin": "0.0.8",
