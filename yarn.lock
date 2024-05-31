@@ -4318,7 +4318,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rees46/react-native-sdk@npm:1.7.1, @rees46/react-native-sdk@workspace:sdk":
+"@rees46/react-native-sdk@npm:1.7.1":
+  version: 1.7.1
+  resolution: "@rees46/react-native-sdk@npm:1.7.1"
+  dependencies:
+    "@jest/create-cache-key-function": "npm:^26.6.2"
+    axios: "npm:^0.21.1"
+    react-native-device-info: "npm:^8.0.7"
+  peerDependencies:
+    "@notifee/react-native": ^7.8.2
+    "@react-native-async-storage/async-storage": ^1.23.1
+    "@react-native-community/push-notification-ios": ^1.11.0
+    "@react-native-firebase/messaging": ^19.2.2
+    react-native-push-notification: ^8.1.1
+  checksum: 10/96c813665b86026b1741387ed1653ae0e5c4a8c581283eaf44c11f91696d9238294af6971c68d11f0b990cc4c86e88cf576c6c0d0baa446ee74cdf46194df6af
+  languageName: node
+  linkType: hard
+
+"@rees46/react-native-sdk@workspace:sdk":
   version: 0.0.0-use.local
   resolution: "@rees46/react-native-sdk@workspace:sdk"
   dependencies:
