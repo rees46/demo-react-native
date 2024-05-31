@@ -9,7 +9,7 @@ import { Row }                    from '@ui/layout'
 import { Spacer }                 from '@ui/spacer'
 import { TextComponent }          from '@ui/text'
 
-import { CartLayoutProps }         from './cart-layout.interfaces'
+import { CartLayoutProps }        from './cart-layout.interfaces'
 
 export const CartBlockLayout = ({ navigation, children }: CartLayoutProps) => {
   const { t } = useTranslation()
@@ -17,14 +17,18 @@ export const CartBlockLayout = ({ navigation, children }: CartLayoutProps) => {
   return (
     <Box justifyContent='space-between' flex={1}>
       <Row flex={1}>
-        <Spacer space={16} />
         <Column flex={1}>
-          <TextComponent fontSize='bigTitle' fontColor='black' fontWeight='semibold'>
-            {t('screens.cart.shopping-cart')}
-          </TextComponent>
+          <Row>
+            <Spacer space={16} />
+            <TextComponent fontSize='bigTitle' fontColor='black' fontWeight='semibold'>
+              {t('screens.cart.shopping-cart')}
+            </TextComponent>
+            <Spacer space={16} />
+          </Row>
+          <Spacer height={16} />
           {children}
+          <Spacer height={16} />
         </Column>
-        <Spacer space={16} />
       </Row>
       <RecommendationsBlock
         navigation={navigation}
@@ -32,6 +36,7 @@ export const CartBlockLayout = ({ navigation, children }: CartLayoutProps) => {
         titleVariant='title'
         infiniteScroll={RECOMMENDATIONS_BLOCKS.ALSO_BUY.oneAlgorithm}
       />
+      <Spacer height={16} />
     </Box>
   )
 }

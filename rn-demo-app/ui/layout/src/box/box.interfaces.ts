@@ -7,6 +7,8 @@ export interface BoxProps extends BaseBoxProps {
   flexDirection?: 'row' | 'column'
   width?: number | string
   height?: number | string
+  minWidth?: number | string
+  minHeight?: number | string
   radius?: RadiusType
   fullWidth?: boolean
   fullHeight?: boolean

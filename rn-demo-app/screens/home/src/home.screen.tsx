@@ -17,7 +17,11 @@ const HomeScreen = ({ navigation }: HomeProps) => (
         <Condition condition={!!index}>
           <Spacer height={16} />
         </Condition>
-        <RecommendationsBlock recommenderCode={code} navigation={navigation} infiniteScroll={oneAlgorithm} />
+        <RecommendationsBlock
+          recommenderCode={code}
+          navigation={navigation}
+          infiniteScroll={oneAlgorithm}
+        />
       </Fragment>
     ))}
     <Spacer height={16} />

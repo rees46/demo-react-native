@@ -5,10 +5,14 @@
   "main": "src/index.ts",
   "dependencies": {
     "@fragments/recommendations-block": "workspace:0.0.1",
+    "@globals/api-service": "workspace:0.0.1",
     "@globals/constants": "workspace:0.0.1",
+    "@navigations/constants": "workspace:0.0.1",
     "@stores/rn-sdk": "workspace:0.0.1",
+    "@ui/button": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/divider": "workspace:0.0.1",
+    "@ui/image": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/spacer": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1"

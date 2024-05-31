@@ -29,6 +29,9 @@
     "navigations.back": "Back",
     "fragments.product-list.show-more": "Show more",
     "fragments.product-card.shop": "Shop",
-    "fragments.product-info.add-to-cart": "Add to cart"
+    "fragments.product-info.add-to-cart": "Add to cart",
+    "fragments.cart-block.total": "Total",
+    "fragments.cart-block.continue_shopping": "Continue shopping",
+    "fragments.cart-block.checkout": "Checkout"
   }
 }

@@ -1,6 +1,9 @@
 export interface ButtonProps {
   height?: number
   onPress?: VoidFunction
-  variant: 'secondary' | 'primary'
+  variant: 'secondary' | 'primary' | 'clear'
   title?: string
+  iconSize?: number
+  flex?: number
+  fullWidth?: boolean
 }

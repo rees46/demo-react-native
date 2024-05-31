@@ -1,8 +1,7 @@
-import React           from 'react'
+import React            from 'react'
+import { memo }         from 'react'
 
-import { memo }  from 'react'
-
-import { Box }         from '@ui/layout'
+import { Box }          from '@ui/layout'
 
 import { DividerProps } from './divider.interfaces'
 

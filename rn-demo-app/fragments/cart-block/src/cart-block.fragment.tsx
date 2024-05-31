@@ -1,25 +1,78 @@
-import React              from 'react'
-import { useTranslation } from 'react-i18next'
+import React                                 from 'react'
+import { useCallback }                 from 'react'
+import { useTranslation }                    from 'react-i18next'
 
-import { Box }            from '@ui/layout'
-import { TextComponent }  from '@ui/text'
+import { ProductType }                       from '@globals/types'
+import { APP_ROUTES }                        from '@navigations/constants'
+import { ButtonComponent }                   from '@ui/button'
+import { Condition }                         from '@ui/condition'
+import { Box }                                from '@ui/layout'
+import { Row }                           from '@ui/layout'
+import { Spacer }                            from '@ui/spacer'
+import { TextComponent }                     from '@ui/text'
 
-import { CartBlockProps }  from './cart-block.interfaces'
-import { CartBlockLayout } from './components'
-import { useCart }         from './campaign-services'
+import { CartBlockProps }                    from './cart-block.interfaces'
+import { CartBlockLayout }                    from './components'
+import { CartItemComponent } from './components'
+import { useCart }                           from './campaign-services'
 
 export const CartBlock = ({ navigation }: CartBlockProps) => {
   const { t } = useTranslation()
 
-  const {} = useCart()
+  const { items, totalPrice } = useCart()
+
+  const handleShoppingPress = useCallback(() => {
+    navigation.navigate(APP_ROUTES.HOME.tabName)
+  }, [navigation])
 
   return (
     <CartBlockLayout navigation={navigation}>
-      <Box flex={1} justifyContent='center' alignItems='center'>
-        <TextComponent fontSize='big' fontColor='gray' fontWeight='semibold'>
-          {t('screens.cart.empty')}
-        </TextComponent>
-      </Box>
+      <Condition condition={items.length > 0}>
+        <Box minHeight={250}>
+          {items.map((item) => (
+            <CartItemComponent key={item.key} item={item as ProductType} />
+          ))}
+          <Spacer height={16} />
+          <Row justifyContent='flex-end'>
+            <Spacer space={16} />
+            <TextComponent fontSize='normal' fontColor='black' fontWeight='medium'>{`${t(
+              'fragments.cart-block.total'
+            )}: `}</TextComponent>
+            <TextComponent
+              fontSize='normal'
+              fontColor='black'
+              fontWeight='bold'
+            >{`${totalPrice} ${items[0]?.currency}`}</TextComponent>
+            <Spacer space={16} />
+          </Row>
+          <Spacer height={32} />
+          <Row>
+            <Spacer space={16} />
+            <ButtonComponent
+              variant='secondary'
+              title={t('fragments.cart-block.continue_shopping')}
+              fullWidth={false}
+              onPress={handleShoppingPress}
+              flex={0}
+            />
+            <Spacer space={16} />
+            <ButtonComponent
+              variant='primary'
+              title={t('fragments.cart-block.checkout')}
+              fullWidth={false}
+            />
+            <Spacer space={16} />
+          </Row>
+          <Spacer height={16} />
+        </Box>
+      </Condition>
+      <Condition condition={items.length === 0}>
+        <Box height={250} justifyContent='center' alignItems='center'>
+          <TextComponent fontSize='big' fontColor='gray' fontWeight='semibold'>
+            {t('screens.cart.empty')}
+          </TextComponent>
+        </Box>
+      </Condition>
     </CartBlockLayout>
   )
 }

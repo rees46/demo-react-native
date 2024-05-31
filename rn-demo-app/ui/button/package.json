@@ -6,14 +6,18 @@
   "dependencies": {
     "@ui/condition": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1"
+    "@ui/spacer": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "@ui/theme": "workspace:0.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.6",
+    "@types/react-native-vector-icons": "6.4.18",
     "react-native": "0.74.1"
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-vector-icons": "10.1.0"
   }
 }

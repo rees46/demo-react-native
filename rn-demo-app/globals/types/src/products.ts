@@ -2,6 +2,7 @@ import { SearchCategory } from './categories'
 
 export interface ProductType {
   _id?: string
+  uniqid?: string
   brand: string
   categories: SearchCategory[]
   category_ids: string[]

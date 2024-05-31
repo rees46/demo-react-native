@@ -1,13 +1,13 @@
-import { useCallback }          from 'react'
-import { useMemo } from 'react'
-import { useEffect }            from 'react'
-import { useState }             from 'react'
+import { useCallback }        from 'react'
+import { useMemo }            from 'react'
+import { useEffect }          from 'react'
+import { useState }           from 'react'
 
-import { ProductType }          from '@globals/types'
-import { useSDK }               from '@stores/rn-sdk'
+import { ProductType }        from '@globals/types'
+import { useSDK }             from '@stores/rn-sdk'
 
-import { UseRecommendations }   from './use-recommendations.interfaces'
-import { defaultOptions }       from '../../recommendations-block.constants'
+import { UseRecommendations } from './use-recommendations.interfaces'
+import { defaultOptions }     from '../../recommendations-block.constants'
 
 export const useRecommendations: UseRecommendations = ({
   recommenderCode,

@@ -7,4 +7,5 @@ export interface SpacerProps extends ViewProps {
   space?: number
   width?: number
   height?: number
+  flex?: number
 }

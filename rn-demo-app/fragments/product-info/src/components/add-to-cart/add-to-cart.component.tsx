@@ -1,19 +1,19 @@
-import React                 from 'react'
-import { useCallback } from 'react'
-import { TextInput }         from 'react-native'
-import { useRef }            from 'react'
-import { useState }          from 'react'
-import { memo }              from 'react'
-import { useTranslation }    from 'react-i18next'
+import React               from 'react'
+import { TextInput }       from 'react-native'
+import { useCallback }     from 'react'
+import { useRef }          from 'react'
+import { useState }        from 'react'
+import { memo }            from 'react'
+import { useTranslation }  from 'react-i18next'
 
-import { ButtonComponent }   from '@ui/button'
-import { Input }             from '@ui/input'
-import { Box }               from '@ui/layout'
-import { Row }               from '@ui/layout'
-import { Spacer }            from '@ui/spacer'
-import { useSDK }            from '@stores/rn-sdk'
+import { ButtonComponent } from '@ui/button'
+import { Input }           from '@ui/input'
+import { Box }             from '@ui/layout'
+import { Row }             from '@ui/layout'
+import { Spacer }          from '@ui/spacer'
+import { useSDK }          from '@stores/rn-sdk'
 
-import { AddToCartProps }     from './add-to-cart.interfaces'
+import { AddToCartProps }  from './add-to-cart.interfaces'
 
 export const AddToCart = memo(({ productId, max }: AddToCartProps) => {
   const [count, setCount] = useState('1')

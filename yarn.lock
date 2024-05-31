@@ -2069,12 +2069,16 @@ __metadata:
   resolution: "@fragments/cart-block@workspace:rn-demo-app/fragments/cart-block"
   dependencies:
     "@fragments/recommendations-block": "workspace:0.0.1"
+    "@globals/api-service": "workspace:0.0.1"
     "@globals/constants": "workspace:0.0.1"
     "@globals/types": "workspace:0.0.1"
+    "@navigations/constants": "workspace:0.0.1"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
+    "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/divider": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/spacer": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
@@ -4387,6 +4391,7 @@ __metadata:
     react-native-push-notification: "npm:8.1.1"
     react-native-safe-area-context: "npm:4.10.1"
     react-native-screens: "npm:3.31.1"
+    react-native-splash-screen: "npm:3.3.0"
     react-native-svg: "npm:15.3.0"
     react-native-vector-icons: "npm:10.1.0"
     react-native-webview: "npm:13.10.2"
@@ -5261,13 +5266,17 @@ __metadata:
   resolution: "@ui/button@workspace:rn-demo-app/ui/button"
   dependencies:
     "@types/react": "npm:^18.2.6"
+    "@types/react-native-vector-icons": "npm:6.4.18"
     "@ui/condition": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/spacer": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    "@ui/theme": "workspace:0.0.1"
     react-native: "npm:0.74.1"
   peerDependencies:
     react: "*"
     react-native: "*"
+    react-native-vector-icons: 10.1.0
   languageName: unknown
   linkType: soft
 
@@ -5338,6 +5347,7 @@ __metadata:
     "@types/prop-types": "npm:^15"
     "@types/react": "npm:^18.2.6"
     "@types/react-native-vector-icons": "npm:6.4.18"
+    "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/spacer": "workspace:0.0.1"
@@ -13690,6 +13700,15 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 10/54a44fc5a34848195a8e004b9ee2269e8a3560c5fa7922d80eaa1fc6283990d6ef77b3d3ec6004d7df2ad95279d486faf25bb68a82a0e958493891adb7dbac9c
+  languageName: node
+  linkType: hard
+
+"react-native-splash-screen@npm:3.3.0":
+  version: 3.3.0
+  resolution: "react-native-splash-screen@npm:3.3.0"
+  peerDependencies:
+    react-native: ">=0.57.0"
+  checksum: 10/21eed33e445e03f748397dfacbd83db2c7ce9ad508e292a053bf2b0fc2d63e4736d0ffc1e7c3548ea7897c83142e1ecf8949e6f21e7743405d48a9072879178c
   languageName: node
   linkType: hard
 

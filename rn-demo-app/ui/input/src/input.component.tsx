@@ -5,6 +5,7 @@ import { TouchableOpacity } from 'react-native'
 import { forwardRef }       from 'react'
 import { useCallback }      from 'react'
 
+import { ButtonComponent }  from '@ui/button'
 import { Condition }        from '@ui/condition'
 import { Box }              from '@ui/layout'
 import { Spacer }           from '@ui/spacer'
@@ -52,18 +53,7 @@ export const Input = forwardRef<TextInput, InputProps>((
             {...props}
           />
           <Condition condition={clearable && !!value?.length}>
-            <TouchableOpacity onPress={handleClearPress}>
-              <Box
-                width={22}
-                height={22}
-                backgroundColor='gray'
-                justifyContent='center'
-                alignItems='center'
-                radius='rounded'
-              >
-                <Icon name='close' size={12} color={theme.colors.white} />
-              </Box>
-            </TouchableOpacity>
+            <ButtonComponent variant='clear' onPress={handleClearPress} height={22} iconSize={12} />
           </Condition>
           <Spacer space={16} />
         </Box>

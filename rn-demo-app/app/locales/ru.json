@@ -29,6 +29,9 @@
     "navigations.back": "Назад",
     "fragments.product-list.show-more": "Просмотреть ещё",
     "fragments.product-card.shop": "Заказать",
-    "fragments.product-info.add-to-cart": "Добавить в корзину"
+    "fragments.product-info.add-to-cart": "Добавить в корзину",
+    "fragments.cart-block.total": "Всего",
+    "fragments.cart-block.continue_shopping": "Продолжить покупки",
+    "fragments.cart-block.checkout": "Оформить"
   }
 }
