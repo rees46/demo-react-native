@@ -8,12 +8,11 @@ import { useSDK }                                from '@stores/rn-sdk'
 
 import { CartItem }                               from './use-cart.interfaces'
 
-import { ExtendedProductType }          from './use-cart.interfaces'
-
 import { UseCart } from './use-cart.interfaces'
+import { ProductType } from '@globals/types'
 
-export const useCart: UseCart = () => {
-  const [items, setItems] = useState<ExtendedProductType[]>([])
+export const useCart: UseCart = ({ navigation }) => {
+  const [items, setItems] = useState<ProductType[]>([])
   const [totalPrice, setTotalPrice] = useState<number>(0)
   const [loading, setLoading] = useState(false)
   const sdk = useSDK()
@@ -21,7 +20,7 @@ export const useCart: UseCart = () => {
   const [error, setError] = useState<Error>()
 
   const getProductInfo = useCallback(
-    async (items: CartItem[]): Promise<ExtendedProductType[]> => {
+    async (items: CartItem[]): Promise<ProductType[]> => {
       try {
         const requests = items.map(({ uniqid: id, quantity }) =>
           publicApi
@@ -32,17 +31,14 @@ export const useCart: UseCart = () => {
               },
             })
             .then((response) => {
-              const product: ExtendedProductType = response.data
-              return Array.from({ length: quantity }, (_, index) => {
-                setTotalPrice((prev) => prev + Number(product.price))
-
-                return {
-                  ...product,
-                  key: `${product.uniqid}_${index + 1}`,
-                }
-              })
+              const product: ProductType = response.data
+              setTotalPrice((prev) => prev + Number(product.price) * quantity)
+              return {
+                ...product,
+                quantity,
+              }
             }))
-        const productsArrays: ExtendedProductType[][] = await Promise.all(requests)
+        const productsArrays: ProductType[] = await Promise.all(requests)
 
         return productsArrays.flat()
       } catch (error) {
@@ -73,8 +69,28 @@ export const useCart: UseCart = () => {
   }, [loading, sdk, error, getProductInfo])
 
   useEffect(() => {
-    loadCartItems()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const unsubscribeFocus = navigation.addListener('focus', () => {
+      loadCartItems()
+    });
+
+    const unsubscribeBlur = navigation.addListener('blur', () => {
+      setTotalPrice(0)
+    });
+
+    return () => {
+      unsubscribeFocus();
+      unsubscribeBlur();
+    };
+  }, []);
+
+  const removeCartItem = useCallback((id: string) => {
+    setItems(prev => prev.filter(({ uniqid, quantity, price }) => {
+      if (uniqid === id) {
+        setTotalPrice(prev => prev - quantity! * Number(price))
+        return false
+      }
+      return true
+    }))
   }, [])
 
   return {
@@ -82,5 +98,6 @@ export const useCart: UseCart = () => {
     items,
     error,
     totalPrice,
+    removeCartItem,
   }
 }

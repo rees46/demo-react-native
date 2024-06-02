@@ -17,7 +17,7 @@ import { getProductCardWidthHelper } from './utils'
 export const ProductList = ({ products, navigation, onLoad, isOver }: ProductListProps) => {
   const handleProductPress = useCallback(
     (id: string) => () => {
-      navigation.navigate(APP_ROUTES.PRODUCT.name, { id })
+      navigation.push(APP_ROUTES.PRODUCT.name, { id })
     },
     [navigation]
   )

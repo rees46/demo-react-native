@@ -3351,9 +3351,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rees46/react-native-sdk@npm:1.7.1":
-  version: 1.7.1
-  resolution: "@rees46/react-native-sdk@npm:1.7.1"
+"@rees46/react-native-sdk@npm:1.7.2":
+  version: 1.7.2
+  resolution: "@rees46/react-native-sdk@npm:1.7.2"
   dependencies:
     "@jest/create-cache-key-function": "npm:^26.6.2"
     axios: "npm:^0.21.1"
@@ -3364,7 +3364,7 @@ __metadata:
     "@react-native-community/push-notification-ios": ^1.11.0
     "@react-native-firebase/messaging": ^19.2.2
     react-native-push-notification: ^8.1.1
-  checksum: 10/96c813665b86026b1741387ed1653ae0e5c4a8c581283eaf44c11f91696d9238294af6971c68d11f0b990cc4c86e88cf576c6c0d0baa446ee74cdf46194df6af
+  checksum: 10/863ce20957caa033cde3eb341487a659db3f3c6373acf993552dd860e2eb55c601e2110ee3daba77841d56d8d78ff0e8d1b2bca60cd6f83758ab421b5db616d9
   languageName: node
   linkType: hard
 
@@ -3390,7 +3390,7 @@ __metadata:
     "@react-native/typescript-config": "npm:0.74.83"
     "@react-navigation/bottom-tabs": "npm:6.5.20"
     "@react-navigation/native": "npm:6.1.17"
-    "@rees46/react-native-sdk": "npm:1.7.1"
+    "@rees46/react-native-sdk": "npm:1.7.2"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/prop-types": "npm:^15"
     "@types/react": "npm:^18.2.6"
@@ -3677,7 +3677,7 @@ __metadata:
     "@react-native-community/push-notification-ios": "npm:1.11.0"
     "@react-native-firebase/app": "npm:19.2.2"
     "@react-native-firebase/messaging": "npm:19.2.2"
-    "@rees46/react-native-sdk": "npm:1.7.1"
+    "@rees46/react-native-sdk": "npm:1.7.2"
     "@types/react": "npm:^18.2.6"
     "@types/react-native-push-notification": "npm:8"
     react-native: "npm:0.74.1"

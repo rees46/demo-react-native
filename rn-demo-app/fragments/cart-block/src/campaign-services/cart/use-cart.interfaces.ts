@@ -1,14 +1,15 @@
 import { ProductType } from '@globals/types'
 
-export interface ExtendedProductType extends ProductType {
-  key: string
+interface UseCartProps {
+  navigation?: any
 }
 
 export interface UseCartReturnedType {
   loading: boolean
-  items: ExtendedProductType[]
+  items: ProductType[]
   totalPrice: number
   error?: Error
+  removeCartItem?: (id: string) => void
 }
 
 export interface CartItem {
@@ -16,4 +17,4 @@ export interface CartItem {
   uniqid: string
 }
 
-export type UseCart = () => UseCartReturnedType
+export type UseCart = (props: UseCartProps) => UseCartReturnedType

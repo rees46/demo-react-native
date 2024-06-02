@@ -7,6 +7,7 @@ export interface ProductType {
   categories: SearchCategory[]
   category_ids: string[]
   currency: string
+  quantity?: number
   description: string
   id: string
   image_url?: string

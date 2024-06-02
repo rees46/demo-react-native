@@ -19,18 +19,23 @@ import { useCart }                           from './campaign-services'
 export const CartBlock = ({ navigation }: CartBlockProps) => {
   const { t } = useTranslation()
 
-  const { items, totalPrice } = useCart()
+  const { items, totalPrice, removeCartItem } = useCart({navigation})
+
 
   const handleShoppingPress = useCallback(() => {
     navigation.navigate(APP_ROUTES.HOME.tabName)
   }, [navigation])
+
+  const handleRemoveItem = useCallback((id: string) => () => {
+    removeCartItem?.(id)
+  }, [removeCartItem])
 
   return (
     <CartBlockLayout navigation={navigation}>
       <Condition condition={items.length > 0}>
         <Box minHeight={250}>
           {items.map((item) => (
-            <CartItemComponent key={item.key} item={item as ProductType} />
+            <CartItemComponent key={item.uniqid} item={item as ProductType} onRemovePress={handleRemoveItem(item.uniqid!)} />
           ))}
           <Spacer height={16} />
           <Row justifyContent='flex-end'>
@@ -42,7 +47,7 @@ export const CartBlock = ({ navigation }: CartBlockProps) => {
               fontSize='normal'
               fontColor='black'
               fontWeight='bold'
-            >{`${totalPrice} ${items[0]?.currency}`}</TextComponent>
+            >{`${totalPrice.toFixed(2)} ${items[0]?.currency}`}</TextComponent>
             <Spacer space={16} />
           </Row>
           <Spacer height={32} />
