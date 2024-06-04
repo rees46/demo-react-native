@@ -1,6 +1,7 @@
-import React                from 'react'
-import { memo }             from 'react'
-import { useEffect }        from 'react'
+import { priceFormatter } from '@shared/utils'
+import React              from 'react'
+import { memo }           from 'react'
+import { useEffect }      from 'react'
 
 import { SHOP_ID }          from '@globals/constants'
 import { ProductType }      from '@globals/types'
@@ -44,6 +45,9 @@ export const ProductInfo = memo(({ id }: ProductInfoProps) => {
   if (loading || !product?.name) {
     return null
   }
+
+  const price = priceFormatter(product.price)
+  const oldPrice = priceFormatter(product?.oldprice)
 
   return (
     <>
@@ -93,11 +97,11 @@ export const ProductInfo = memo(({ id }: ProductInfoProps) => {
               fontSize='smallTitle'
               fontColor='gray'
               lineTrough
-            >{`${product?.oldprice} ${product!.currency}`}</TextComponent>
+            >{`${oldPrice} ${product!.currency}`}</TextComponent>
             <Spacer height={4} />
           </Condition>
           <TextComponent fontWeight='semibold' fontSize='title' lineHeight={1}>
-            {`${product!.price} ${product!.currency}`}
+            {`${price} ${product!.currency}`}
           </TextComponent>
         </Box>
         <Spacer space={16} />

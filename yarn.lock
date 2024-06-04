@@ -2186,6 +2186,7 @@ __metadata:
     "@globals/constants": "workspace:0.0.1"
     "@globals/types": "workspace:0.0.1"
     "@navigations/constants": "workspace:0.0.1"
+    "@shared/utils": "workspace:*"
     "@stores/rn-sdk": "workspace:0.0.1"
     "@types/react": "npm:^18.2.6"
     "@ui/button": "workspace:0.0.1"
@@ -3813,7 +3814,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@shared/utils@workspace:0.0.1, @shared/utils@workspace:rn-demo-app/shared/utils":
+"@shared/utils@workspace:*, @shared/utils@workspace:0.0.1, @shared/utils@workspace:rn-demo-app/shared/utils":
   version: 0.0.0-use.local
   resolution: "@shared/utils@workspace:rn-demo-app/shared/utils"
   dependencies:

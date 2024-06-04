@@ -1,0 +1,226 @@
+{
+  "project_info": {
+    "project_number": "605730184710",
+    "project_id": "rees46-com",
+    "storage_bucket": "rees46-com.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605730184710:android:6c640baac4dda9e05b6d87",
+        "android_client_info": {
+          "package_name": "com.demoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605730184710-0t1ptvsobvg8pu3v4in9vb0u2lm855kb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMI5DiiCqeZ2JV2m6r0Be520N39WKh_TA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605730184710-0t1ptvsobvg8pu3v4in9vb0u2lm855kb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "605730184710-33itje7rfcbadqg1j9bh98iip5h02nju.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Avsi.TestPushSDK1"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605730184710:android:7b6eb053665460b55b6d87",
+        "android_client_info": {
+          "package_name": "com.example.rees46_java_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605730184710-0t1ptvsobvg8pu3v4in9vb0u2lm855kb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMI5DiiCqeZ2JV2m6r0Be520N39WKh_TA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605730184710-0t1ptvsobvg8pu3v4in9vb0u2lm855kb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "605730184710-33itje7rfcbadqg1j9bh98iip5h02nju.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Avsi.TestPushSDK1"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605730184710:android:198526dca19b16ec5b6d87",
+        "android_client_info": {
+          "package_name": "com.personaclick.sample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605730184710-0t1ptvsobvg8pu3v4in9vb0u2lm855kb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMI5DiiCqeZ2JV2m6r0Be520N39WKh_TA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605730184710-0t1ptvsobvg8pu3v4in9vb0u2lm855kb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "605730184710-33itje7rfcbadqg1j9bh98iip5h02nju.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Avsi.TestPushSDK1"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605730184710:android:e3fd667d60c9bdb75b6d87",
+        "android_client_info": {
+          "package_name": "com.personalizatio.sample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605730184710-0t1ptvsobvg8pu3v4in9vb0u2lm855kb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMI5DiiCqeZ2JV2m6r0Be520N39WKh_TA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605730184710-0t1ptvsobvg8pu3v4in9vb0u2lm855kb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "605730184710-33itje7rfcbadqg1j9bh98iip5h02nju.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Avsi.TestPushSDK1"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605730184710:android:75abe9965c01c1c45b6d87",
+        "android_client_info": {
+          "package_name": "com.rees46.sample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605730184710-0t1ptvsobvg8pu3v4in9vb0u2lm855kb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMI5DiiCqeZ2JV2m6r0Be520N39WKh_TA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605730184710-0t1ptvsobvg8pu3v4in9vb0u2lm855kb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "605730184710-33itje7rfcbadqg1j9bh98iip5h02nju.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Avsi.TestPushSDK1"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605730184710:android:9f9c2bc678183a005b6d87",
+        "android_client_info": {
+          "package_name": "com.sdkdev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605730184710-0t1ptvsobvg8pu3v4in9vb0u2lm855kb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMI5DiiCqeZ2JV2m6r0Be520N39WKh_TA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605730184710-0t1ptvsobvg8pu3v4in9vb0u2lm855kb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "605730184710-33itje7rfcbadqg1j9bh98iip5h02nju.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Avsi.TestPushSDK1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
