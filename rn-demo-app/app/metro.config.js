@@ -45,7 +45,6 @@ const config = {
       return context.resolveRequest(context, moduleName, platform)
     },
   },
-  nodeModulesPaths: [path.resolve(path.join(__dirname, './node_modules'))],
 }
 
 module.exports = mergeConfig(getDefaultConfig(__dirname), config)

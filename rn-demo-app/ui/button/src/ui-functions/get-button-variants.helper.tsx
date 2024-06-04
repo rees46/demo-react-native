@@ -1,11 +1,11 @@
-import React                     from 'react'
-import Icon                      from 'react-native-vector-icons/Ionicons'
-import { TouchableOpacity }       from 'react-native'
-
-import { Box }                   from '@ui/layout'
-import { Row }              from '@ui/layout'
+import { Box }                    from '@ui/layout'
+import { Row }                    from '@ui/layout'
 import { Spacer }                 from '@ui/spacer'
 import { TextComponent }          from '@ui/text'
+
+import React                      from 'react'
+import Icon                       from 'react-native-vector-icons/Ionicons'
+import { TouchableOpacity }       from 'react-native'
 
 import { GetButtonVariantsProps } from './get-button-variants.interfaces'
 

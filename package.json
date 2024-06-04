@@ -5,13 +5,15 @@
   "license": "BSD 3-Clause",
   "scripts": {
     "clean": "rm -rf node_modules **/node_modules **/**/node_modules **/**/**/node_modules && rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clean",
-    "format": "prettier ./rn-demo-app --write"
+    "format": "prettier ./rn-demo-app --write",
+    "lint": "eslint ./rn-demo-app/**.ts --no-warn-ignored"
   },
   "workspaces": [
     "rn-demo-app/**"
   ],
   "devDependencies": {
     "@atls/prettier-plugin": "0.0.8",
+    "@eslint/js": "9.4.0",
     "@jest/core": "29.7.0",
     "@types/eslint": "8.56.2",
     "@types/jest": "29.5.12",
@@ -19,7 +21,8 @@
     "eslint": "8.56.0",
     "husky": "8.0.3",
     "prettier": "3.1.1",
-    "typescript": "5.4.5"
+    "typescript": "5.4.5",
+    "typescript-eslint": "7.12.0"
   },
   "packageManager": "yarn@4.2.2"
 }
