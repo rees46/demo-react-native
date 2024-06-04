@@ -1,0 +1,40 @@
+name: Release
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  Release:
+    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+
+      - name: Bump version
+        run: yarn workspace @rn-demo-app/app version patch
+
+      - name: Build Android app
+        run: yarn workspace @rn-demo-app/app run android --mode=release
+
+      - name: Create tarball
+        run: yarn workspace @rn-demo-app/app pack
+
+      - name: Create Release
+        working-directory: ./rn-demo-app/app
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          yarn exec 'bash -c \
+          "VERSION=\$npm_package_version; \
+          gh release create \"\$VERSION\" ./android/app/build/outputs/apk/release/app-release.apk ;"'
