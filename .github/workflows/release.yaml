@@ -18,6 +18,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: 'zulu'
+
       - name: Setup Node
         uses: actions/setup-node@v4
 
@@ -28,6 +34,7 @@ jobs:
         run: yarn workspace @rn-demo-app/app run android --mode=release
 
       - name: Commit changes
+        if: ${{ !cancelled() }}
         id: committer
         uses: EndBug/add-and-commit@v9
         env:
