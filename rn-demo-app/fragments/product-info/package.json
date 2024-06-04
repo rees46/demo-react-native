@@ -7,6 +7,7 @@
     "@globals/api-service": "workspace:0.0.1",
     "@globals/constants": "workspace:0.0.1",
     "@navigations/constants": "workspace:0.0.1",
+    "@shared/utils": "workspace:*",
     "@stores/rn-sdk": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
