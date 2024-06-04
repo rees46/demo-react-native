@@ -9,14 +9,16 @@ import { useEffect }           from 'react'
 import { TabLayoutNavigation } from '@navigations/tab-layout'
 import { SDKProvider }         from '@stores/rn-sdk'
 import { ThemeProvider }       from '@ui/theme'
-import SplashScreen from 'react-native-splash-screen';
+import SplashScreen            from 'react-native-splash-screen';
 
 import i18n                    from './i18n'
 
-function App(): React.JSX.Element {
+const App = (): React.JSX.Element => {
   useEffect(() => {
     const locale = RNLocalize.getLocales()[0].languageCode
+
     i18n.changeLanguage('ru' ?? locale)
+
     SplashScreen.hide();
   }, [])
 
@@ -32,4 +34,5 @@ function App(): React.JSX.Element {
     </ThemeProvider>
   )
 }
+
 export default App

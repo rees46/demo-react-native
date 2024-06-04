@@ -6,20 +6,23 @@
   "scripts": {
     "clean": "rm -rf node_modules **/node_modules **/**/node_modules **/**/**/node_modules && rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clean",
     "format": "prettier ./rn-demo-app --write",
-    "lint": "eslint ./rn-demo-app/**.ts --no-warn-ignored"
+    "lint": "eslint ./rn-demo-app/**.ts --no-warn-ignored",
+    "prepare": "husky"
   },
   "workspaces": [
     "rn-demo-app/**"
   ],
   "devDependencies": {
     "@atls/prettier-plugin": "0.0.8",
+    "@commitlint/cli": "19.2.1",
+    "@commitlint/config-conventional": "19.1.0",
     "@eslint/js": "9.4.0",
     "@jest/core": "29.7.0",
     "@types/eslint": "8.56.2",
     "@types/jest": "29.5.12",
     "@types/node": "18.19.17",
     "eslint": "8.56.0",
-    "husky": "8.0.3",
+    "husky": "9.0.11",
     "prettier": "3.1.1",
     "typescript": "5.4.5",
     "typescript-eslint": "7.12.0"
