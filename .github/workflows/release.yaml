@@ -27,10 +27,24 @@ jobs:
       - name: Build Android app
         run: yarn workspace @rn-demo-app/app run android --mode=release
 
+      - name: Commit changes
+        id: committer
+        uses: EndBug/add-and-commit@v9
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          commit: -S
+          default_author: github_actions
+          author_email: github-bot@rees46.com
+          message: ${{ steps.commit_message.outputs.commitMessage }}
+          add: '["*.lock", "*.json", "*.yml", "*.md"]'
+
       - name: Create tarball
+        if: ${{ !cancelled() }}
         run: yarn workspace @rn-demo-app/app pack
 
       - name: Create Release
+        if: ${{ !cancelled() && steps.committer.outputs.committed == 'true' }}
         working-directory: ./rn-demo-app/app
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
