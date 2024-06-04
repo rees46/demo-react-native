@@ -1,0 +1,50 @@
+{
+  "brand": "Yuong toys",
+  "brand_downcase": "yuong toys",
+  "categories": [
+    {
+      "external_id": "15",
+      "name": "Toys",
+      "parent_id": 1571698960744055000,
+      "url": "https://demo.rees46.com/categories/kids"
+    },
+    {
+      "external_id": "479",
+      "name": "Baby & Kids",
+      "parent_id": null,
+      "url": "https://demo.rees46.com/categories/baby"
+    }
+  ],
+  "category_ids": ["479", "15"],
+  "child_age_max": 178956970,
+  "child_age_min": 3,
+  "child_gender": "m",
+  "child_type": "toy",
+  "currency": "₽",
+  "description": "The hero of the cartoon \"Tobot\" will love Your child!Using a special key, the robot quickly turns into a vehicle with raised wheels and Vice versa. This toy will contribute to the development of imagination, thinking and fine motorik...",
+  "discount": false,
+  "ignored": false,
+  "image_download_data": {
+    "could_be_widgetable": true,
+    "image": "https://demo.rees46.com/uploads/product/image/1846/5028889-01.jpg_x_",
+    "image_changed": false,
+    "name": "Yuong toys Transformer \"Tobot evolution X\"",
+    "persisted": true,
+    "price": "2969.0",
+    "time": "2022-02-04T10:20:22.299+03:00",
+    "url": "https://demo.rees46.com/products/1846",
+    "widgetable": true
+  },
+  "image_download_start_at": "2024-05-23T11:09:24.000Z",
+  "is_available": true,
+  "is_child": true,
+  "is_realty": true,
+  "locations": {},
+  "name": "Yuong toys Transformer \"Tobot evolution X\"",
+  "picture": "https://demo.rees46.com/uploads/product/image/1846/5028889-01.jpg_x_",
+  "price": "2969.0",
+  "sales_rate": 2759,
+  "uniqid": "1846",
+  "url": "https://demo.rees46.com/products/1846",
+  "widgetable": true
+}

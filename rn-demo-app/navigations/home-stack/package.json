@@ -1,0 +1,27 @@
+{
+  "name": "@navigations/home-stack",
+  "version": "0.0.1",
+  "private": true,
+  "main": "src/index.ts",
+  "dependencies": {
+    "@navigations/constants": "workspace:0.0.1",
+    "@navigations/screen-stack-framgent": "workspace:0.0.1",
+    "@screens/cart": "workspace:0.0.1",
+    "@screens/catalog": "workspace:0.0.1",
+    "@screens/category": "workspace:0.0.1",
+    "@screens/home": "workspace:0.0.1",
+    "@screens/product": "workspace:0.0.1",
+    "@screens/product-search": "workspace:0.0.1",
+    "@screens/recommendation-products": "workspace:0.0.1",
+    "@screens/search-results": "workspace:0.0.1",
+    "@screens/subcategories": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.6",
+    "react-native": "0.74.1"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@fragments/category-products",
+  "version": "0.0.1",
+  "private": true,
+  "main": "src/index.ts",
+  "dependencies": {
+    "@fragments/product-list": "workspace:0.0.1",
+    "@globals/api-service": "workspace:0.0.1",
+    "@globals/constants": "workspace:0.0.1",
+    "@navigations/constants": "workspace:0.0.1",
+    "@stores/rn-sdk": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/spacer": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@globals/types": "workspace:0.0.1",
+    "@types/react": "^18.2.6",
+    "react-native": "0.74.1"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
+}
